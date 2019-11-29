@@ -1,7 +1,6 @@
-import 'index.html';
-import 'main.scss';
+import React from "react";
+import ReactDOM from "react-dom";
+import App from "@components/App";
+import "@sass/main";
 
-const saying = document.createElement('h2');
-saying.innerHTML = 'Works';
-const app = document.querySelector('.app');
-app.appendChild(saying);
+ReactDOM.render(<App />, document.querySelector("#root"));
