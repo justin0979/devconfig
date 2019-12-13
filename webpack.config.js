@@ -26,7 +26,11 @@ module.exports = {
       '.jpeg',
       '.png',
       '.svg',
-      '.gif'
+      '.gif',
+      '.ttf',
+      '.woff',
+      '.woff2',
+      '.eot'
     ]
   },
   module: {
@@ -45,7 +49,7 @@ module.exports = {
         use: 'html-loader'
       },
       {
-        test: /\.(jpe?g|png|gif|svg)$/,
+        test: /\.(jpe?g|png|gif|svg|ttf|woff(2)?|eot)$/,
         use: [
           {
             loader: 'file-loader',
