@@ -1,75 +1,82 @@
-const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+const path = require("path");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
-  entry: ['./src'],
+  entry: ["./src/index"],
   output: {
-    filename: 'bundle.js',
-    path: path.resolve(__dirname, 'dist'),
-    publicPath: ''
+    filename: "bundle.js",
+    path: path.resolve(__dirname, "dist"),
+    publicPath: "",
   },
-  mode: 'development',
+  mode: "development",
   optimization: {
     splitChunks: {
-      chunks: 'all'
-    }
+      chunks: "all",
+    },
   },
   devServer: {
-    contentBase: 'dist',
+    contentBase: "dist",
     port: 3000,
     hot: true,
-    overlay: true
+    overlay: true,
   },
   resolve: {
-    modules: ['src', 'node_modules'],
+    modules: ["src", "node_modules"],
     extensions: [
-      '.js',
-      '.jsx',
-      '.css',
-      '.scss',
-      '.jpg',
-      '.jpeg',
-      '.png',
-      '.svg',
-      '.gif',
-      '.ttf',
-      '.woff',
-      '.woff2',
-      '.eot'
-    ]
+      ".js",
+      ".jsx",
+      ".ts",
+      ".tsx",
+      ".css",
+      ".scss",
+      ".jpg",
+      ".jpeg",
+      ".png",
+      ".svg",
+      ".gif",
+      ".ttf",
+      ".woff",
+      ".woff2",
+      ".eot",
+    ],
   },
   module: {
     rules: [
       {
-        test: /\.jsx?$/,
+        test: /\.(tsx?|jsx?)$/,
         exclude: /node_modules/,
-        use: 'babel-loader'
+        use: "babel-loader",
       },
       {
         test: /\.s?css$/,
-        use: ['style-loader', 'css-loader', 'postcss-loader', 'sass-loader']
+        use: [
+          "style-loader",
+          "css-loader",
+          "postcss-loader",
+          "sass-loader",
+        ],
       },
       {
         test: /\.html$/,
-        use: 'html-loader'
+        use: "html-loader",
       },
       {
         test: /\.(jpe?g|png|gif|svg|ttf|woff(2)?|eot)$/,
         use: [
           {
-            loader: 'file-loader',
+            loader: "file-loader",
             options: {
-              name: '[path][name].[ext]'
-            }
+              name: "[path][name].[ext]",
+            },
           },
-          'image-webpack-loader'
-        ]
-      }
-    ]
+          "image-webpack-loader",
+        ],
+      },
+    ],
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: './src/index.html'
-    })
-  ]
+      template: "./src/index.html",
+    }),
+  ],
 };
