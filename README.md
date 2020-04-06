@@ -10,3 +10,7 @@ Sass is already setup.
 
 For `react` already installed and ready for use:<br />
 run `git checkout react` then `npm i` then `npm start`.
+
+For only `typescript` already installed and ready for use:<br />
+run `git checkout typescript` then `npm i` then `npm start`.
+
