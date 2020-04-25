@@ -1,9 +1,9 @@
 ## Base Development Envrionments
 
-run `npm i` then `npm start` and go to `localhost:3000`.
+Light weight dev environment. `create-react-app` covers way more scenarios; however, it takes time to install all of the dependencies. This is just for a quick install and run and is easily configurable with webpack and babel.
 
-Uses `webpack-dev-server` for auto reloads on save.
-
+run `npm i` then `npm start` and go to `localhost:3000`.<br />
+Uses `webpack-dev-server` for auto reloads on save.<br/>
 Aboslute paths are set to `src` in `webpack.config.js`.
 
 Sass is already setup.
