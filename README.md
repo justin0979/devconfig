@@ -14,7 +14,7 @@ Sass is already setup.
 
 For `react` already installed and ready for use:<br />
 run `git checkout react` then `npm i` then `npm start`.<br />
-\*there is also a typescript with react branch.
+\*there is also a typescript with react in `Branch: react-ts`.
 
 ### Typescript
 
