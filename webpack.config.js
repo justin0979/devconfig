@@ -16,11 +16,12 @@ module.exports = {
   },
   devServer: {
     contentBase: "dist",
-    host: "0.0.0.0",
+    host: "0.0.0.0", // added for nginx
     port: 3000,
     hot: true,
-    historyApiFallback: true,
+    historyApiFallback: true, // use for routing
     overlay: true,
+    public: "devconfig:80", // use for nginx, change devconfig if needed
   },
   resolve: {
     modules: ["src", "node_modules"],
