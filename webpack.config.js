@@ -21,7 +21,7 @@ module.exports = {
     hot: true,
     historyApiFallback: true, // use for routing
     overlay: true,
-    public: "devconfig:80", // use for nginx, change devconfig if needed
+    public: "devconfig:80", // use for nginx, change devconfig if needed to whatever app is named (e.g. client:80)
   },
   resolve: {
     modules: ["src", "node_modules"],
