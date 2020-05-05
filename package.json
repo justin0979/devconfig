@@ -6,7 +6,7 @@
   "scripts": {
     "start": "webpack-dev-server",
     "build": "webpack",
-    "test": "jest --watchAll",
+    "test": "jest --watch",
     "lint": "npm run clean && eslint .",
     "clean": "rm -rf dist"
   },
@@ -32,6 +32,8 @@
     "babel-loader": "^8.0.6",
     "babel-plugin-module-resolver": "^3.2.0",
     "css-loader": "^3.2.0",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.2",
     "eslint": "^6.7.1",
     "eslint-plugin-react": "^7.16.0",
     "file-loader": "^5.0.2",
@@ -39,6 +41,7 @@
     "html-webpack-plugin": "^3.2.0",
     "image-webpack-loader": "^6.0.0",
     "jest": "^26.0.0",
+    "jest-enzyme": "^7.1.2",
     "node-sass": "^4.14.1",
     "postcss-loader": "^3.0.0",
     "sass-loader": "^8.0.0",
