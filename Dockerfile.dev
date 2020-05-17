@@ -1,6 +1,8 @@
-FROM node:alpine
+FROM node:slim as base
 WORKDIR "/app"
 COPY ./package*.json ./
 RUN npm install
+
+FROM base as dev
 COPY ./ ./
 CMD ["npm", "start"]

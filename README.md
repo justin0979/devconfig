@@ -10,3 +10,8 @@ Go to `localhost:3000`
 
 add packages with `npm i <packages>` or remove them with `npm uninstall <packages>`.<br/>
 (e.g. `react-router-dom` is installed, remove it with `npm uninstall react-router-dom` and the environment is one package lighter)
+
+### Using Docker
+
+If use `docker-compose up` and later need to add package, you will have to use `docker-compose run client npm i <package>`; otherwise, you will get permission errors.
+An alternative is to initially run `docker-compose run client npm i` to have node_modules in the container and on your host computer.
