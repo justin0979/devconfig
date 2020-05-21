@@ -14,4 +14,7 @@ add packages with `npm i <packages>` or remove them with `npm uninstall <package
 ### Using Docker
 
 If use `docker-compose up` and later need to add package, you will have to use `docker-compose run client npm i <package>`; otherwise, you will get permission errors.
-An alternative is to initially run `docker-compose run client npm i` to have node_modules in the container and on your host computer.
+
+## Tests
+
+Testing is configured with jest and enzyme.
