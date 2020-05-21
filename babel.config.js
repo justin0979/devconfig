@@ -6,11 +6,11 @@ module.exports = {
         useBuiltIns: "usage",
         corejs: {
           version: 3,
-          proposals: true
-        }
-      }
+          proposals: true,
+        },
+      },
     ],
-    "@babel/react"
+    "@babel/react",
   ],
   plugins: [
     "@babel/transform-runtime",
@@ -22,9 +22,10 @@ module.exports = {
           "@src": "./src",
           "@components": "./src/components",
           "@images": "./src/images",
-          "@sass": "./src/sass"
-        }
-      }
-    ]
-  ]
+          "@sass": "./src/sass",
+          "@test": "./test",
+        },
+      },
+    ],
+  ],
 };

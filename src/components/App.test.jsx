@@ -1,11 +1,39 @@
 import React from "react";
-import Enzyme, { shallow } from "enzyme";
-import EnzymeAdapter from "enzyme-adapter-react-16";
+import { shallow, ShallowWrapper } from "enzyme";
+
+import { findByTestAttr } from "@test/testUtils";
 import App from "./App";
 
-Enzyme.configure({ adapter: new EnzymeAdapter() });
+/**
+ * Function to setup tests for App component
+ * @function setup
+ * @param {object} props
+ * @param {object} state
+ * @returns {ShallowWrapper}
+ */
+const setup = (props = {}, state = null) => {
+  return shallow(<App {...props} />);
+};
 
 test("renders without crashing", () => {
-  const wrapper = shallow(<App />);
-  expect(wrapper).toBeTruthy();
+  const wrapper = setup();
+  const appComponent = findByTestAttr(wrapper, "appComponent");
+  expect(appComponent.length).not.toBe(0);
+});
+
+test("lazyLoadLazy returns default message", () => {
+  const wrapper = setup();
+  const lazyLoadLazyDefault = findByTestAttr(
+    wrapper,
+    "lazyLoadLazyDefault"
+  );
+  expect(lazyLoadLazyDefault.text()).toBe("Loaded here");
+});
+
+describe("lazyLoadButton", () => {
+  test("renders", () => {
+    const wrapper = setup();
+    const lazyLoadButton = findByTestAttr(wrapper, "lazyLoadButton");
+    expect(lazyLoadButton.length).toBe(1);
+  });
 });

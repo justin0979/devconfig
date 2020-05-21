@@ -12,14 +12,19 @@ const App = () => {
         </Suspense>
       );
     }
-    return <h1>Loaded here</h1>;
+    return <h1 data-test="lazyLoadLazyDefault">Loaded here</h1>;
   };
 
   return (
-    <div className="app">
+    <div className="app" data-test="appComponent">
       <h1>Basic React App Component</h1>
       {lazyLoadLazy()}
-      <button onClick={() => setLoaded(!loaded)}>lazy load</button>
+      <button
+        onClick={() => setLoaded(!loaded)}
+        data-test="lazyLoadButton"
+      >
+        lazy load
+      </button>
     </div>
   );
 };
