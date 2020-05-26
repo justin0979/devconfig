@@ -5,6 +5,6 @@
  * @param {string} val - name to find attribute
  * @returns {ShallowWrapper}
  */
-export const findByTestAttr = (wrapper, val) => {
+export const findByTestAttr = (wrapper: any, val: any) => {
   return wrapper.find(`[data-test='${val}']`);
 };
