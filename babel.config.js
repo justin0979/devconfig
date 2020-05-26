@@ -24,6 +24,7 @@ module.exports = {
           "@components": "./src/components",
           "@images": "./src/images",
           "@sass": "./src/sass",
+          "@test": "./test",
         },
       },
     ],

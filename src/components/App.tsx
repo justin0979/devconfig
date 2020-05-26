@@ -18,7 +18,7 @@ const componentContent: Content = {
 
 const App = (): JSX.Element => {
   return (
-    <div className="app">
+    <div className="app" data-test="appComponent">
       <h1>{componentContent.h1}</h1>
       <p>{componentContent.text}</p>
       <div>
