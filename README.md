@@ -26,6 +26,6 @@ e.g. `git checkout master`<br />
 ### Typescript
 
 For only `typescript` already installed and ready for use:<br />
-run<br /> `git clone --branch typescript --single-branch --depth 1 https://github.com/justin0979/devconfig.git` followed by `npm i`.<br />
+run<br /> `git clone --branch typescript --single-branch --depth 1 https://github.com/justin0979/devconfig.git`<br /> followed by `npm i`.<br />
 For all branches, follow steps from React section above.<br />
 \*adjust the `tsconfig.json` file.
