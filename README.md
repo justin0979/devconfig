@@ -13,11 +13,11 @@ Sass is already setup.
 ### React
 
 For only the `react` branch,<br />
-run `git clone --branch react --single-branch --depth 1 https://github.com/justin0979/devconfig.git`<br />
+run<br /> `git clone --branch react --single-branch --depth 1 https://github.com/justin0979/devconfig.git`<br />
 then run `npm i`.
 
 Alternatively, do the following for all branches:<br />
-run `git clone --branch react https://github.com/justin0979/devconfig.git`<br />
+run<br /> `git clone --branch react https://github.com/justin0979/devconfig.git`<br />
 then run `npm i`.
 To access other branches, run `git checkout <branch name>`.<br />
 e.g. `git checkout master`<br />
@@ -26,6 +26,6 @@ e.g. `git checkout master`<br />
 ### Typescript
 
 For only `typescript` already installed and ready for use:<br />
-run `git clone --branch typescript --single-branch --depth 1 https://github.com/justin0979/devconfig.git` followed by `npm i`.<br />
+run<br /> `git clone --branch typescript --single-branch --depth 1 https://github.com/justin0979/devconfig.git` followed by `npm i`.<br />
 For all branches, follow steps from React section above.<br />
 \*adjust the `tsconfig.json` file.
