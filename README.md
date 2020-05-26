@@ -28,12 +28,33 @@ e.g. `git checkout master`<br />
 \*there is also a typescript with react in `Branch: react-ts`.
 
 ##### The following two commands use ssh instead of https.<br />
+
 For cloning, entering directory and installing, run:<br />
 `git clone --branch react --single-branch --depth 1 git@github.com:justin0979/devconfig.git && cd devconfig && npm i`
 <br />
 
 The same as above, but having all branches:<br />
 `git clone --branch react git@github.com:justin0979/devconfig.git && cd devconfig && npm i`
+<br />
+
+##### The same as above but with starting VSC and running app.<br />
+
+Only react branch:
+`git clone --branch react --single-branch --depth 1 git@github.com:justin0979/devconfig.git && cd devconfig && code . && npm i && npm start`
+<br />
+
+All branches:
+`git clone --branch react git@github.com:justin0979/devconfig.git && cd devconfig && code . && npm i && npm start`
+<br />
+
+#### For react-ts branch (has Typescript)<br />
+
+Only react-ts branch:
+`git clone --branch react-ts --single-branch --depth 1 git@github.com:justin0979/devconfig.git && cd devconfig && code . && npm i && npm start`
+<br />
+
+All branches:
+`git clone --branch react-ts git@github.com:justin0979/devconfig.git && cd devconfig && code . && npm i && npm start`
 <br />
 
 ### Typescript
