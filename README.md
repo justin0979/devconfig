@@ -39,25 +39,25 @@ The same as above, but having all branches:<br />
 
 ##### The same as above but with starting VSC and running app.<br />
 
-Only react branch:
+Only react branch:<br />
 `git clone --branch react --single-branch --depth 1 git@github.com:justin0979/devconfig.git && cd devconfig && code . && npm i && npm start`
 <br />
 
-All branches:
+All branches:<br />
 `git clone --branch react git@github.com:justin0979/devconfig.git && cd devconfig && code . && npm i && npm start`
 <br />
 
 #### For react-ts branch (has Typescript)<br />
 
-Only react-ts branch:
+Only react-ts branch:<br />
 `git clone --branch react-ts --single-branch --depth 1 git@github.com:justin0979/devconfig.git && cd devconfig && code . && npm i && npm start`
 <br />
 
-All branches:
+All branches:<br />
 `git clone --branch react-ts git@github.com:justin0979/devconfig.git && cd devconfig && code . && npm i && npm start`
 <br />
 
-### Typescript
+### Typescript only, no react
 
 For only `typescript` already installed and ready for use:<br />
 run the following to clone and enter directory:<br />
