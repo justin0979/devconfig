@@ -18,8 +18,8 @@ module.exports = {
     [
       "module-resolver",
       {
+        root: ["./"],
         alias: {
-          "@src": "./src",
           "@components": "./src/components",
           "@images": "./src/images",
           "@sass": "./src/sass",
