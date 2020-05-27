@@ -1,3 +1,7 @@
+Only react branch (for quick copy/paste):<br />
+`git clone --branch react --single-branch --depth 1 git@github.com:justin0979/devconfig.git && cd devconfig && code . && npm i && npm start`
+<br />
+
 ## Base Development Envrionments
 
 Light weight dev environment. This is just for a quick install & run and is easily configurable with webpack and babel.
