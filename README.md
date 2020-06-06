@@ -1,6 +1,8 @@
-Only react branch (for quick copy/paste):<br />
+Download, change dir, install and run Only react branch (for quick copy/paste):<br />
 `git clone --branch react --single-branch --depth 1 git@github.com:justin0979/devconfig.git && cd devconfig && code . && npm i && npm start`
 <br />
+Download only:<br />
+`git clone --branch react --single-branch --depth 1 git@github.com:justin0979/devconfig.git`
 
 ## Base Development Envrionments
 
