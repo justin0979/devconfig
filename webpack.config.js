@@ -6,7 +6,7 @@ module.exports = {
   output: {
     filename: "bundle.js",
     path: path.resolve(__dirname, "dist"),
-    publicPath: "",
+    publicPath: "/", // without /, kept getting 404 errors when refreshing with redux-form
   },
   mode: "development",
   optimization: {
@@ -22,6 +22,7 @@ module.exports = {
     historyApiFallback: true, // use for routing
     overlay: true,
     //public: "devconfig:80", // change devconfig if needed to whatever app is named (e.g. client:80), added with nginx use
+    //proxy: [{ context: ["/auth/google", "/api"], target: "http://localhost:5000" }] <--- use if working with backend, paths are just examples.
   },
   resolve: {
     modules: ["src", "node_modules"],
