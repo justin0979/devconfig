@@ -18,12 +18,14 @@ module.exports = {
     [
       "module-resolver",
       {
-        root: ["./"],
+        root: ["./src"],
         alias: {
-          "@components": "./src/components",
-          "@images": "./src/images",
-          "@sass": "./src/sass",
-          "@test": "./test",
+          // not needed since webpack uses source
+          // here only if webpack aliasing isn't wanted
+          "&components": "./src/components",
+          "&images": "./src/images",
+          "&sass": "./src/sass",
+          "#test": "./test",
         },
       },
     ],

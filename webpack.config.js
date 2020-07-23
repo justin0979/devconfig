@@ -25,7 +25,7 @@ module.exports = {
     //proxy: [{ context: ["/auth/google", "/api"], target: "http://localhost:5000" }] <--- use if working with backend, paths are just examples.
   },
   resolve: {
-    modules: ["src", "node_modules"],
+    modules: [path.resolve(__dirname, "src"), "node_modules"],
     extensions: [
       ".js",
       ".jsx",

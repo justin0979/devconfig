@@ -1,8 +1,8 @@
 import React from "react";
 import { shallow, ShallowWrapper } from "enzyme";
 
-import { findByTestAttr } from "@test/testUtils";
-import App from "./App";
+import { findByTestAttr } from "#test/testUtils";
+import App from "components/App";
 
 /**
  * Function to setup tests for App component
