@@ -21,10 +21,10 @@ module.exports = {
       {
         root: ["./"],
         alias: {
-          "@components": "./src/components",
-          "@images": "./src/images",
-          "@sass": "./src/sass",
-          "@test": "./test",
+          "&components": "./src/components",
+          "&images": "./src/images",
+          "&sass": "./src/sass",
+          "#test": "./test",
         },
       },
     ],

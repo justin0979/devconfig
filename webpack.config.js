@@ -22,7 +22,7 @@ module.exports = {
     overlay: true,
   },
   resolve: {
-    modules: ["src", "node_modules"],
+    modules: [path.resolve(__dirname, "src"), "node_modules"],
     extensions: [
       ".js",
       ".jsx",
