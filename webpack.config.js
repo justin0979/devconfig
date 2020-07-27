@@ -8,6 +8,7 @@ module.exports = {
     filename: "bundle.js",
     path: path.resolve(__dirname, "dist"),
     publicPath: "", // without /, kept getting 404 errors when refreshing with redux-form
+    // with /, running `npm run build` would not find bundle or any other file
   },
   mode: "development",
   optimization: {
