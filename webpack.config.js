@@ -7,7 +7,7 @@ module.exports = {
   output: {
     filename: "bundle.js",
     path: path.resolve(__dirname, "dist"),
-    publicPath: "/", // without /, kept getting 404 errors when refreshing with redux-form
+    publicPath: "", // without /, kept getting 404 errors when refreshing with redux-form
   },
   mode: "development",
   optimization: {
