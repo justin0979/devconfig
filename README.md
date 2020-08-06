@@ -71,3 +71,33 @@ run the following to clone and enter directory:<br />
 <br /> followed by `npm i`.<br />
 For all branches, follow steps from React section above.<br />
 \*adjust the `tsconfig.json` file.
+
+### Kubernetes
+
+When using Kubernetes and needing to adjust where the project is running at, make the following change:
+<pre><code>module.exports = {
+  // ...
+  devServer: {
+    contentBase: "dist",
+    host: "0.0.0.0",
+    port: 3000,
+    hot: true,
+    historyApiFallback: true,
+    overlay: true,
+  },
+  ...
+}</code></pre>
+to
+<pre><code>module.exports = {
+  // ...
+  devServer: {
+    contentBase: "dist",
+    host: "0.0.0.0",
+    port: 3000,
+    hot: true,
+    historyApiFallback: true,
+    overlay: true,
+    public: "posts.com" // or whatever name will be.
+  },
+  ...
+}</code></pre>
