@@ -5,7 +5,7 @@ import App from "&components/App";
 
 /**
  * Function to setup wrapper
- * @fuction setup
+ * @function setup
  * @param {object} props
  * @param {object} state
  * @returns {ShallowWrapper}
