@@ -25,6 +25,9 @@ const App = (): JSX.Element => {
         <a href={componentContent.reference}>
           {componentContent.refDesc}
         </a>
+        <div>
+          Or, just run `tsc --init` after `npm install typescript`.
+        </div>
       </div>
     </div>
   );
