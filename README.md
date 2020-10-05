@@ -4,6 +4,11 @@ Download, change dir, install and run Only react branch (for quick copy/paste):<
 Download react branch only:<br />
 `git clone --branch react --single-branch --depth 1 git@github.com:justin0979/devconfig.git`
 
+## Issues
+
+Unable to load `svg` files onto html img's (e.g. `<img src="loader.svg" alt="stuff" />`).<br />
+I just opened the svg file and copied and pasted the `<svg>...</svg>` directely into the html file.
+
 ## Base Development Envrionments
 
 Light weight dev environment. This is just for a quick install & run and is easily configurable with webpack and babel.
