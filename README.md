@@ -4,10 +4,6 @@ Download, change dir, install and run Only react branch (for quick copy/paste):<
 Download react branch only:<br />
 `git clone --branch react --single-branch --depth 1 git@github.com:justin0979/devconfig.git`
 
-## Issues
-
-Unable to load `svg` files onto html img's (e.g. `<img src="loader.svg" alt="stuff" />`).<br />
-I just opened the svg file and copied and pasted the `<svg>...</svg>` directely into the html file.
 
 ## Base Development Envrionments
 
@@ -106,3 +102,10 @@ to
   },
   ...
 }</code></pre>
+
+## Issues
+
+Unable to load `svg` files onto html img's (e.g. `<img src="loader.svg" alt="stuff" />`).<br />
+~~I just opened the svg file and copied and pasted the `<svg>...</svg>` directly into the html file.~~<br />
+`svg` file added to `img` element with JS file by importing the `svg` file and `setAttribute("src", <svg filename>)`.
+(May have overlooked a simple, direct, common sense way though)
