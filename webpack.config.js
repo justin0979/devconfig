@@ -16,7 +16,10 @@ module.exports = {
     overlay: true,
   },
   resolve: {
-    modules: ["src", "node_modules"],
+    modules: [path.resolve(__dirname, "src"), "node_modules"],
+    alias: {
+      $public: path.resolve(__dirname, "public"),
+    },
     extensions: [
       ".js",
       ".jsx",
@@ -76,7 +79,8 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: "./src/index.html",
+      template: "./public/index.html",
+      favicon: "./public/lastname-32x32.png",
     }),
   ],
 };

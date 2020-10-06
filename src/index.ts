@@ -1,4 +1,4 @@
-import "index.html";
+import "$public/index.html";
 import "main.scss";
 
 interface Sayings {
