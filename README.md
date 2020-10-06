@@ -108,4 +108,13 @@ to
 Unable to load `svg` files onto html img's (e.g. `<img src="loader.svg" alt="stuff" />`).<br />
 ~~I just opened the svg file and copied and pasted the `<svg>...</svg>` directly into the html file.~~<br />
 `svg` file added to `img` element with JS file by importing the `svg` file and `setAttribute("src", <svg filename>)`.
-(May have overlooked a simple, direct, common sense way though)
+```
+import loader from 'images/loader.svg';
+
+const loaderDiv = document.getElementById('loader');
+const imgSvg = document.createElement('img');
+imgSvg.setAttribute('src', loader);
+imgSvg.setAttribute('alt', 'Loading');
+loaderDiv.appendChild(imgSvg);
+```
+(May have overlooked a simple, direct, common sense way for adding directly to `index.html` though)
