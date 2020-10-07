@@ -25,3 +25,37 @@ body {
   align-items: center;
   justify-content: center;
 }
+
+@media screen and (max-width: 1000px) {
+  .app {
+    margin: 1.4rem;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .app {
+    margin: 2rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .app {
+    margin: 1rem;
+  }
+}
+
+@media screen and (max-width: 435px) {
+  body {
+    font-size: 1.4rem;
+  }
+}
+
+@media screen and (max-width: 384px) {
+  body {
+    font-size: 1.2rem;
+  }
+
+  .app {
+    margin: 0;
+  }
+}
