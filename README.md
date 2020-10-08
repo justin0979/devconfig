@@ -6,14 +6,6 @@ git clone --branch react --single-branch --depth 1 git@github.com:justin0979/dev
   && npm i \
   && npm start
 ```
-
-Download react branch only:
-
-```sh
-git clone --branch react --single-branch --depth 1 git@github.com:justin0979/devconfig.git
-```
-
-
 ## Base Development Envrionments
 
 Light weight dev environment. This is just for a quick install & run and is easily configurable with webpack and babel.
@@ -50,22 +42,36 @@ e.g. `git checkout master`<br />
 ##### The following two commands use ssh instead of https.<br />
 
 For cloning, entering directory and installing, run:<br />
-`git clone --branch react --single-branch --depth 1 git@github.com:justin0979/devconfig.git && cd devconfig && npm i`
-<br />
+```sh
+git clone --branch react --single-branch --depth 1 git@github.com:justin0979/devconfig.git \
+  && cd devconfig \
+  && npm i
+```
 
 The same as above, but having all branches:<br />
-`git clone --branch react git@github.com:justin0979/devconfig.git && cd devconfig && npm i`
-<br />
+```sh
+git clone --branch react git@github.com:justin0979/devconfig.git \
+  && cd devconfig \
+  && npm i
+```
 
 ##### The same as above but with starting VSC and running app.<br />
 
 Only react branch:
 ```sh
-git clone --branch react --single-branch --depth 1 git@github.com:justin0979/devconfig.git && cd devconfig && code . && npm i && npm start
+git clone --branch react --single-branch --depth 1 git@github.com:justin0979/devconfig.git \
+  && cd devconfig \
+  && code . \
+  && npm i \
+  && npm start
 ```
 All branches:
 ```sh
-git clone --branch react git@github.com:justin0979/devconfig.git && cd devconfig && code . && npm i && npm start
+git clone --branch react git@github.com:justin0979/devconfig.git \
+  && cd devconfig \
+  && code . \
+  && npm i \
+  && npm start
 ```
 #### For react-ts branch (has Typescript)<br />
 
