@@ -32,7 +32,7 @@ Alternatively, do the following for all branches:<br />
 run the following to clone and enter directory:<br />
 ```sh
 git clone --branch react https://github.com/justin0979/devconfig.git \
-  && cd devconfig
+  && cd devconfig \
   && npm i
  ```
 To access other branches, run `git checkout <branch name>`.<br />
