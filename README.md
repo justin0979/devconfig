@@ -1,7 +1,13 @@
 Download, change dir, install and run Only react branch (for quick copy/paste):<br />
-`git clone --branch react --single-branch --depth 1 git@github.com:justin0979/devconfig.git && cd devconfig && code . && npm i && npm start`
-<br />
-Download react branch only:<br />
+```sh
+git clone --branch react --single-branch --depth 1 git@github.com:justin0979/devconfig.git \
+  && cd devconfig \
+  && code . \
+  && npm i \
+  && npm start
+```
+
+Download react branch only:
 
 ```sh
 git clone --branch react --single-branch --depth 1 git@github.com:justin0979/devconfig.git
@@ -18,21 +24,25 @@ Aboslute paths are set to `src` in `webpack.config.js`.
 
 Sass is already setup.
 
-`Branch: master` is only html, js, and scss.
+`Branch: main` is only html, js, and scss.
 
 ### React
 
 For only the `react` branch,<br />
-run the following to clone and enter directory:<br />
-`git clone --branch react --single-branch --depth 1 https://github.com/justin0979/devconfig.git && cd devconfig`
-<br />
-then run `npm i`.
+run the following to clone and enter directory:
+```sh
+git clone --branch react --single-branch --depth 1 https://github.com/justin0979/devconfig.git \
+  && cd devconfig \
+  && npm i
+ ```
 
 Alternatively, do the following for all branches:<br />
 run the following to clone and enter directory:<br />
-`git clone --branch react https://github.com/justin0979/devconfig.git && cd devconfig`
-<br />
-then run `npm i`.
+```sh
+git clone --branch react https://github.com/justin0979/devconfig.git \
+  && cd devconfig
+  && npm i
+ ```
 To access other branches, run `git checkout <branch name>`.<br />
 e.g. `git checkout master`<br />
 \*there is also a typescript with react in `Branch: react-ts`.
@@ -49,37 +59,49 @@ The same as above, but having all branches:<br />
 
 ##### The same as above but with starting VSC and running app.<br />
 
-Only react branch:<br />
-`git clone --branch react --single-branch --depth 1 git@github.com:justin0979/devconfig.git && cd devconfig && code . && npm i && npm start`
-<br />
-
-All branches:<br />
-`git clone --branch react git@github.com:justin0979/devconfig.git && cd devconfig && code . && npm i && npm start`
-<br />
-
+Only react branch:
+```sh
+git clone --branch react --single-branch --depth 1 git@github.com:justin0979/devconfig.git && cd devconfig && code . && npm i && npm start
+```
+All branches:
+```sh
+git clone --branch react git@github.com:justin0979/devconfig.git && cd devconfig && code . && npm i && npm start
+```
 #### For react-ts branch (has Typescript)<br />
 
 Only react-ts branch:<br />
-`git clone --branch react-ts --single-branch --depth 1 git@github.com:justin0979/devconfig.git && cd devconfig && code . && npm i && npm start`
-<br />
-
-All branches:<br />
-`git clone --branch react-ts git@github.com:justin0979/devconfig.git && cd devconfig && code . && npm i && npm start`
-<br />
+```sh
+git clone --branch react-ts --single-branch --depth 1 git@github.com:justin0979/devconfig.git \
+  && cd devconfig \
+  && code . \
+  && npm i \
+  && npm start
+```
+All branches:
+```sh
+git clone --branch react-ts git@github.com:justin0979/devconfig.git \
+  && cd devconfig && code . \
+  && npm i \
+  && npm start
+```
 
 ### Typescript only, no react
 
 For only `typescript` already installed and ready for use:<br />
 run the following to clone and enter directory:<br />
-`git clone --branch typescript --single-branch --depth 1 https://github.com/justin0979/devconfig.git && cd devconfig`
-<br /> followed by `npm i`.<br />
+```sh
+git clone --branch typescript --single-branch --depth 1 https://github.com/justin0979/devconfig.git \
+  && cd devconfig
+  && npm i
+```
 For all branches, follow steps from React section above.<br />
 \*adjust the `tsconfig.json` file.
 
 ### Kubernetes
 
 When using Kubernetes and needing to adjust where the project is running at, make the following change:
-<pre><code>module.exports = {
+```javascript
+module.exports = {
   // ...
   devServer: {
     contentBase: "dist",
@@ -90,9 +112,11 @@ When using Kubernetes and needing to adjust where the project is running at, mak
     overlay: true,
   },
   ...
-}</code></pre>
+}
+```
 to
-<pre><code>module.exports = {
+```javascript
+module.exports = {
   // ...
   devServer: {
     contentBase: "dist",
@@ -104,14 +128,17 @@ to
     public: "posts.com" // or whatever name will be.
   },
   ...
-}</code></pre>
+```
 
 ## Issues
 
-Unable to load `svg` files onto html img's (e.g. `<img src="loader.svg" alt="stuff" />`).<br />
-~~I just opened the svg file and copied and pasted the `<svg>...</svg>` directly into the html file.~~<br />
-`svg` file added to `img` element with JS file by importing the `svg` file and `setAttribute("src", <svg filename>)`.
+Unable to load `svg` files onto html img's, e.g.
+```html
+<img src="loader.svg" alt="stuff" />
 ```
+~~I just opened the svg file and copied and pasted the `<svg>...</svg>` directly into the html file.~~<br />
+`.svg` file added to `img` element with JS file by importing the `svg` file and `setAttribute("src", <svg filename>)`.
+```javascript
 import loader from 'images/loader.svg';
 
 const loaderDiv = document.getElementById('loader');
