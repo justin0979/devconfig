@@ -41,6 +41,8 @@ module.exports = {
       ".woff",
       ".woff2",
       ".eot",
+      "mp4",
+      "webm",
     ],
   },
   module: {
@@ -64,7 +66,7 @@ module.exports = {
         use: "html-loader",
       },
       {
-        test: /\.(jpe?g|png|gif|svg|ttf|woff(2)?|eot)$/,
+        test: /\.(jpe?g|png|gif|svg|ttf|woff(2)?|eot|mp4|webm)$/,
         use: [
           {
             loader: "file-loader",
