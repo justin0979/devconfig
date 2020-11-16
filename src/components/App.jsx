@@ -20,6 +20,7 @@ const App = () => {
       <h1>Basic React App Component</h1>
       {lazyLoadLazy()}
       <button
+        className="btn"
         onClick={() => setLoaded(!loaded)}
         data-test="lazyLoadButton"
       >

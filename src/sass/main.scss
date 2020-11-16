@@ -25,3 +25,12 @@ body {
   align-items: center;
   justify-content: center;
 }
+
+.btn {
+  padding: 0.7rem 1rem;
+}
+
+::selection {
+  background-color: #ffeedd;
+  color: green;
+}
