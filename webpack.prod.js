@@ -1,26 +1,20 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 
 module.exports = {
   entry: ["./src/index"],
   output: {
-    filename: "bundle.js",
+    filename: "bundle.[contenthash].js",
     path: path.resolve(__dirname, "dist"),
     publicPath: "",
   },
-  mode: "development",
+  mode: "production",
   optimization: {
     splitChunks: {
       chunks: "all",
     },
-  },
-  devServer: {
-    contentBase: "dist",
-    port: 3000,
-    hot: true,
-    historyApiFallback: true,
-    overlay: true,
   },
   resolve: {
     modules: [path.resolve(__dirname, "src"), "node_modules"],
@@ -84,7 +78,8 @@ module.exports = {
       favicon: "./public/favicon-32x32.png",
     }),
     new MiniCssExtractPlugin({
-      filename: "styles.css",
+      filename: "styles.[contenthash].css",
     }),
+    new CleanWebpackPlugin(),
   ],
 };
