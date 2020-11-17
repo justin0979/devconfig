@@ -1,7 +1,11 @@
-import '../public/index.html';
-import 'main.scss';
+import "../public/index.html";
+import "main.scss";
 
-const saying = document.createElement('h2');
-saying.innerHTML = 'Works';
-const app = document.querySelector('.app');
+const saying2 = document.createElement("h2");
+saying2.innerHTML = "webpack-dev-server";
+
+const saying = document.createElement("h2");
+saying.innerHTML = "Works with Webpack 5";
+const app = document.querySelector(".app");
+app.appendChild(saying2);
 app.appendChild(saying);

@@ -1,17 +1,19 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const TerserPlugin = require("terser-webpack-plugin");
+const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 
 module.exports = {
   entry: ["./src"],
   output: {
-    filename: "bundle.js",
+    filename: "bundle.[contenthash].js",
     path: path.resolve(__dirname, "dist"),
     publicPath: "",
   },
   mode: "development",
   devServer: {
-    contentBase: "dist",
+    contentBase: path.resolve(__dirname, "dist"),
     host: "0.0.0.0",
     port: 3000,
     hot: true,
@@ -78,7 +80,9 @@ module.exports = {
       favicon: "./public/lastname-32x32.png",
     }),
     new MiniCssExtractPlugin({
-      filename: "styles.css",
+      filename: "./styles/styles.css",
     }),
+    new TerserPlugin(),
+    new CleanWebpackPlugin(),
   ],
 };
