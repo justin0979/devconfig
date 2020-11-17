@@ -10,15 +10,7 @@ module.exports = {
     path: path.resolve(__dirname, "dist"),
     publicPath: "",
   },
-  mode: "development",
-  devServer: {
-    contentBase: path.resolve(__dirname, "dist"),
-    host: "0.0.0.0",
-    port: 3000,
-    hot: true,
-    historyApiFallback: true,
-    overlay: true,
-  },
+  mode: "production",
   resolve: {
     modules: ["src", "node_modules"],
     extensions: [
