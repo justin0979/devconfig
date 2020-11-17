@@ -1,7 +1,6 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const TerserPlugin = require("terser-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 
 module.exports = {
@@ -80,9 +79,8 @@ module.exports = {
       favicon: "./public/lastname-32x32.png",
     }),
     new MiniCssExtractPlugin({
-      filename: "./styles/styles.css",
+      filename: "styles.[contenthash].css",
     }),
-    new TerserPlugin(),
     new CleanWebpackPlugin(),
   ],
 };
