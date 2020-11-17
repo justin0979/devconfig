@@ -27,6 +27,7 @@ const App = (): JSX.Element => {
         </a>
         <div>
           Or, just run `tsc --init` after `npm install typescript`.
+          <p>You will have to look up any configurations though.</p>
         </div>
       </div>
     </div>
