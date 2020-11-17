@@ -1,23 +1,24 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 
 module.exports = {
   entry: ["./src"],
   output: {
     filename: "bundle.js",
     path: path.resolve(__dirname, "dist"),
-    publicPath: "", // without /, kept getting 404 errors when refreshing with redux-form
+    //publicPath: "", // without /, kept getting 404 errors when refreshing with redux-form
     // with /, running `npm run build` would not find bundle or any other file
   },
   mode: "development",
-  optimization: {
-    splitChunks: {
-      chunks: "all",
-    },
-  },
+  //  optimization: {
+  //    splitChunks: {
+  //      chunks: "all",
+  //    },
+  //  },
   devServer: {
-    contentBase: "dist",
+    contentBase: path.resolve(__dirname, "dist"),
     host: "0.0.0.0", // added for nginx & docker configs
     port: 3000,
     hot: true,
@@ -88,5 +89,6 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: "styles.css",
     }),
+    new CleanWebpackPlugin(),
   ],
 };
