@@ -4,20 +4,20 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 
 module.exports = {
-  entry: ["./src"],
+  entry: ["./src/index"],
   output: {
     filename: "bundle.js",
     path: path.resolve(__dirname, "dist"),
-    publicPath: "",
+    //publicPath: "",
   },
   mode: "development",
-  optimization: {
-    splitChunks: {
-      chunks: "all",
-    },
-  },
+  // optimization: {
+  //   splitChunks: {
+  //     chunks: "all",
+  //   },
+  // },
   devServer: {
-    contentPath: path.resolve(__dirname, "dist"),
+    contentBase: path.resolve(__dirname, "dist"),
     port: 3000,
     hot: true,
     historyApiFallback: true,
