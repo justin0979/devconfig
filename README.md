@@ -105,7 +105,8 @@ For all branches, follow steps from React section above.<br />
 
 ### Kubernetes
 
-When using Kubernetes and needing to adjust where the project is running at, make the following change:
+When using Kubernetes and needing to adjust where the project is running at, make the following change: <br />
+From
 ```javascript
 module.exports = {
   // ...
