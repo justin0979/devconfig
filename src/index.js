@@ -1,5 +1,5 @@
 import "../public/index.html";
-import "main.scss";
+import "./main.scss";
 
 const saying2 = document.createElement("h2");
 saying2.innerHTML = "webpack-dev-server";
