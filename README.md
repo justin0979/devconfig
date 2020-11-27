@@ -20,6 +20,8 @@ To change directory name while cloning, add new name after repo:
 git clone git@github.com:justin0979/devconfig.git new_name
 ```
 
+To change favicon, add new favicon to public and change path to that favicon in webpack configs' html plugin.
+
 ### React
 
 For only the `react` branch,<br />

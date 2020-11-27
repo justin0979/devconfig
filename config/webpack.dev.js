@@ -33,7 +33,6 @@ module.exports = merge(commonConfig, {
     new HtmlWebpackPlugin({
       template: "./public/index.html",
       favicon: "./public/lastname-32x32.png",
-      title: "Base Frontend Dev Config",
       meta: {
         viewport: "width=device-width, initial-scale=1",
       },
