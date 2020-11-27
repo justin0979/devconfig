@@ -1,29 +1,8 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 
 module.exports = {
-  entry: ["./src/index"],
-  output: {
-    filename: "bundle.js",
-    path: path.resolve(__dirname, "dist"),
-    //  publicPath: "",
-  },
-  mode: "development",
-  // optimization: {
-  //   splitChunks: {
-  //     chunks: "all",
-  //   },
-  // },
-  devServer: {
-    contentBase: path.resolve(__dirname, "dist"),
-    port: 3000,
-    hot: true,
-    historyApiFallback: true,
-    overlay: true,
-    writeToDisk: true,
-  },
   resolve: {
     modules: [path.resolve(__dirname, "src"), "node_modules"],
     extensions: [
@@ -54,15 +33,6 @@ module.exports = {
         use: "babel-loader",
       },
       {
-        test: /\.s?css$/,
-        use: [
-          MiniCssExtractPlugin.loader,
-          "css-loader",
-          "postcss-loader",
-          "sass-loader",
-        ],
-      },
-      {
         test: /\.html$/,
         use: "html-loader",
       },
@@ -87,9 +57,6 @@ module.exports = {
       meta: {
         viewport: "width=device-width, initial-scale=1",
       },
-    }),
-    new MiniCssExtractPlugin({
-      filename: "styles.css",
     }),
     new CleanWebpackPlugin(),
   ],
