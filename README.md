@@ -14,7 +14,7 @@ Sass is already setup.
 
 All of the following copy and paste commands for cloning use `SSH`.
 
-To change directory name while cloning:
+To change directory name while cloning, add new name after repo:
 
 ```sh
 git clone git@github.com:justin0979/devconfig.git new_name
