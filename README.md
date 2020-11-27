@@ -12,9 +12,23 @@ Sass is already setup.
 
 `Branch: main` is only html, js, and scss.
 
+All of the following copy and paste commands for cloning use `SSH`.
+
+To change directory name while cloning:
+
+```sh
+git clone git@github.com:justin0979/devconfig.git new_name
+```
+
 ### React
 
 For only the `react` branch,<br />
+copy and paste:
+
+```sh
+git clone --branch react --single-branch --depth 1 https://github.com/justin0979/devconfig.git
+```
+
 run the following to clone and enter directory:
 
 ```sh
