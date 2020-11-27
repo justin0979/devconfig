@@ -1,5 +1,7 @@
 ## "Base" Development Envrionments
 
+<small>(Some of the comments towards the bottom might be out of date, haven't had a chance to check test them since updating to webpack v5)</small>
+
 Light weight dev environment. This is just for a quick install & run and is easily configurable with webpack and babel.
 
 run `npm i` then `npm start` and go to `localhost:3000`.<br />
@@ -117,7 +119,7 @@ git clone --branch typescript --single-branch --depth 1 https://github.com/justi
 For all branches, follow steps from React section above.<br />
 \*adjust the `tsconfig.json` file.
 
-### Kubernetes
+### Kubernetes (this might not apply with webpack v5, haven't tried yet)
 
 When using Kubernetes and needing to adjust where the project is running at, make the following change: <br />
 From
