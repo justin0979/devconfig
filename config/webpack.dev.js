@@ -10,6 +10,7 @@ module.exports = merge(commonConfig, {
   mode: "development",
   devServer: {
     port: 3000,
+    // host: "0.0.0.0"  // add for docker use
     hot: true,
     historyApiFallback: {
       index: "index.html",
