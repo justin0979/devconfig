@@ -3,7 +3,7 @@ const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 
 module.exports = {
   resolve: {
-    modules: [path.resolve(__dirname, "dist"), "node_modules"],
+    modules: [path.resolve(__dirname, "src"), "node_modules"],
     extensions: [
       ".js",
       ".jsx",
