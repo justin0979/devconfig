@@ -21,7 +21,7 @@ const App = (): JSX.Element => {
     <div className="app" data-test="appComponent">
       <h1>{componentContent.h1}</h1>
       <p>{componentContent.text}</p>
-      <div>
+      <div className="content">
         <a href={componentContent.reference}>
           {componentContent.refDesc}
         </a>

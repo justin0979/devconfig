@@ -27,8 +27,15 @@ body {
   justify-content: center;
 }
 
+.content > a {
+  display: block;
+  height: 3.5rem;
+  width: 51rem;
+}
+
 a {
   color: #cccbbb;
+
   &:hover {
     color: white;
     font-size: 1.8rem;
