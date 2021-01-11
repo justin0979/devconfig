@@ -135,7 +135,7 @@ git clone --branch typescript --single-branch --depth 1 https://github.com/justi
 For all branches, follow steps from React section above.<br />
 \*adjust the `tsconfig.json` file.
 
-### Kubernetes (this might not apply with webpack v5, haven't tried yet)
+### Kubernetes
 
 When using Kubernetes and needing to adjust where the project is running at, make the following change: <br />
 From
@@ -144,11 +144,12 @@ From
 module.exports = {
   // ...
   devServer: {
-    contentBase: "dist",
     host: "0.0.0.0",
     port: 3000,
     hot: true,
-    historyApiFallback: true,
+    historyApiFallback: {
+      index: "index.html"
+    },
     overlay: true,
   },
   ...
@@ -161,13 +162,14 @@ to
 module.exports = {
   // ...
   devServer: {
-    contentBase: "dist",
     host: "0.0.0.0",
     port: 3000,
     hot: true,
-    historyApiFallback: true,
+    historyApiFallback: {
+      index: "index.html"
+   },
     overlay: true,
-    public: "posts.com" // or whatever name will be.
+    public: "posts.com" // or whatever name will be (e.g., public: "ticketing.dev")
   },
   ...
 ```
