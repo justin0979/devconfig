@@ -7,7 +7,7 @@ interface Sayings {
 }
 
 const sayings: Sayings = {
-  text: "This interface works with typescript!",
+  text: "This interface works with typescript!!!",
   title: "Typescript Front End",
 };
 
