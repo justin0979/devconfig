@@ -46,6 +46,12 @@ git clone --branch react --single-branch --depth 1 https://github.com/justin0979
   && npm i
 ```
 
+to change directory name on install:
+
+```ssh
+git clone --branch react --single-branch --depth 1 https://github.com/justin0979/devconfig.git <new_name>
+```
+
 Alternatively, do the following for all branches:<br />
 run the following to clone and enter directory:<br />
 
@@ -114,12 +120,20 @@ Only react-ts branch:<br />
 git clone --branch react-ts --single-branch --depth 1 git@github.com:justin0979/devconfig.git
 ```
 
+Install only react-ts branch and enter the directory.
+
 ```sh
 git clone --branch react-ts --single-branch --depth 1 git@github.com:justin0979/devconfig.git \
   && cd devconfig \
   && code . \
   && npm i \
   && npm start
+```
+
+To install and change the dircetory name:
+
+```ssh
+git clone --branch react-ts --single-branch --depth 1 git@github.com:justin0979/devconfig.git <new_name>
 ```
 
 All branches:
