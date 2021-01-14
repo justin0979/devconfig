@@ -100,7 +100,7 @@ git clone --branch react git@github.com:justin0979/devconfig.git \
 </details>
 
 <details>
-<summary><b>For react-ts branch (has Typescript)</b><hr /></summary>
+<summary><b>React With Typescript</b><hr /></summary>
 
 Only react-ts branch:<br />
 
@@ -127,7 +127,8 @@ git clone --branch react-ts git@github.com:justin0979/devconfig.git \
 
 </details>
 
-### Typescript only, no react
+<details>
+<summary><b>Typescript only, no react</b><hr /></ summary>
 
 For only `typescript` already installed and ready for use:<br />
 run the following to clone and enter directory:<br />
@@ -141,7 +142,10 @@ git clone --branch typescript --single-branch --depth 1 https://github.com/justi
 For all branches, follow steps from React section above.<br />
 \*adjust the `tsconfig.json` file.
 
-### Kubernetes
+</details>
+
+<details>
+<summary><strong>Kubernetes</strong><hr /></summary>
 
 When using Kubernetes and needing to adjust where the project is running at, make the following change: <br />
 From
@@ -180,7 +184,11 @@ module.exports = {
   ...
 ```
 
-## Issues
+</details>
+
+<details>
+
+<summary><strong>Issues</strong><hr /></summary>
 
 Unable to load `svg` files onto html img's, e.g.
 
@@ -202,3 +210,5 @@ loaderDiv.appendChild(imgSvg);
 ```
 
 (May have overlooked a simple, direct, common sense way for adding directly to `index.html` though)
+
+</details>
