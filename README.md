@@ -22,7 +22,8 @@ git clone git@github.com:justin0979/devconfig.git new_name
 
 To change favicon, add new favicon to public and change path to that favicon in webpack configs' html plugin.
 
-### React
+<details>
+<summary><b>React</b><hr /><summary>
 
 For only the `react` branch,<br />
 copy and paste:
@@ -96,7 +97,10 @@ git clone --branch react git@github.com:justin0979/devconfig.git \
   && npm start
 ```
 
-#### For react-ts branch (has Typescript)<br />
+</details>
+
+<details>
+<summary><b>For react-ts branch (has Typescript)</b><hr /></summary>
 
 Only react-ts branch:<br />
 
@@ -120,6 +124,8 @@ git clone --branch react-ts git@github.com:justin0979/devconfig.git \
   && npm i \
   && npm start
 ```
+
+</details>
 
 ### Typescript only, no react
 
