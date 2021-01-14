@@ -2,7 +2,11 @@
 
 <sub>(Some of the comments towards the bottom might be out of date, haven't had a chance to check test them since updating to webpack v5)</sub>
 
-Light weight dev environment. This is just for a quick install & run and is easily configurable with webpack and babel.
+Light weight development environment. This is just for a quick install & run and is easily configurable with webpack and babel. Webpack is <strong>not</strong> set up for production in some branches.
+
+<details>
+
+<summary><strong>Overview</strong><hr /></summary>
 
 run `npm i` then `npm start` and go to `localhost:3000`.<br />
 Uses `webpack-dev-server` for auto reloads on save.<br/>
@@ -21,6 +25,8 @@ git clone git@github.com:justin0979/devconfig.git new_name
 ```
 
 To change favicon, add new favicon to public and change path to that favicon in webpack configs' html plugin.
+
+</details>
 
 <details>
 <summary><b>React</b><hr /></summary>
