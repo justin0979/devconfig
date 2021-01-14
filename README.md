@@ -6,7 +6,7 @@ Light weight development environment. This is just for a quick install & run and
 
 <details>
 
-<summary><strong>Overview</strong><hr /></summary>
+<summary><strong>Overview</strong></summary>
 
 run `npm i` then `npm start` and go to `localhost:3000`.<br />
 Uses `webpack-dev-server` for auto reloads on save.<br/>
@@ -26,10 +26,11 @@ git clone git@github.com:justin0979/devconfig.git new_name
 
 To change favicon, add new favicon to public and change path to that favicon in webpack configs' html plugin.
 
+<hr />
 </details>
 
 <details>
-<summary><b>React</b><hr /></summary>
+<summary><b>React</b></summary>
 
 For only the `react` branch,<br />
 copy and paste:
@@ -92,6 +93,7 @@ git clone --branch react --single-branch --depth 1 git@github.com:justin0979/dev
 ```
 
 Only react branch and entering and installing packages in devconfig dir:
+
 ```sh
 git clone --branch react --single-branch --depth 1 git@github.com:justin0979/devconfig.git \
   && cd devconfig \
@@ -108,10 +110,11 @@ git clone --branch react git@github.com:justin0979/devconfig.git \
   && npm start
 ```
 
+<hr />
 </details>
 
 <details>
-<summary><b>React With Typescript</b><hr /></summary>
+<summary><b>React With Typescript</b></summary>
 
 Only react-ts branch:<br />
 
@@ -143,10 +146,11 @@ git clone --branch react-ts git@github.com:justin0979/devconfig.git \
   && npm start
 ```
 
+<hr />
 </details>
 
 <details>
-<summary><b>Typescript only, no react</b><hr /></summary>
+<summary><b>Typescript only, no react</b></summary>
 
 For only `typescript` already installed and ready for use:<br />
 run the following to clone and enter directory:<br />
@@ -160,10 +164,11 @@ git clone --branch typescript --single-branch --depth 1 https://github.com/justi
 For all branches, follow steps from React section above.<br />
 \*adjust the `tsconfig.json` file.
 
+<hr />
 </details>
 
 <details>
-<summary><strong>Kubernetes</strong><hr /></summary>
+<summary><strong>Kubernetes</strong></summary>
 
 When using Kubernetes and needing to adjust where the project is running at, make the following change: <br />
 From
@@ -202,11 +207,12 @@ module.exports = {
   ...
 ```
 
+<hr />
 </details>
 
 <details>
 
-<summary><strong>Issues</strong><hr /></summary>
+<summary><strong>Issues</strong></summary>
 
 Unable to load `svg` files onto html img's, e.g.
 
