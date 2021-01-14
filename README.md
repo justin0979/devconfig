@@ -128,7 +128,7 @@ git clone --branch react-ts git@github.com:justin0979/devconfig.git \
 </details>
 
 <details>
-<summary><b>Typescript only, no react</b><hr /></ summary>
+<summary><b>Typescript only, no react</b><hr /></summary>
 
 For only `typescript` already installed and ready for use:<br />
 run the following to clone and enter directory:<br />
