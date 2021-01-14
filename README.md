@@ -23,7 +23,7 @@ git clone git@github.com:justin0979/devconfig.git new_name
 To change favicon, add new favicon to public and change path to that favicon in webpack configs' html plugin.
 
 <details>
-<summary><b>React</b><hr /><summary>
+<summary><b>React</b><hr /></summary>
 
 For only the `react` branch,<br />
 copy and paste:
