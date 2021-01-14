@@ -10,7 +10,12 @@ module.exports = {
         },
       },
     ],
-    "@babel/react",
+    [
+      "@babel/react",
+      {
+        runtime: "automatic",
+      },
+    ],
     "@babel/typescript",
   ],
   plugins: [
