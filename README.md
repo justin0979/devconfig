@@ -6,7 +6,7 @@
 git clone --branch react-ts --single-branch --depth 1 git@github.com:justin0979/devconfig.git
 ```
 
-For use of absolute paths like (from [TypeScript: Documentation's Path mapping](https://www.typescriptlang.org/docs/handbook/module-resolution.html#path-mapping)):
+For use of absolute paths like:
 
 ```javascript
 import newFile from "&newdirname";
@@ -47,3 +47,6 @@ plugins: [
    </li>
  </ul>
 </ul>
+
+The `tsconfig.json` comes from:
+[TypeScript: Documentation Path mapping](https://www.typescriptlang.org/docs/handbook/module-resolution.html#path-mapping)
