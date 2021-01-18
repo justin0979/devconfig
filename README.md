@@ -16,21 +16,24 @@ update the following:
 
 <ul>
  <li>Update `babel.config.js`:
+  
  ```sh
  module.exports = {
 plugins: [
            "module-resolver", {
-             root: ["./"],
-                   alias: {
-                     "&newdirname": "./src/newdirname"
-                   }
-           }
-]
+              root: ["./"],
+               alias: {
+                 "&newdirname": "./src/newdirname"
+               }
+             }
+         ]
  }
  ```
+ 
  </li>
  <li>
    Update `tsconfig.json`:
+ 
    ```sh
 {
   "compilerOptions": {
@@ -40,6 +43,7 @@ plugins: [
   }
 }
    ```
+ 
    </li>
  </ul>
 </ul>
