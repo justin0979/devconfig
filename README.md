@@ -5,11 +5,11 @@
 ```sh
 git clone --branch react-ts --single-branch --depth 1 git@github.com:justin0979/devconfig.git
 ```
-
+#### Absolute Path
 For use of absolute paths like:
 
 ```javascript
-import newFile from "&newdirname";
+import newFile from "&newdirname/newFile";
 ```
 
 update the following:
