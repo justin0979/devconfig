@@ -146,6 +146,53 @@ git clone --branch react-ts git@github.com:justin0979/devconfig.git \
   && npm start
 ```
 
+#### Absolute Paths
+For use of absolute paths like:
+
+```javascript
+import newFile from "&newdirname";
+```
+
+update the following:
+
+<ul>
+ <li>Update <code>babel.config.js</code>:
+  
+ ```sh
+ module.exports = {
+plugins: [
+           "module-resolver", {
+              root: ["./"],
+               alias: {
+                 "&newdirname": "./src/newdirname"
+               }
+             }
+         ]
+ }
+ ```
+ 
+ </li>
+ <li>
+ Update <code>tsconfig.json</code>:
+ 
+   ```sh
+{
+     "compilerOptions": {
+      "paths": {
+        "&newdirname/*": ["./src/newdirname/*"]
+     }
+    }
+}
+   ```
+ 
+   </li>
+ </ul>
+</ul>
+
+The `tsconfig.json` comes from:
+[TypeScript: Documentation Path mapping](https://www.typescriptlang.org/docs/handbook/module-resolution.html#path-mapping)
+
+
 <hr />
 </details>
 
