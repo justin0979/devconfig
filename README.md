@@ -15,7 +15,7 @@ import newFile from "&newdirname";
 update the following:
 
 <ul>
- <li>Update `babel.config.js`:
+ <li>Update <code>babel.config.js</code>:
   
  ```sh
  module.exports = {
@@ -32,15 +32,15 @@ plugins: [
  
  </li>
  <li>
-   Update `tsconfig.json`:
+ Update <code>tsconfig.json</code>:
  
    ```sh
 {
-  "compilerOptions": {
-    "paths": {
-      "&newdirname/*": ["./src/newdirname/*"]
+     "compilerOptions": {
+      "paths": {
+        "&newdirname/*": ["./src/newdirname/*"]
+     }
     }
-  }
 }
    ```
  
