@@ -185,7 +185,14 @@ plugins: [
     }
 }
    ```
- If importing <code>index.ts</code> with <code>import { whatever } from "&newdirname";</code>, I had to add:
+   <ul>
+    <li>
+ If importing <code>index.ts</code> with:
+      
+      import { whatever } from "&newdirname";
+      
+      
+ I had to add:
  
    ```sh
 {
@@ -197,6 +204,8 @@ plugins: [
     }
 }
    ```
+    </li>
+   </ul>
    </li>
  </ul>
 </ul>
