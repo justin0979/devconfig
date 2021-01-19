@@ -1,5 +1,3 @@
-import React from "react";
-
 interface Content {
   h1: string;
   text: string;
@@ -16,7 +14,7 @@ const componentContent: Content = {
     "This article has config file examples...like a much longer tsconfig.json",
 };
 
-const App = (): JSX.Element => {
+const App: React.FC = () => {
   return (
     <div className="app" data-test="appComponent">
       <h1>{componentContent.h1}</h1>
