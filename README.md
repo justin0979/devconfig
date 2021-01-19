@@ -185,7 +185,18 @@ plugins: [
     }
 }
    ```
+ If importing <code>index.ts</code> with <code>import { whatever } from "&newdirname";</code>, I had to add:
  
+   ```sh
+{
+     "compilerOptions": {
+      "paths": {
+        "&newdirname": ["./src/newdirname"],  // <--- Add without '/*' at end of path
+        "&newdirname/*": ["./src/newdirname/*"]
+     }
+    }
+}
+   ```
    </li>
  </ul>
 </ul>
