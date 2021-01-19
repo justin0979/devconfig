@@ -145,8 +145,9 @@ git clone --branch react-ts git@github.com:justin0979/devconfig.git \
   && npm i \
   && npm start
 ```
-
-#### Absolute Paths
+<details>
+  <summary>Updating React w/ TypeScript Absolute Paths</summary>
+  
 For use of absolute paths like:
 
 ```javascript
@@ -192,6 +193,7 @@ plugins: [
 The `tsconfig.json` comes from:
 [TypeScript: Documentation Path mapping](https://www.typescriptlang.org/docs/handbook/module-resolution.html#path-mapping)
 
+</details>
 
 <hr />
 </details>
