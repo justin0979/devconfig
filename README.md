@@ -1,11 +1,19 @@
 # Base Development Envrionment with React
 
+After updating `tsconfig.json`, no longer need
+
+```js script
+import React from "react";
+```
+
 ## Frontend Only
 
 ```sh
 git clone --branch react-ts --single-branch --depth 1 git@github.com:justin0979/devconfig.git
 ```
+
 #### Absolute Path
+
 For use of absolute paths like:
 
 ```javascript
