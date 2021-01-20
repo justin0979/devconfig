@@ -204,10 +204,8 @@ plugins: [
     }
 }
    ```
-    </li>
    </ul>
    </li>
- </ul>
 </ul>
 
 The `tsconfig.json` comes from:
