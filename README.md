@@ -54,9 +54,9 @@ plugins: [
  
 To import <code>index.ts</code> like:
 
-    ```javascript
-    import * from "&newdirname";
-    ```
+```javascript
+import * from "&newdirname";
+```
 
 change <code>tsconfig.json</code>:
 
@@ -80,7 +80,3 @@ change <code>tsconfig.json</code>:
 
 The `tsconfig.json` comes from:
 [TypeScript: Documentation Path mapping](https://www.typescriptlang.org/docs/handbook/module-resolution.html#path-mapping)
-
-```
-
-```
