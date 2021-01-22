@@ -20,7 +20,7 @@ For use of absolute paths like:
 import newFile from "&newdirname/newFile";
 ```
 
-update the following:
+update the following (assuming <code>newdirname/</code> is in <code>src/</code>):
 
 <ul>
   <li>Update <code>babel.config.js</code>:
@@ -65,10 +65,8 @@ change <code>tsconfig.json</code>:
   "compilerOptions": {
     "baseUrl": "./",
     "paths": {
-      "&newdirname": [
-        "src/newdirname/index.ts",
-        "src/newdirname/*"
-      ]
+      "&newdirname": ["src/newdirname"],
+      "&newdirname/*": ["src/newdirname/*"]
     }
   }
 }
