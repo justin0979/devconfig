@@ -23,7 +23,7 @@ import newFile from "&newdirname/newFile";
 update the following:
 
 <ul>
- <li>Update <code>babel.config.js</code>:
+  <li>Update <code>babel.config.js</code>:
   
  ```sh
  module.exports = {
@@ -38,8 +38,8 @@ plugins: [
  }
  ```
  
- </li>
- <li>
+  </li>
+  <li>
  Update <code>tsconfig.json</code>:
  
    ```sh
@@ -52,9 +52,34 @@ plugins: [
 }
    ```
  
+    To import <code>index.ts</code> like:
+
+    ```javascript
+    import * from "&newdirname";
+    ```
+
+    change <code>tsconfig.json</code>:
+
+    ```sh
+
+{
+"compilerOptions": {
+"baseUrl": "./",
+"paths": {
+"&newdirname": [
+"src/newdirname/index.ts",
+"src/newdirname/*"
+]
+}
+}
+}
+
+```
+
    </li>
- </ul>
+  </ul>
 </ul>
 
 The `tsconfig.json` comes from:
 [TypeScript: Documentation Path mapping](https://www.typescriptlang.org/docs/handbook/module-resolution.html#path-mapping)
+```
