@@ -42,7 +42,7 @@ plugins: [
   <li>
  Update <code>tsconfig.json</code>:
  
-   ```sh
+```sh
 {
      "compilerOptions": {
       "paths": {
@@ -50,30 +50,28 @@ plugins: [
      }
     }
 }
-   ```
+```
  
-    To import <code>index.ts</code> like:
+To import <code>index.ts</code> like:
 
     ```javascript
     import * from "&newdirname";
     ```
 
-    change <code>tsconfig.json</code>:
+change <code>tsconfig.json</code>:
 
-    ```sh
-
+```sh
 {
-"compilerOptions": {
-"baseUrl": "./",
-"paths": {
-"&newdirname": [
-"src/newdirname/index.ts",
-"src/newdirname/*"
-]
+  "compilerOptions": {
+    "baseUrl": "./",
+    "paths": {
+      "&newdirname": [
+        "src/newdirname/index.ts",
+        "src/newdirname/*"
+      ]
+    }
+  }
 }
-}
-}
-
 ```
 
    </li>
@@ -82,4 +80,7 @@ plugins: [
 
 The `tsconfig.json` comes from:
 [TypeScript: Documentation Path mapping](https://www.typescriptlang.org/docs/handbook/module-resolution.html#path-mapping)
+
+```
+
 ```
