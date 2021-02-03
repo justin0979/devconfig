@@ -5,7 +5,7 @@ After updating `tsconfig.json`, no longer need
 ```js script
 import React from "react";
 ```
-
+with functoinal components, but classes will still say it needs to import react.
 ## Frontend Only
 
 ```sh
