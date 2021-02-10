@@ -17,4 +17,23 @@ If use `docker-compose up` and later need to add package, you will have to use `
 
 ## Tests
 
-Testing is configured with jest and enzyme.
+Testing is configured with only jest.<br />
+If needing to use:
+
+```javascript
+jest.spyOn(global, "fetch").mockImplementation(() =>
+  Promise.resolve({
+    json: () => Promise.resolve(stuff),
+  }),
+);
+```
+
+implement this way instead:
+
+```javascript
+global.fetch = jest.fn.mockImplementation(() =>
+  Promise.resolve({
+    json: () => Promise.resolve(stuff),
+  }),
+);
+```
