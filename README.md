@@ -5,12 +5,18 @@ After updating `tsconfig.json`, no longer need
 ```js script
 import React from "react";
 ```
+
 with functoinal components, but classes will still say it needs to import react.
+
 ## Frontend Only
 
 ```sh
 git clone --branch react-ts --single-branch --depth 1 git@github.com:justin0979/devconfig.git
 ```
+
+#### Running Tests
+
+Testing only uses jest. Enzyme was removed due to a lack of an official adapter-17.
 
 #### Absolute Path
 
