@@ -18,6 +18,33 @@ git clone --branch react-ts --single-branch --depth 1 git@github.com:justin0979/
 
 Testing only uses jest. Enzyme was removed due to a lack of an official adapter-17.
 
+If needing to use:
+
+```typescriptlang
+jest.spyOn(global, "fetch").mockImplementation(() =>
+    Promise.resolve({
+      json: () => Promise.resolve(stuff),
+      }),
+    );
+```
+
+use this instead:
+
+```typescriptlang
+global.fetch = jest.fn().mockImplementation(() =>
+    Promise.resolve({
+      json: () => Promise.resolve(stuff),
+      }),
+    );
+```
+
+then, remove the mock:
+
+```typescriptlang
+global.fetch.mockRestore();
+delete global.fetch();
+```
+
 #### Absolute Path
 
 For use of absolute paths like:
