@@ -1,21 +1,24 @@
 import React from "react";
-import { shallow, ShallowWrapper } from "enzyme";
-import { findByTestAttr } from "#test/testUtils";
-import App from "&components/App";
+import { render, unmountComponentAtNode } from "react-dom";
+import { act } from "react-dom/test-utils";
+import App from "./App";
 
-/**
- * Function to setup wrapper
- * @function setup
- * @param {object} props
- * @param {object} state
- * @returns {ShallowWrapper}
- */
-const setup = (props: Object = {}) => {
-  return shallow(<App {...props} />);
-};
+let container: any = null;
+beforeEach(() => {
+  container = document.createElement("div");
+  document.body.appendChild(container);
+});
 
-test("renders without crashing", () => {
-  const wrapper = setup();
-  const appComponent = findByTestAttr(wrapper, "appComponent");
-  expect(appComponent.length).toBe(1);
+afterEach(() => {
+  unmountComponentAtNode(container);
+  container.remove();
+  container = null;
+});
+
+it("renders with a heading", () => {
+  act(() => {
+    render(<App />, container);
+  });
+  const heading = container.querySelector("h1");
+  expect(heading.textContent).toBe("With Typescript");
 });

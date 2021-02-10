@@ -3,6 +3,7 @@ module.exports = {
     [
       "@babel/env",
       {
+        targets: { node: "current" },
         useBuiltIns: "usage",
         corejs: {
           version: 3,
@@ -29,7 +30,6 @@ module.exports = {
           "&components": "./src/components",
           "&images": "./src/images",
           "&sass": "./src/sass",
-          "#test": "./test",
         },
       },
     ],
