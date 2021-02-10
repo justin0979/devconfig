@@ -31,9 +31,16 @@ jest.spyOn(global, "fetch").mockImplementation(() =>
 implement this way instead:
 
 ```javascript
-global.fetch = jest.fn.mockImplementation(() =>
+global.fetch = jest.fn().mockImplementation(() =>
   Promise.resolve({
     json: () => Promise.resolve(stuff),
   }),
 );
+```
+
+then, remove the mock to ensure tests are completely isolated:
+
+```javascript
+global.fetch.mockRestore();
+delete global.fetch();
 ```
