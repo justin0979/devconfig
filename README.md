@@ -20,27 +20,27 @@ Testing only uses jest. Enzyme was removed due to a lack of an official adapter-
 
 If needing to use:
 
-```typescriptlang
+```javascript
 jest.spyOn(global, "fetch").mockImplementation(() =>
-    Promise.resolve({
-      json: () => Promise.resolve(stuff),
-      }),
-    );
+  Promise.resolve({
+    json: () => Promise.resolve(stuff),
+  }),
+);
 ```
 
 use this instead:
 
-```typescriptlang
+```javascript
 global.fetch = jest.fn().mockImplementation(() =>
-    Promise.resolve({
-      json: () => Promise.resolve(stuff),
-      }),
-    );
+  Promise.resolve({
+    json: () => Promise.resolve(stuff),
+  }),
+);
 ```
 
 then, remove the mock:
 
-```typescriptlang
+```javascript
 global.fetch.mockRestore();
 delete global.fetch();
 ```
@@ -110,4 +110,4 @@ change <code>tsconfig.json</code>:
 </ul>
 
 The `tsconfig.json` comes from:
-[TypeScript: Documentation Path mapping](https://www.typescriptlang.org/docs/handbook/module-resolution.html#path-mapping)
+[TypeScript: Documentation Path mapping](https://www.javascript.org/docs/handbook/module-resolution.html#path-mapping)
