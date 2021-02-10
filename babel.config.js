@@ -12,6 +12,8 @@ module.exports = {
       },
     ],
     [
+      // Upgrade to new JSX Transform
+      // No need for: import React from "react";
       "@babel/react",
       {
         runtime: "automatic",
