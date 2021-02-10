@@ -145,6 +145,9 @@ git clone --branch react-ts git@github.com:justin0979/devconfig.git \
   && npm i \
   && npm start
 ```
+
+Tests use only `jest`.
+
 <details>
   <summary>Updating React w/ TypeScript Absolute Paths</summary>
   
