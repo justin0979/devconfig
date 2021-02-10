@@ -1,39 +1,23 @@
-import * as React from "react";
-import { shallow, ShallowWrapper } from "enzyme";
+import { render, unmountComponentAtNode } from "react-dom";
+import { act } from "react-dom/test-utils";
+import App from "./App";
 
-import { findByTestAttr } from "#test/testUtils";
-import App from "components/App";
-
-/**
- * Function to setup tests for App component
- * @function setup
- * @param {object} props
- * @param {object} state
- * @returns {ShallowWrapper}
- */
-const setup = (props = {}, state = null) => {
-  return shallow(<App {...props} />);
-};
-
-test("renders without crashing", () => {
-  const wrapper = setup();
-  const appComponent = findByTestAttr(wrapper, "appComponent");
-  expect(appComponent.length).not.toBe(0);
+let container = null;
+beforeEach(() => {
+  container = document.createElement("div");
+  document.body.appendChild(container);
 });
 
-test("lazyLoadLazy returns default message", () => {
-  const wrapper = setup();
-  const lazyLoadLazyDefault = findByTestAttr(
-    wrapper,
-    "lazyLoadLazyDefault"
-  );
-  expect(lazyLoadLazyDefault.text()).toBe("Loaded here");
+afterEach(() => {
+  unmountComponentAtNode(container);
+  container.remove();
+  container = null;
 });
 
-describe("lazyLoadButton", () => {
-  test("renders", () => {
-    const wrapper = setup();
-    const lazyLoadButton = findByTestAttr(wrapper, "lazyLoadButton");
-    expect(lazyLoadButton.length).toBe(1);
+it("renders strings", () => {
+  act(() => {
+    render(<App />, container);
   });
+  const button = container.querySelector("button");
+  expect(button.textContent).toBe("lazy load");
 });
