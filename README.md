@@ -285,7 +285,8 @@ module.exports = {
 
 <summary><strong>Issues</strong></summary>
 
-Unable to load `svg` files onto html img's, e.g.
+[SOLVED]
+~~Unable to load `svg` files onto html img's, e.g.
 
 ```html
 <img src="loader.svg" alt="stuff" />
@@ -304,6 +305,6 @@ imgSvg.setAttribute("alt", "Loading");
 loaderDiv.appendChild(imgSvg);
 ```
 
-(May have overlooked a simple, direct, common sense way for adding directly to `index.html` though)
+(May have overlooked a simple, direct, common sense way for adding directly to `index.html` though)~~
 
 </details>
