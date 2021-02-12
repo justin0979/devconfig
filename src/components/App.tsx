@@ -1,3 +1,5 @@
+import ripple from "../ripple.svg";
+
 interface Content {
   h1: string;
   text: string;
@@ -17,12 +19,11 @@ const componentContent: Content = {
 const App: React.FC = () => {
   return (
     <div className="app" data-test="appComponent">
+      <img src={ripple} alt="Rippling" />
       <h1>{componentContent.h1}</h1>
       <p>{componentContent.text}</p>
       <div className="content">
-        <a href={componentContent.reference}>
-          {componentContent.refDesc}
-        </a>
+        <a href={componentContent.reference}>{componentContent.refDesc}</a>
         <div>
           Or, just run `tsc --init` after `npm install typescript`.
           <p>You will have to look up any configurations though.</p>
