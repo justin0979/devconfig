@@ -1,4 +1,4 @@
-import ripple from "../ripple.svg";
+import ripple from "&src/ripple.svg";
 
 interface Content {
   h1: string;
