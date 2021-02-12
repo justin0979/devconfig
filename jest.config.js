@@ -4,11 +4,17 @@ module.exports = {
     "**/__tests__/**/*.+(ts|tsx|js)",
     "**/?(*.)*(spec|test).*(ts|tsx|js)",
   ],
-  transform: {
-    "^.+\\.(ts|tsx)$": "ts-jest",
-  },
+  moduleDirectories: ["node_modules", "src"],
+  moduleFileExtensions: ["js", "jsx", "ts", "tsx"],
   moduleNameMapper: {
     "\\.(css|less)$": "<rootDir>/__mocks__/styleMock.js",
     "\\.(gif|ttf|eot|svg)$": "<rootDir>/__mocks__/fileMock.js",
+    "&src/(.*)": "<rootDir>/src/$1",
+    "&components/(.*)": "<rootDir>/src/components/$1",
+  },
+  modulePaths: ["<rootDir>/src/components"],
+  roots: ["src"],
+  transform: {
+    "^.+\\.(ts|tsx)$": "ts-jest",
   },
 };
