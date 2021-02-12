@@ -30,6 +30,62 @@ To change favicon, add new favicon to public and change path to that favicon in 
 </details>
 
 <details>
+<summary><b>Testing</b></summary>
+
+Setup `jest` to not throw errors for importing .svg files, use mock files.
+
+In the root directory, run:
+
+```sh
+mkdir __mocks__
+```
+
+Add mock files:
+
+```sh
+touch __mocks__/fileMock.js __mocks__/styleMock.js
+```
+
+Add to `fileMock.js`:
+
+```javascript
+module.exports = "test-file-stub";
+```
+
+Add to `styleMock.js`:
+
+```javascript
+module.exports = {};
+```
+
+Now create `jest.config.js` in root directory:
+
+```sh
+touch jest.config.js
+```
+
+Add/Update `jest.config.js`:
+
+```javascript
+module.exports = {
+  roots: ["<rootDir>/src"],
+  testMatch: [
+    "**/__tests__/**/*.+(ts|tsx|js)",
+    "**/?(*.)*(spec|test).*(ts|tsx|js)",
+  ],
+  transform: {
+    "^.+\\.(ts|tsx)$": "ts-jest",
+  },
+  moduleNameMapper: {
+    "\\.(css|less)$": "<rootDir>/__mocks__/styleMock.js",
+    "\\.(gif|ttf|eot|svg)$": "<rootDir>/__mocks__/fileMock.js",
+  },
+};
+```
+
+</details>
+
+<details>
 <summary><b>React</b></summary>
 
 For only the `react` branch,<br />
