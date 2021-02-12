@@ -306,6 +306,8 @@ loaderDiv.appendChild(imgSvg);
 
 (May have overlooked a simple, direct, common sense way for adding directly to `index.html` though)
 
+SOLUTION
+
 Fixed above issue by adding `custom.d.ts` to root directory:
 
 ```javascript
