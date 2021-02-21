@@ -23,10 +23,15 @@ const App: React.FC = () => {
       <h1>{componentContent.h1}</h1>
       <p>{componentContent.text}</p>
       <div className="content">
-        <a href={componentContent.reference}>{componentContent.refDesc}</a>
+        <a href={componentContent.reference}>
+          {componentContent.refDesc}
+        </a>
         <div>
-          Or, just run `tsc --init` after `npm install typescript`.
-          <p>You will have to look up any configurations though.</p>
+          Or, just run `tsc --init` after `npm install
+          typescript`.
+          <p>
+            You will have to look up any configurations though.
+          </p>
         </div>
       </div>
     </div>
