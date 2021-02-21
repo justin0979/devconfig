@@ -12,10 +12,9 @@ module.exports = {
       },
     ],
     [
-      // Upgrade to new JSX Transform
-      // No need for: import React from "react";
       "@babel/react",
       {
+        // Upgrade to new JSX Transform, no need for: import React from "react";
         runtime: "automatic",
       },
     ],
