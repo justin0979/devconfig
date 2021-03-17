@@ -21,7 +21,7 @@ All of the following copy and paste commands for cloning use `SSH`.
 To change directory name while cloning, add new name after repo:
 
 ```sh
-git clone git@github.com:justin0979/devconfig.git new_name
+git clone git@github.com:justin0979/devconfig.git new_name 
 ```
 
 To change favicon, add new favicon to public and change path to that favicon in webpack configs' html plugin.
