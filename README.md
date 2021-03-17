@@ -92,7 +92,7 @@ For only the `react` branch,<br />
 copy and paste:
 
 ```sh
-git clone --branch react --single-branch --depth 1 https://github.com/justin0979/devconfig.git
+git clone --branch react --single-branch --depth 1 https://github.com/justin0979/devconfig.git 
 ```
 
 run the following to clone and enter directory:
@@ -175,7 +175,7 @@ git clone --branch react git@github.com:justin0979/devconfig.git \
 Only react-ts branch:<br />
 
 ```sh
-git clone --branch react-ts --single-branch --depth 1 git@github.com:justin0979/devconfig.git
+git clone --branch react-ts --single-branch --depth 1 git@github.com:justin0979/devconfig.git 
 ```
 
 Install only react-ts branch and enter the directory, install dependencies and start program:
