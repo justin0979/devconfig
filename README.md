@@ -1,12 +1,13 @@
 # Base Development Envrionment with React
 
-After updating `tsconfig.json`, no longer need
+After updating `babel.config.js` to use [JSX Transform](https://reactjs.org/blog/2020/09/22/introducing-the-new-jsx-transform.html),
+no longer need
 
 ```js script
 import React from "react";
 ```
 
-with functoinal components, but classes will still say it needs to import react.
+with functional components, but classes will still say it needs to import react.
 
 ## Frontend Only
 
