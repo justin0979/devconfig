@@ -341,6 +341,8 @@ module.exports = {
 
 <summary><strong>Issues</strong></summary>
 
+Unable to load wasm file.
+
 [SOLVED] Unable to load `svg` files onto html img's, e.g.
 
 ```html
