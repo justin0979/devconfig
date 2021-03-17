@@ -343,7 +343,7 @@ module.exports = {
 
 <details>
 
-<summary><strong>[SOLVED Issue] Unable to load wasm file to dist/</strong></summary>
+<summary>[SOLVED Issue] Unable to load wasm file to dist directory</summary>
 
 Using `esbuild-wasm@0.8.27`, adding
 `./node_modules/esbuild-wasm/esbuild.wasm` to `./public`
@@ -375,6 +375,7 @@ const CopyWebpackPlugin = require("copy-webpack-plugin");
    ]
  };
 ```
+
 </details>
 
 <details>
