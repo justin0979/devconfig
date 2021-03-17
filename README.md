@@ -341,7 +341,9 @@ module.exports = {
 
 <summary><strong>Issues</strong></summary>
 
-##### [SOLVED Issue] Unable to load wasm file to dist/
+<details>
+
+<summary><strong>[SOLVED Issue] Unable to load wasm file to dist/</strong></summary>
 
 Using `esbuild-wasm@0.8.27`, adding
 `./node_modules/esbuild-wasm/esbuild.wasm` to `./public`
@@ -373,6 +375,7 @@ const CopyWebpackPlugin = require("copy-webpack-plugin");
    ]
  };
 ```
+</details>
 
 <details>
 
@@ -399,11 +402,7 @@ loaderDiv.appendChild(imgSvg);
 
 (May have overlooked a simple, direct, common sense way for adding directly to `index.html` though)
 
-</details>
-
-<details>
-
-<summary>SOLUTION for Unable to load `svg` files onto html img's</summary>
+#### SOLUTION for Unable to load `svg` files onto html img's
 
 Fixed above issue by adding `custom.d.ts` to root directory:
 
