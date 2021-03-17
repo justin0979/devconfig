@@ -13,7 +13,6 @@ module.exports = {
     "&components/(.*)": "<rootDir>/src/components/$1",
   },
   modulePaths: ["<rootDir>/src/components"],
-  roots: ["src"],
   transform: {
     "^.+\\.(ts|tsx)$": "ts-jest",
   },
