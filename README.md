@@ -341,9 +341,40 @@ module.exports = {
 
 <summary><strong>Issues</strong></summary>
 
-#### [Active Issue] Unable to load wasm file
+##### [SOLVED Issue] Unable to load wasm file to dist/
 
-#### [SOLVED for TS Issue] Unable to load `svg` files onto html img's
+Using `esbuild-wasm@0.8.27`, adding
+`./node_modules/esbuild-wasm/esbuild.wasm` to `./public`
+did not build with `esbuild.wasm` being added to `./dist`.<br />
+
+##### SOLUTION for Unable to load wasm file to dist/
+
+run
+
+```ssh
+npm i -D copy-webpack-plugin
+```
+
+In `webpack.common.config` add:
+
+```javascript
+const CopyWebpackPlugin = require("copy-webpack-plugin");
+
+ module.exports = {
+   ...,
+   plugins: [
+     new CopyWebpackPlugin({
+      patterns: [
+        {
+          from: "public"
+        }
+      ]
+     })
+   ]
+ };
+```
+
+##### [SOLVED for TS Issue] Unable to load `svg` files onto html img's
 
 e.g.
 
