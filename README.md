@@ -341,9 +341,11 @@ module.exports = {
 
 <summary><strong>Issues</strong></summary>
 
-Unable to load wasm file.
+<h3>[Active Issue] Unable to load wasm file</h3>
 
-[SOLVED] Unable to load `svg` files onto html img's, e.g.
+<h3>[SOLVED Issue] Unable to load `svg` files onto html img's</h3>
+
+e.g.
 
 ```html
 <img src="loader.svg" alt="stuff" />
@@ -364,7 +366,7 @@ loaderDiv.appendChild(imgSvg);
 
 (May have overlooked a simple, direct, common sense way for adding directly to `index.html` though)
 
-SOLUTION
+SOLUTION for Unable to load `svg` files onto html img's
 
 Fixed above issue by adding `custom.d.ts` to root directory:
 
