@@ -342,82 +342,82 @@ module.exports = {
 
 <summary><strong>Issues</strong></summary>
 
-  <details>
+<details>
 
-    <summary>[SOLVED Issue] Unable to load wasm file to dist directory</summary>
+<summary>[SOLVED Issue] Unable to load wasm file to dist directory</summary>
 
-    Using `esbuild-wasm@0.8.27` in React program to transpile and bundle in browser, adding
-    `./node_modules/esbuild-wasm/esbuild.wasm` to `./public`
-    did not build with `esbuild.wasm` being added to `./dist`.<br />
+Using `esbuild-wasm@0.8.27` in React program to transpile and bundle in browser, adding
+`./node_modules/esbuild-wasm/esbuild.wasm` to `./public`
+did not build with `esbuild.wasm` being added to `./dist`.<br />
 
 ##### SOLUTION for Unable to load wasm file to dist/
 
-    run
+run
 
-    ```ssh
-    npm i -D copy-webpack-plugin
-    ```
+```ssh
+npm i -D copy-webpack-plugin
+```
 
-    In `webpack.common.config` add:
+In `webpack.common.config` add:
 
-    ```javascript
-    const CopyWebpackPlugin = require("copy-webpack-plugin");
+```javascript
+const CopyWebpackPlugin = require("copy-webpack-plugin");
 
-     module.exports = {
-       ...,
-       plugins: [
-         new CopyWebpackPlugin({
-          patterns: [
-            {
-              from: "public"
-            }
-          ]
-         })
-       ]
-     };
-    ```
+ module.exports = {
+   ...,
+   plugins: [
+     new CopyWebpackPlugin({
+      patterns: [
+        {
+          from: "public"
+        }
+      ]
+     })
+   ]
+ };
+```
 
-  </details>
+</details>
 
-  <details>
+<details>
 
-    <summary>[SOLVED for TS Issue] Unable to load `svg` files onto html img's</summary>
+<summary>[SOLVED for TS Issue] Unable to load `svg` files onto html img's</summary>
 
-    e.g.
+e.g.
 
-    ```html
-    <img src="loader.svg" alt="stuff" />
-    ```
+```html
+<img src="loader.svg" alt="stuff" />
+```
 
-    ~~I just opened the svg file and copied and pasted the `<svg>...</svg>` directly into the html file.~~<br />
-    `.svg` file added to `img` element with JS file by importing the `svg` file and `setAttribute("src", <svg filename>)`.
+~~I just opened the svg file and copied and pasted the `<svg>...</svg>` directly into the html file.~~<br />
+`.svg` file added to `img` element with JS file by importing the `svg` file and `setAttribute("src", <svg filename>)`.
 
-    ```javascript
-    import loader from "images/loader.svg";
+```javascript
+import loader from "images/loader.svg";
 
-    const loaderDiv = document.getElementById("loader");
-    const imgSvg = document.createElement("img");
-    imgSvg.setAttribute("src", loader);
-    imgSvg.setAttribute("alt", "Loading");
-    loaderDiv.appendChild(imgSvg);
-    ```
+const loaderDiv = document.getElementById("loader");
+const imgSvg = document.createElement("img");
+imgSvg.setAttribute("src", loader);
+imgSvg.setAttribute("alt", "Loading");
+loaderDiv.appendChild(imgSvg);
+```
 
-    (May have overlooked a simple, direct, common sense way for adding directly to `index.html` though)
+(May have overlooked a simple, direct, common sense way for adding directly to `index.html` though)
 
 #### SOLUTION for Unable to load `svg` files onto html img's
 
-    Fixed above issue by adding `custom.d.ts` to root directory:
+Fixed above issue by adding `custom.d.ts` to root directory:
 
-    ```javascript
-    // custom.d.ts
+```javascript
+// custom.d.ts
 
-    declare module "*.svg" {
-      const ReactComponent: React.FunctionComponent<React.SVGAttributes<SVGElement>>;
-      const content: string;
-      export default content;
-    }
-    ```
+declare module "*.svg" {
+  const ReactComponent: React.FunctionComponent<React.SVGAttributes<SVGElement>>;
+  const content: string;
+  export default content;
+}
+```
 
-  </details>
+</details>
 
 </details>
