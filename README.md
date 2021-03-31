@@ -21,7 +21,7 @@ All of the following copy and paste commands for cloning use `SSH`.
 To change directory name while cloning, add new name after repo:
 
 ```sh
-git clone git@github.com:justin0979/devconfig.git new_name 
+git clone git@github.com:justin0979/devconfig.git new_name
 ```
 
 To change favicon, add new favicon to public and change path to that favicon in webpack configs' html plugin.
@@ -92,7 +92,7 @@ For only the `react` branch,<br />
 copy and paste:
 
 ```sh
-git clone --branch react --single-branch --depth 1 https://github.com/justin0979/devconfig.git 
+git clone --branch react --single-branch --depth 1 https://github.com/justin0979/devconfig.git
 ```
 
 run the following to clone and enter directory:
@@ -175,7 +175,7 @@ git clone --branch react git@github.com:justin0979/devconfig.git \
 Only react-ts branch:<br />
 
 ```sh
-git clone --branch react-ts --single-branch --depth 1 git@github.com:justin0979/devconfig.git 
+git clone --branch react-ts --single-branch --depth 1 git@github.com:justin0979/devconfig.git
 ```
 
 Install only react-ts branch and enter the directory, install dependencies and start program:
@@ -416,6 +416,50 @@ declare module "*.svg" {
   const content: string;
   export default content;
 }
+```
+
+</details>
+
+<details>
+
+<summary>[SOLVED] Error `GET http://localhost:3000/favicon.ico [HTTP/1.1 404 Not Found 0ms]</summary>
+
+Originally fixed `webpack.common.js` to be:
+
+```javascript
+module.exports = {
+  // ...
+  ,plugins: [
+    new CopyWebpackPlugin({
+      patterns: [
+        {
+          from: "public"
+        }
+      ]
+    })
+  ],
+};
+```
+
+SOLUTION is to either leave it commented out, or specify the files needs to be copied:
+e.g.,
+
+```javascript
+// uncomment below
+const CopyWebpackPlugin = require("copy-webpack-plugin");
+
+module.exports = {
+  // ...
+  , plugins: [
+  {
+    new CopyWebpackPlugin({
+      patterns: [{
+        from: "public/esbuild.wasm"
+      }]
+    })
+  }
+  ]
+};
 ```
 
 </details>
