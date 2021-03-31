@@ -9,6 +9,9 @@ import React from "react";
 
 with functional components, but classes will still say it needs to import react.
 
+If run into issues, if not mentioned here, check out the `Issues`
+section on the `main` branch.
+
 ## Frontend Only
 
 ```sh
