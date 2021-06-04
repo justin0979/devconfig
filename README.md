@@ -283,9 +283,7 @@ For only `typescript` already installed and ready for use:<br />
 run the following to clone and enter directory:<br />
 
 ```sh
-git clone --branch typescript --single-branch --depth 1 https://github.com/justin0979/devconfig.git \
-  && cd devconfig
-  && npm i
+git clone --branch typescript --single-branch --depth 1 https://github.com/justin0979/devconfig.git
 ```
 
 For all branches, follow steps from React section above.<br />
