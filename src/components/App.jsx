@@ -26,7 +26,7 @@ const App = () => {
         onClick={() => setLoaded(!loaded)}
         data-test="lazyLoadButton"
       >
-        lazy load
+        lazy load a message
       </button>
     </div>
   );
