@@ -37,15 +37,12 @@ module.exports = {
       },
       {
         test: /\.(jpe?g|png|gif|svg|ttf|woff(2)?|eot|mp4|webm)$/,
-        use: [
-          {
-            loader: "file-loader",
-            options: {
-              name: "[path][name].[ext]",
-            },
-          },
-          "image-webpack-loader",
-        ],
+        type: "asset",
+        parser: {
+          dataUrlCondition: {
+            maxSize: 3 * 1024 // 3 kBs
+          }
+        }
       },
     ],
   },
