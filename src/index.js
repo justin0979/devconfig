@@ -42,3 +42,7 @@ const starting = async () => {
 };
 
 starting();
+
+if (module.hot) {
+  module.hot.accept();
+}
