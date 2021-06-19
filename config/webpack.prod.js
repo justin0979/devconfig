@@ -11,6 +11,7 @@ module.exports = merge(commonConfig, {
     publicPath: "",
   },
   mode: "production",
+  devtool: "source-map",
   optimization: {
     splitChunks: {
       chunks: "all",
