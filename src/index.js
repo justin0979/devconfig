@@ -11,7 +11,7 @@ const starting = async () => {
 
   const ul = document.createElement("ul");
 
-  const renderUsers = users.forEach((user) => {
+  users.forEach((user) => {
     const li = document.createElement("li");
     li.key = user.id;
     li.innerHTML = user.name;
@@ -30,7 +30,7 @@ const starting = async () => {
   const environment = document.createElement("h3");
   environment.innerHTML = `Environment = ${process.env.NODE_ENV}`;
 
-  const module_hot = document.createElement("h3");
+  // const module_hot = document.createElement("h3");
   app.appendChild(environment);
 
   app.appendChild(ul);
