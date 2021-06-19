@@ -13,3 +13,5 @@ parserOptions:
 settings:
   react:
     version: detect
+rules:
+  no-console: 1
