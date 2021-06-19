@@ -1,13 +1,11 @@
 # Base Development Envrionment with React
 
 After updating `babel.config.js` to use [JSX Transform](https://reactjs.org/blog/2020/09/22/introducing-the-new-jsx-transform.html),
-no longer need
+functional components no longer need to import `react` with
 
 ```js script
 import React from "react";
 ```
-
-with functional components, but classes will still say it needs to import react.
 
 If run into issues, if not mentioned here, check out the `Issues`
 section on the `main` branch.
