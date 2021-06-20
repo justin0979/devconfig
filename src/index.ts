@@ -20,3 +20,7 @@ app.appendChild(title);
 const saying = document.createElement("h2");
 saying.innerHTML = sayings.text;
 app.appendChild(saying);
+
+if (module.hot) {
+  module.hot.accept();
+}
