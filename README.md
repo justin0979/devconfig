@@ -1,6 +1,6 @@
 ## Base Development Envrionments
 
-(No production webpack file setup yet)
+(No production webpack configuration file setup yet)
 
 run `npm i` then `npm start` and go to `localhost:3000`.
 
