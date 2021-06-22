@@ -1,4 +1,5 @@
 const path = require("path");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const { merge } = require("webpack-merge");
 const commonConfig = require("./webpack.common");
@@ -41,6 +42,9 @@ module.exports = merge(commonConfig, {
       meta: {
         viewport: "width=device-width, initial-scale=1",
       },
+    }),
+    new MiniCssExtractPlugin({
+      filename: "styles.[contenthash].css",
     }),
   ],
 });
