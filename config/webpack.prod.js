@@ -1,6 +1,5 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const { merge } = require("webpack-merge");
 const commonConfig = require("./webpack.common");
 
@@ -11,14 +10,25 @@ module.exports = merge(commonConfig, {
     publicPath: "",
   },
   mode: "production",
+  devtool: "source-map",
   module: {
     rules: [
       {
         test: /\.s?css$/,
         use: [
-          MiniCssExtractPlugin.loader,
+          "style-loader",
           "css-loader",
-          "postcss-loader",
+          {
+            loader: "postcss-loader",
+            options: {
+              postcssOptions: {
+                config: path.resolve(
+                  __dirname,
+                  "postcss.config.js",
+                ),
+              },
+            },
+          },
           "sass-loader",
         ],
       },
@@ -31,9 +41,6 @@ module.exports = merge(commonConfig, {
       meta: {
         viewport: "width=device-width, initial-scale=1",
       },
-    }),
-    new MiniCssExtractPlugin({
-      filename: "styles.[contenthash].css",
     }),
   ],
 });

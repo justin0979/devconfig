@@ -1,3 +1,4 @@
+const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const { merge } = require("webpack-merge");
@@ -25,7 +26,17 @@ module.exports = merge(commonConfig, {
         use: [
           MiniCssExtractPlugin.loader,
           "css-loader",
-          "postcss-loader",
+          {
+            loader: "postcss-loader",
+            options: {
+              postcssOptions: {
+                config: path.resolve(
+                  __dirname,
+                  "postcss.config.js",
+                ),
+              },
+            },
+          },
           "sass-loader",
         ],
       },
