@@ -1,4 +1,5 @@
 import ripple from "&src/ripple.svg";
+import favIcon from "&images/favicon-32x32.png";
 
 interface Content {
   h1: string;
@@ -19,6 +20,7 @@ const componentContent: Content = {
 const App: React.FC = () => {
   return (
     <div className="app" data-test="appComponent">
+      <img src={favIcon} alt="Name" />
       <img src={ripple} alt="Rippling" />
       <h1>{componentContent.h1}</h1>
       <p>{componentContent.text}</p>
