@@ -13,8 +13,8 @@ const componentContent: Content = {
   text: "This works",
   reference:
     "https://medium.com/@dahvinchee/how-to-set-up-a-react-typescript-project-from-scratch-with-babel-and-webpack-6b069881229d",
-  refDesc:
-    "There are lots of articles with good explanations and much longer tsconfig.json (like this one)",
+  refDesc: `There are lots of articles with explanations 
+    (like this one)`,
 };
 
 const App: React.FC = () => {
