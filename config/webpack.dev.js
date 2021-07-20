@@ -4,7 +4,11 @@ const { merge } = require("webpack-merge");
 const commonConfig = require("./webpack.common");
 
 module.exports = merge(commonConfig, {
-  entry: ["./src/index", "./public/index.html"],
+  entry: [
+    "./src/index",
+    "./public/index.html",
+    "./src/sass/main.scss",
+  ],
   output: {
     path: path.resolve(__dirname, "../dist"),
     publicPath: "",
