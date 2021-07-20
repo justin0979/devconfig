@@ -1,5 +1,4 @@
 import "$public/index.html";
-import "main.scss";
 
 interface Sayings {
   text: string;
