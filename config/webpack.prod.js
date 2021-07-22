@@ -5,6 +5,7 @@ const { merge } = require("webpack-merge");
 const commonConfig = require("./webpack.common");
 
 module.exports = merge(commonConfig, {
+  entry: ["./src", "./src/main.scss"],
   output: {
     filename: "bundle.[contenthash].js",
     path: path.resolve(__dirname, "../dist"),
@@ -17,7 +18,7 @@ module.exports = merge(commonConfig, {
       {
         test: /\.s?css$/,
         use: [
-          "style-loader",
+          MiniCssExtractPlugin.loader,
           "css-loader",
           {
             loader: "postcss-loader",
