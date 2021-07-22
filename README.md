@@ -130,4 +130,4 @@ change <code>tsconfig.json</code>:
 </ul>
 
 The `tsconfig.json` comes from:
-[TypeScript: Documentation Path mapping](https://www.typescript.org/docs/handbook/module-resolution.html#path-mapping)
+[TypeScript: Documentation Path mapping](https://www.typescriptlang.org/docs/handbook/module-resolution.html#path-mapping)
