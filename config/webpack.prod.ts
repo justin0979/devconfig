@@ -1,9 +1,9 @@
 const path = require("path");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const { merge } = require("webpack-merge");
-const commonConfig = require("./webpack.common");
+import commonConfig from "./webpack.common";
 
-module.exports = merge(commonConfig, {
+export default merge(commonConfig, {
   entry: ["./src/index", "./src/sass/main.scss"],
   output: {
     filename: "bundle.[contenthash].js",

@@ -1,9 +1,9 @@
-const path = require("path");
-const HtmlWebpackPlugin = require("html-webpack-plugin");
+import * as path from "path";
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 //const CopyWebpackPlugin = require("copy-webpack-plugin");
 
-module.exports = {
+export default {
   resolve: {
     modules: [path.resolve(__dirname, "src"), "node_modules"],
     alias: {

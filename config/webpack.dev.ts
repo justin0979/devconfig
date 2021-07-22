@@ -1,9 +1,9 @@
-const path = require("path");
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+import * as path from "path";
 const { merge } = require("webpack-merge");
-const commonConfig = require("./webpack.common");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+import commonConfig from "./webpack.common";
 
-module.exports = merge(commonConfig, {
+export default merge(commonConfig, {
   entry: [
     "./src/index",
     "./public/index.html",
