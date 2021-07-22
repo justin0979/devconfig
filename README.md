@@ -61,7 +61,7 @@ update the following (assuming <code>newdirname/</code> is in <code>src/</code>)
   <li>
     Update <code>webpack.common.ts</code>:
 
-    ```typescript
+```typescript
     export default {
 
 resolve: {
@@ -71,23 +71,24 @@ alias: {
 }
 }
 
-````
+```
 
   </li>
   <li>Update <code>babel.config.js</code>:
 
- ```javascript
- module.exports = {
-plugins: [
-           "module-resolver", {
-              root: ["./"],
-               alias: {
-                 "&newdirname": "./src/newdirname"
-               }
-             }
-         ]
- }
-````
+```javascript
+module.exports = {
+  plugins: [
+    "module-resolver",
+    {
+      root: ["./"],
+      alias: {
+        "&newdirname": "./src/newdirname",
+      },
+    },
+  ],
+};
+```
 
   </li>
   <li>
