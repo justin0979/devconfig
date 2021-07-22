@@ -6,6 +6,15 @@ const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 module.exports = {
   resolve: {
     modules: [path.resolve(__dirname, "src"), "node_modules"],
+    alias: {
+      "&components": path.resolve(
+        __dirname,
+        "../src/components",
+      ),
+      "&images": path.resolve(__dirname, "../src/images"),
+      "&src": path.resolve(__dirname, "../src"),
+      __tests__: path.resolve(__dirname, "../src/__tests__"),
+    },
     extensions: [
       ".js",
       ".jsx",
@@ -29,22 +38,34 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.(tsx?|jsx?)$/,
+        test: /\.jsx?$/,
         exclude: /node_modules/,
-        use: "babel-loader",
+        loader: "babel-loader",
+      },
+      {
+        test: /\.tsx?$/,
+        exclude: /node_modules/,
+        use: [
+          {
+            loader: "ts-loader",
+            options: {
+              transpileOnly: true,
+            },
+          },
+        ],
       },
       {
         test: /\.html$/,
-        use: "html-loader",
+        loader: "html-loader",
       },
       {
         test: /\.(jpe?g|png|gif|svg|ttf|woff(2)?|eot|mp4|webm)$/,
         type: "asset",
         parser: {
           dataUrlCondition: {
-            maxSize: 3 * 1024 // 3 kBs
-          }
-        }
+            maxSize: 3 * 1024, // 3 kBs
+          },
+        },
       },
     ],
   },
