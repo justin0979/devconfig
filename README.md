@@ -58,9 +58,25 @@ import newFile from "&newdirname/newFile";
 update the following (assuming <code>newdirname/</code> is in <code>src/</code>):
 
 <ul>
+  <li>
+    Update <code>webpack.common.ts</code>:
+
+    ```typescript
+    export default {
+
+resolve: {
+alias: {
+"&newdirname": path.resolve(\_\_dirname, "../src/newdirname")
+}
+}
+}
+
+````
+
+  </li>
   <li>Update <code>babel.config.js</code>:
-  
- ```sh
+
+ ```javascript
  module.exports = {
 plugins: [
            "module-resolver", {
@@ -71,13 +87,13 @@ plugins: [
              }
          ]
  }
- ```
- 
+````
+
   </li>
   <li>
  Update <code>tsconfig.json</code>:
  
-```sh
+```javascript
 {
      "compilerOptions": {
       "paths": {
@@ -89,13 +105,13 @@ plugins: [
  
 To import <code>index.ts</code> like:
 
-```javascript
+```typescript
 import * from "&newdirname";
 ```
 
 change <code>tsconfig.json</code>:
 
-```sh
+```javascript
 {
   "compilerOptions": {
     "baseUrl": "./",
