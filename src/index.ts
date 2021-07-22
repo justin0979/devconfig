@@ -1,4 +1,4 @@
-import "$public/index.html";
+import "public_html";
 
 interface Sayings {
   text: string;

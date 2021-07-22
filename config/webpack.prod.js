@@ -14,7 +14,10 @@ module.exports = {
   resolve: {
     modules: [path.resolve(__dirname, "src"), "node_modules"],
     alias: {
-      $public: path.resolve(__dirname, "../public"),
+      public_html$: path.resolve(
+        __dirname,
+        "../public/index.html",
+      ),
     },
     extensions: [
       ".js",
