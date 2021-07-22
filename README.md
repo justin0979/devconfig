@@ -65,11 +65,13 @@ update the following (assuming <code>newdirname/</code> is in <code>src/</code>)
 export default {
   resolve: {
     alias: {
-      "&newdirname": path.resolve(\_\_dirname, "../src/newdirname"),
+      "&newdirname": path.resolve(
+        __dirname,
+        "../src/newdirname",
+      ),
     },
   },
 };
-
 ```
 
   </li>
