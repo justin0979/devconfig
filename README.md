@@ -62,14 +62,13 @@ update the following (assuming <code>newdirname/</code> is in <code>src/</code>)
     Update <code>webpack.common.ts</code>:
 
 ```typescript
-    export default {
-
-resolve: {
-alias: {
-"&newdirname": path.resolve(\_\_dirname, "../src/newdirname")
-}
-}
-}
+export default {
+  resolve: {
+    alias: {
+      "&newdirname": path.resolve(\_\_dirname, "../src/newdirname"),
+    },
+  },
+};
 
 ```
 
