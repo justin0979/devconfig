@@ -49,12 +49,12 @@ module.exports = {
     rules: [
       {
         test: /\.jsx?$/,
-        use: "babel-loader",
+        loader: "babel-loader",
         exclude: /node_modules/,
       },
       {
         test: /\.tsx?$/,
-        use: "ts-loader",
+        loader: "ts-loader",
         exclude: /node_modules/,
       },
       {
@@ -68,7 +68,7 @@ module.exports = {
       },
       {
         test: /\.html$/,
-        use: "html-loader",
+        loader: "html-loader",
       },
       {
         test: /\.(jpe?g|png|gif|svg|ttf|woff(2)?|eot|mp4|webm)$/,
