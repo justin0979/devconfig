@@ -14,5 +14,15 @@
   "plugins": [
     "@babel/transform-runtime",
     "@babel/proposal-class-properties"
+    ,[
+      "module-resolver", 
+      {
+        "root": ["./"],
+        "alias": {
+          "&src": "./src",
+          "&public": "./public"
+        }
+      }
+    ]
   ]
 }
