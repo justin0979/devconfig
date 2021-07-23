@@ -12,6 +12,7 @@ export default {
         "../src/components",
       ),
       "&images": path.resolve(__dirname, "../src/images"),
+      "&sass": path.resolve(__dirname, "../src/sass"),
       "&src": path.resolve(__dirname, "../src"),
       __tests__: path.resolve(__dirname, "../src/__tests__"),
     },

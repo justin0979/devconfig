@@ -52,6 +52,7 @@
     "paths": {
       "&components/*": ["src/components/*"],
       "&images/*": ["src/images/*"],
+      "&sass/*": ["src/sass/*"],
       "&src": ["src"],
       "&src/*": ["src/*"],
       "__tests__/*": ["__tests__/*"]
