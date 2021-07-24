@@ -11,9 +11,11 @@ export default {
         __dirname,
         "../src/components",
       ),
+      "&hooks": path.resolve(__dirname, "../src/hooks"),
       "&images": path.resolve(__dirname, "../src/images"),
       "&sass": path.resolve(__dirname, "../src/sass"),
       "&src": path.resolve(__dirname, "../src"),
+      "&state": path.resolve(__dirname, "../src/state"),
       __tests__: path.resolve(__dirname, "../src/__tests__"),
     },
     extensions: [

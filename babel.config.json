@@ -29,9 +29,11 @@
         "root": ["./"],
         "alias": {
           "&components": "./src/components",
+          "&hooks": "./src/hooks",
           "&images": "./src/images",
           "&sass": "./src/sass",
           "&src": "./src",
+          "&state": "./src/state",
           "__tests__": "./__tests__"
         }
       }

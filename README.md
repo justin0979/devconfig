@@ -108,7 +108,7 @@ module.exports = {
 To import <code>index.ts</code> like:
 
 ```typescript
-import * from "&newdirname";
+import * from "&newdirname"; // instead of import * from "&newdirname/index";
 ```
 
 change <code>tsconfig.json</code>:
