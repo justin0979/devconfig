@@ -1,4 +1,4 @@
-# Base Development Envrionment with React
+# Base Development Envrionment with React and Redux (using Typescript)
 
 After updating `babel.config.js` to use [JSX Transform](https://reactjs.org/blog/2020/09/22/introducing-the-new-jsx-transform.html),
 functional components no longer need to import `react` with
@@ -15,6 +15,10 @@ section on the `main` branch.
 ```sh
 git clone --branch react-ts --single-branch --depth 1 git@github.com:justin0979/devconfig.git
 ```
+
+## Redux added
+
+Redux data is accessed in `state/` along with `hooks/`
 
 #### Running Tests
 
