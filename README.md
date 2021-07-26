@@ -418,48 +418,31 @@ declare module "*.svg" {
 
 </details>
 
-<details>
+  <details>
 
-<summary>[SOLVED] Error `GET http://localhost:3000/favicon.ico [HTTP/1.1 404 Not Found 0ms]</summary>
+    <summary>[SOLVED] Error `GET http://localhost:3000/favicon.ico [HTTP/1.1 404 Not Found 0ms]</summary>
 
-Originally fixed `webpack.common.js` to be:
+Solution fixed `webpack.common.js` to be:
 
 ```javascript
 module.exports = {
   // ...
   ,plugins: [
-    new CopyWebpackPlugin({
-      patterns: [
-        {
-          from: "public"
-        }
-      ]
+    new HtmlWebpackPlugin({
+      favicon: "./public/lastname-32x32.png"
     })
   ],
 };
 ```
 
-SOLUTION is to either leave it commented out, or specify the files needs to be copied:
-e.g.,
-
-```javascript
-// uncomment below
-const CopyWebpackPlugin = require("copy-webpack-plugin");
-
-module.exports = {
-  // ...
-  , plugins: [
-  {
-    new CopyWebpackPlugin({
-      patterns: [{
-        from: "public/esbuild.wasm"
-      }]
-    })
-  }
-  ]
-};
-```
+  </details>
 
 </details>
+
+<details>
+  <summary>Routing Issue</summary>
+
+Check `output.publicPath` in `config/webpack.dev.js` and/or
+`config/webpack.prod.js` and adjust according to your situation.
 
 </details>
