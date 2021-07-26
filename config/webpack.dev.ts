@@ -11,7 +11,7 @@ export default merge(commonConfig, {
   ],
   output: {
     path: path.resolve(__dirname, "../dist"),
-    publicPath: "",
+    publicPath: "/",
   },
   mode: "development",
   devtool: "inline-source-map",
@@ -19,9 +19,7 @@ export default merge(commonConfig, {
     port: 3000,
     host: "0.0.0.0", // add for docker
     hot: true,
-    historyApiFallback: {
-      index: "index.html",
-    },
+    historyApiFallback: true,
     overlay: true,
     writeToDisk: true,
     // public: "posts.com" // change to whatever host name is (e.g., "client:80" or "ticketing.dex")
