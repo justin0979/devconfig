@@ -418,9 +418,9 @@ declare module "*.svg" {
 
 </details>
 
-  <details>
+<details>
 
-    <summary>[SOLVED] Error `GET http://localhost:3000/favicon.ico [HTTP/1.1 404 Not Found 0ms]</summary>
+<summary>[SOLVED] Error `GET http://localhost:3000/favicon.ico [HTTP/1.1 404 Not Found 0ms]</summary>
 
 Solution fixed `webpack.common.js` to be:
 
@@ -434,8 +434,6 @@ module.exports = {
   ],
 };
 ```
-
-  </details>
 
 </details>
 
