@@ -419,25 +419,6 @@ declare module "*.svg" {
 </details>
 
 <details>
-
-<summary>[SOLVED] Error `GET http://localhost:3000/favicon.ico [HTTP/1.1 404 Not Found 0ms]</summary>
-
-Solution fixed `webpack.common.js` to be:
-
-```javascript
-module.exports = {
-  // ...
-  ,plugins: [
-    new HtmlWebpackPlugin({
-      favicon: "./public/lastname-32x32.png"
-    })
-  ],
-};
-```
-
-</details>
-
-<details>
   <summary>Routing Issue</summary>
 
 Check `output.publicPath` in `config/webpack.dev.js` and/or
