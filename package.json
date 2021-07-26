@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "npm run dev",
-    "build": "webpack --config config/webpack.prod.ts",
-    "dev": "webpack serve --config config/webpack.dev.ts",
+    "build": "webpack --config config/webpack.prod.js",
+    "dev": "webpack serve --config config/webpack.dev.js",
     "test": "jest --watch",
     "lint": "npm run clean && eslint .",
     "clean": "rm -rf dist"

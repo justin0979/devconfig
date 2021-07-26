@@ -1,21 +1,28 @@
 const path = require("path");
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const { merge } = require("webpack-merge");
-import commonConfig from "./webpack.common";
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const commonConfig = require("./webpack.common");
 
-export default merge(commonConfig, {
-  entry: ["./src/index", "./src/sass/main.scss"],
+module.exports = merge(commonConfig, {
+  entry: [
+    "./src/index",
+    "./public/index.html",
+    "./src/sass/main.scss",
+  ],
   output: {
-    filename: "bundle.[contenthash].js",
     path: path.resolve(__dirname, "../dist"),
-    publicPath: "",
+    publicPath: "/",
   },
-  mode: "production",
-  devtool: "source-map",
-  optimization: {
-    splitChunks: {
-      chunks: "all",
-    },
+  mode: "development",
+  devtool: "inline-source-map",
+  devServer: {
+    port: 3000,
+    host: "0.0.0.0", // add for docker
+    hot: true,
+    historyApiFallback: true,
+    overlay: true,
+    writeToDisk: true,
+    // public: "posts.com" // change to whatever host name is (e.g., "client:80" or "ticketing.dex")
   },
   module: {
     rules: [
@@ -42,7 +49,7 @@ export default merge(commonConfig, {
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: "styles.[contenthash].css",
+      filename: "styles.css",
     }),
   ],
 });
