@@ -135,3 +135,8 @@ change <code>tsconfig.json</code>:
 
 The `tsconfig.json` comes from:
 [TypeScript: Documentation Path mapping](https://www.typescriptlang.org/docs/handbook/module-resolution.html#path-mapping)
+
+## Issues
+
+If run into routing issues, check `output.publicPath` in `webpack.dev.js`
+and/or `webpack.prod.js`.
