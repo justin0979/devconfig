@@ -76,7 +76,14 @@ module.exports = {
       },
     }),
     new CleanWebpackPlugin(),
-    new ForkTsCheckerWebpackPlugin(),
+    new ForkTsCheckerWebpackPlugin({
+      typescript: {
+        diagnosticOptions: {
+          semantic: true,
+          syntactic: true,
+        },
+      },
+    }),
     //    new CopyWebpackPlugin({
     //      patterns: [
     //        {
