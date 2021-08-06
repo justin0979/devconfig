@@ -1,23 +1,17 @@
 const path = require("path");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const TsconfigPathsPlugin = require("tsconfig-paths-webpack-plugin");
 //const CopyWebpackPlugin = require("copy-webpack-plugin");
 
 module.exports = {
   resolve: {
     modules: [path.resolve(__dirname, "src"), "node_modules"],
-    alias: {
-      "&components": path.resolve(
-        __dirname,
-        "../src/components",
-      ),
-      "&hooks": path.resolve(__dirname, "../src/hooks"),
-      "&images": path.resolve(__dirname, "../src/images"),
-      "&sass": path.resolve(__dirname, "../src/sass"),
-      "&src": path.resolve(__dirname, "../src"),
-      "&state": path.resolve(__dirname, "../src/state"),
-      __tests__: path.resolve(__dirname, "../src/__tests__"),
-    },
+    plugins: [
+      new TsconfigPathsPlugin({
+        configFile: "tsconfig.json",
+      }),
+    ],
     extensions: [
       ".js",
       ".jsx",
