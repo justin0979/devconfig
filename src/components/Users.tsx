@@ -14,7 +14,7 @@ export const Users: React.FC = () => {
   return (
     <section>
       <h2>Users</h2>
-      <button onClick={getUsersList}>
+      <button className="btn" onClick={getUsersList}>
         Get Users with Axios
       </button>
       <ol className="users-list">
