@@ -2,12 +2,13 @@ const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
+const TsconfigPathsWebpackPlugin = require("tsconfig-paths-webpack-plugin");
 
 module.exports = {
   entry: ["./src/index.ts", "./src/main.scss"],
   output: {
     path: path.resolve(__dirname, "../dist"),
-    publicPath: "",
+    publicPath: "/",
   },
   mode: "development",
   devtool: "eval",
@@ -19,12 +20,11 @@ module.exports = {
   },
   resolve: {
     modules: [path.resolve(__dirname, "src"), "node_modules"],
-    alias: {
-      public_html$: path.resolve(
-        __dirname,
-        "../public/index.html",
-      ),
-    },
+    plugins: [
+      new TsconfigPathsWebpackPlugin({
+        configFile: "tsconfig.json",
+      }),
+    ],
     extensions: [
       ".js",
       ".jsx",

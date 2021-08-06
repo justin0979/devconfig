@@ -1,4 +1,4 @@
-import "public_html";
+import "&public/index.html";
 
 interface Sayings {
   text: string;
@@ -20,6 +20,6 @@ const saying = document.createElement("h2");
 saying.innerHTML = sayings.text;
 app.appendChild(saying);
 
-if (module.hot) {
-  module.hot.accept();
-}
+// if (module.hot) {
+//   module.hot.accept();
+// }

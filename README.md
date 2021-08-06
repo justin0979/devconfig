@@ -18,18 +18,16 @@ run `git checkout react` then `npm i` then `npm start`.
 Import with:
 
 ```typescript
-import "public_html";
+import "$public/index.html";
 ```
 
-To change this, go to `config/` and make changes to:
+To change this, go to `tsconig.json` and make changes to:
 
 ```javascript
-module.export = {
+"compilerOptions": {
   ...,
-  resolve: {
-    alias: {
-      public_html$: path.resolve(__dirname, "../public/index.html")
-    }
+  "paths": {
+    "&public/*": ["./public/*"]
   },
   ...
 }
