@@ -13,6 +13,11 @@ module.exports = {
   },
   mode: "development",
   devtool: "eval",
+  optimization: {
+    splitChunks: {
+      chunks: "all",
+    },
+  },
   devServer: {
     port: 3000,
     host: "0.0.0.0",
