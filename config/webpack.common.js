@@ -77,6 +77,9 @@ module.exports = {
     }),
     new CleanWebpackPlugin(),
     new ForkTsCheckerWebpackPlugin({
+      eslint: {
+        files: "./src/**/*.{ts,tsx,js,jsx}",
+      },
       typescript: {
         diagnosticOptions: {
           semantic: true,
