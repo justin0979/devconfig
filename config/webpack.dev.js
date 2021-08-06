@@ -13,6 +13,11 @@ module.exports = merge(commonConfig, {
     path: path.resolve(__dirname, "../dist"),
     publicPath: "/",
   },
+  optimization: {
+    splitChunks: {
+      chunks: "all",
+    },
+  },
   mode: "development",
   devtool: "inline-source-map",
   devServer: {
