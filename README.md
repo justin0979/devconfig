@@ -8,7 +8,7 @@ install & run and is easily configurable with webpack and
 babel. Webpack is <strong>not</strong> set up for production
 in some branches.
 
-#### Select An Setup from Below
+#### Select A Setup From Below
 
 Then just copy and paste the `git clone` for that single
 branch.
