@@ -1,8 +1,17 @@
 ## "Base" Development Envrionments
 
-<sub>(Some of the comments towards the bottom might be out of date, haven't had a chance to check test them since updating to webpack v5)</sub>
+<sub>(Some of the comments towards the bottom might be out of
+date)</sub>
 
-Light weight development environment. This is just for a quick install & run and is easily configurable with webpack and babel. Webpack is <strong>not</strong> set up for production in some branches.
+Light weight development environment. This is just for a quick
+install & run and is easily configurable with webpack and
+babel. Webpack is <strong>not</strong> set up for production
+in some branches.
+
+#### Select An Setup from Below
+
+Then just copy and paste the `git clone` for that single
+branch.
 
 <details>
 
@@ -10,7 +19,9 @@ Light weight development environment. This is just for a quick install & run and
 
 run `npm i` then `npm start` and go to `localhost:3000`.<br />
 Uses `webpack-dev-server` for auto reloads on save.<br/>
-Aboslute paths are set to `src` in `webpack.config.js` for `main`, the other branches use `babel.config.js` to set absolute routes.
+Aboslute paths are set to `src` in `webpack.config.js` for
+`main`, the other branches use `babel.config.js` to set
+absolute routes.
 
 Sass is already setup.
 
