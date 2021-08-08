@@ -2,6 +2,8 @@ const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
+const TsconfigPathsWebpackPlugin = require("tsconfig-paths-webpack-plugin");
+const ForkTsCheckerWebpackPlugin = require("fork-ts-checker-webpack-plugin");
 
 module.exports = {
   entry: ["./src/index.ts", "./src/main.scss"],
@@ -13,12 +15,6 @@ module.exports = {
   mode: "production",
   resolve: {
     modules: [path.resolve(__dirname, "src"), "node_modules"],
-    alias: {
-      public_html$: path.resolve(
-        __dirname,
-        "../public/index.html",
-      ),
-    },
     extensions: [
       ".js",
       ".jsx",
@@ -37,6 +33,11 @@ module.exports = {
       ".eot",
       "mp4",
       "webm",
+    ],
+    plugins: [
+      new TsconfigPathsWebpackPlugin({
+        configFile: "tsconfig.json",
+      }),
     ],
   },
   module: {
@@ -84,5 +85,16 @@ module.exports = {
       filename: "styles.[contenthash].css",
     }),
     new CleanWebpackPlugin(),
+    new ForkTsCheckerWebpackPlugin({
+      eslint: {
+        files: "./src/**/*.{ts,tsx,js,jsx}",
+      },
+      typescript: {
+        diagnosticOptions: {
+          semantic: true,
+          syntactic: true,
+        },
+      },
+    }),
   ],
 };
