@@ -47,9 +47,9 @@ Done through `webpack`. To disable, comment out or delete
 the appropriate plugins in `config/webpack.common.js`.
 
 For `.scss` files:<br />
-(stylelint)[https://stylelint.io/] <br />
+[stylelint](https://stylelint.io/) <br />
 For all branches (so far), the only setup is from the
-(Getting started)[https://stylelint.io/user-guide/get-started]
+[Getting started](https://stylelint.io/user-guide/get-started)
 from the docs.
 
 </details>
