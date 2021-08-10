@@ -17,12 +17,11 @@ run `git checkout react` then `npm i` then `npm start`.
 
 For `.scss` files:
 [stylelint](https://stylelint.io/)
-Only used [Getting started](https://stylelint.io/user-guide/get-started) 
+Only used [Getting started](https://stylelint.io/user-guide/get-started)
 section of stylelint docs.
 
-To disable linting, comment out or delete from webpack 
-plugins in `config`.
-
+To disable linting, comment out or delete from webpack
+plugins in `config/`.
 
 ## Import /public/index.html
 
@@ -48,7 +47,7 @@ To change this, go to `tsconig.json` and make changes to:
 
 In order to import `svg` files, you need to do the following:
 
-1. Create custon.d.ts file in home directory<br />
+1. Create custon.d.ts file in home directory with:<br />
    `touch custom.d.ts`
 2. Add the following to `custom.d.ts`:
 
