@@ -16,7 +16,10 @@ module.exports = merge(commonConfig, {
     historyApiFallback: {
       index: "index.html",
     },
-    overlay: true,
+    overlay: {
+      warnings: true,
+      errors: true,
+    },
     writeToDisk: true,
     // public: "post.com" // whatever host name is (e.g. "client:80" or "ticketing.dev")
   },

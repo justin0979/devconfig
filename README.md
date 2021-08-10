@@ -41,6 +41,20 @@ To change favicon, add new favicon to public and change path to that favicon in 
 </details>
 
 <details>
+<summary><b>Linting</b></summary>
+
+Done through `webpack`. To disable, comment out or delete 
+the appropriate plugins in `config/webpack.common.js`.
+
+For `.scss` files:<br />
+(stylelint)[https://stylelint.io/] <br />
+For all branches (so far), the only setup is from the
+(Getting started)[https://stylelint.io/user-guide/get-started]
+from the docs.
+
+</details>
+
+<details>
 <summary><b>Testing</b></summary>
 
 Setup `jest` to not throw errors for importing .svg files, use mock files.

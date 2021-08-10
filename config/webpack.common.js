@@ -1,5 +1,6 @@
 const path = require("path");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
+const StylelintPlugin = require("stylelint-webpack-plugin");
 // const CopyWebpackPlugin = requier("copy-webpack-plugin");
 
 module.exports = {
@@ -47,6 +48,7 @@ module.exports = {
   },
   plugins: [
     new CleanWebpackPlugin(),
+    new StylelintPlugin(),
     //    new CopyWebpackPlugin({
     //      patterns: [
     //        {
