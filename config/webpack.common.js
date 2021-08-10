@@ -1,6 +1,7 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
+const StylelintPlugin = require("stylelint-webpack-plugin");
 //const CopyWebpackPlugin = require("copy-webpack-plugin");
 
 module.exports = {
@@ -40,9 +41,9 @@ module.exports = {
         type: "asset",
         parser: {
           dataUrlCondition: {
-            maxSize: 3 * 1024 // 3 kBs
-          }
-        }
+            maxSize: 3 * 1024, // 3 kBs
+          },
+        },
       },
     ],
   },
@@ -55,6 +56,7 @@ module.exports = {
       },
     }),
     new CleanWebpackPlugin(),
+    new StylelintPlugin(),
     //    new CopyWebpackPlugin({
     //      patterns: [
     //        {

@@ -23,6 +23,11 @@ with functional components, but classes will still say it needs to import react.
 For possible issues, check out `Issues` section on the `main`
 branch.
 
+## Linting
+
+For .scss files:
+[stylelint](https://stylelint.io/)
+
 ### Using Docker
 
 If use `docker-compose up` and later need to add package, you will have to use `docker-compose run client npm i <package>`; otherwise, you will get permission errors.
