@@ -4,6 +4,7 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const TsconfigPathsWebpackPlugin = require("tsconfig-paths-webpack-plugin");
 const ForkTsCheckerWebpackPlugin = require("fork-ts-checker-webpack-plugin");
+const StylelintPlugin = require("stylelint-webpack-plugin")
 
 module.exports = {
   entry: ["./src/index.ts", "./src/main.scss"],
@@ -114,5 +115,6 @@ module.exports = {
         },
       },
     }),
+    new StylelintPlugin()
   ],
 };
