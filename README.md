@@ -43,14 +43,13 @@ To change favicon, add new favicon to public and change path to that favicon in 
 <details>
 <summary><b>Linting</b></summary>
 
-Done through `webpack`. To disable, comment out or delete 
+Done through `webpack`. To disable, comment out or delete
 the appropriate plugins in `config/webpack.common.js`.
 
-For `.scss` files:<br />
-[stylelint](https://stylelint.io/) <br />
-For all branches (so far), the only setup is from the
+For `.scss` files: [stylelint](https://stylelint.io/) <br />
+For SCSS linting in all branches, the only setup is from the
 [Getting started](https://stylelint.io/user-guide/get-started)
-from the docs.
+section from the docs.
 
 </details>
 
