@@ -31,26 +31,23 @@ body {
     display: block;
     width: 51rem;
     height: 7rem;
-  }
+    color: #cccbbb;
 
-  .users {
-    &-list {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
+    &:hover {
+      color: white;
+      font-size: 1.8rem;
+    }
 
-      & li {
-        text-align: left;
+    .users {
+      &-list {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+
+        & li {
+          text-align: left;
+        }
       }
     }
-  }
-}
-
-a {
-  color: #cccbbb;
-
-  &:hover {
-    color: white;
-    font-size: 1.8rem;
   }
 }
 
@@ -65,7 +62,7 @@ a {
 
   &:hover {
     transform: translateY(-0.5rem);
-    box-shadow: 0rem 0.5rem 1rem rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.5);
     background-color: lighten(green, 20%);
     color: #777;
     font-weight: bold;
@@ -73,7 +70,7 @@ a {
 
   &:active {
     transform: translateY(-0.3rem);
-    box-shadow: 0rem 0.3rem 0.3rem rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0.3rem 0.3rem rgba(0, 0, 0, 0.5);
     background-color: springgreen;
   }
 }

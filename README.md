@@ -16,6 +16,15 @@ section on the `main` branch.
 git clone --branch react-ts --single-branch --depth 1 git@github.com:justin0979/devconfig.git
 ```
 
+## Linters
+
+Typescript linting:
+[typescript-eslint](https://github.com/typescript-eslint/typescript-eslint)
+SCSS linting:
+[stylelint](https://stylelint.io/)
+
+To disable, comment out or delete their webpack plugins in `config`.
+
 ## Redux added
 
 Redux data is accessed in `state/` along with `hooks/`
@@ -138,5 +147,7 @@ The `tsconfig.json` comes from:
 
 ## Issues
 
+If run into routing issues, check `output.publicPath` in `webpack.dev.js`
+and/or `webpack.prod.js`.
 If run into routing issues, check `output.publicPath` in `webpack.dev.js`
 and/or `webpack.prod.js`.

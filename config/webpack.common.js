@@ -3,6 +3,7 @@ const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const TsconfigPathsPlugin = require("tsconfig-paths-webpack-plugin");
 const ForkTsCheckerWebpackPlugin = require("fork-ts-checker-webpack-plugin");
+const StylelintPlugin = require("stylelint-webpack-plugin");
 //const CopyWebpackPlugin = require("copy-webpack-plugin");
 
 module.exports = {
@@ -87,6 +88,7 @@ module.exports = {
         },
       },
     }),
+    new StylelintPlugin(),
     //    new CopyWebpackPlugin({
     //      patterns: [
     //        {
