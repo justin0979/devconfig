@@ -73,7 +73,7 @@ touch __mocks__/fileMock.js __mocks__/styleMock.js
 Add to `fileMock.js`:
 
 ```javascript
-module.exports = "test-file-stub";
+module.exports = 'test-file-stub';
 ```
 
 Add to `styleMock.js`:
@@ -92,17 +92,17 @@ Add/Update `jest.config.js`:
 
 ```javascript
 module.exports = {
-  roots: ["<rootDir>/src"],
+  roots: ['<rootDir>/src'],
   testMatch: [
-    "**/__tests__/**/*.+(ts|tsx|js)",
-    "**/?(*.)*(spec|test).*(ts|tsx|js)",
+    '**/__tests__/**/*.+(ts|tsx|js)',
+    '**/?(*.)*(spec|test).*(ts|tsx|js)',
   ],
   transform: {
-    "^.+\\.(ts|tsx)$": "ts-jest",
+    '^.+\\.(ts|tsx)$': 'ts-jest',
   },
   moduleNameMapper: {
-    "\\.(css|less)$": "<rootDir>/__mocks__/styleMock.js",
-    "\\.(gif|ttf|eot|svg)$": "<rootDir>/__mocks__/fileMock.js",
+    '\\.(css|less)$': '<rootDir>/__mocks__/styleMock.js',
+    '\\.(gif|ttf|eot|svg)$': '<rootDir>/__mocks__/fileMock.js',
   },
 };
 ```
@@ -234,8 +234,44 @@ git clone --branch react-ts git@github.com:justin0979/devconfig.git \
 For use of absolute paths like:
 
 ```javascript
-import newFile from "&newdirname/newFile";
+import newFile from '&newdirname/newFile';
 ```
+
+### Two ways:
+
+### First way:
+
+install [tsconfig-paths-webpack-plugin](https://www.npmjs.com/package/tsconfig-paths-webpack-plugin)
+
+update `config/webpack.common.js`:
+
+```javascript
+import TsconfigPathsPlugin = require("tsconfig-paths-webpack-plugin");
+
+module.exports = {
+  resolve: {
+    plugins: [
+      new TsconfigPathsPlugin({
+        configFile: "tsconfig.json"
+      })
+    ]
+  }
+}
+```
+
+then add the desired absolute paths to `tsconfig.json`:
+
+```json
+{
+  "compilerOptions": {
+    "paths": {
+      "&components/*": ["src/components/*"]
+    }
+  }
+}
+```
+
+### Second Way:
 
 update the following:
 
@@ -415,12 +451,12 @@ e.g.
 `.svg` file added to `img` element with JS file by importing the `svg` file and `setAttribute("src", <svg filename>)`.
 
 ```javascript
-import loader from "images/loader.svg";
+import loader from 'images/loader.svg';
 
-const loaderDiv = document.getElementById("loader");
-const imgSvg = document.createElement("img");
-imgSvg.setAttribute("src", loader);
-imgSvg.setAttribute("alt", "Loading");
+const loaderDiv = document.getElementById('loader');
+const imgSvg = document.createElement('img');
+imgSvg.setAttribute('src', loader);
+imgSvg.setAttribute('alt', 'Loading');
 loaderDiv.appendChild(imgSvg);
 ```
 
