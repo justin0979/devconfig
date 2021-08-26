@@ -1,4 +1,4 @@
-import { ActionType } from "&state";
+import { ActionType } from '&state';
 
 export interface Address {
   street: string;
@@ -21,5 +21,10 @@ export interface User {
 
 export interface UsersAction {
   type: ActionType.SEARCH_USERS;
+  payload: User[];
+}
+
+export interface DeleteAction {
+  type: ActionType.DELETE_USERS;
   payload: User[];
 }

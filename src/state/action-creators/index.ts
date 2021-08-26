@@ -1,6 +1,6 @@
-import axios from "axios";
-import { Dispatch } from "redux";
-import { ActionType, Action, User } from "&state";
+import axios from 'axios';
+import { Dispatch } from 'redux';
+import { ActionType, Action, User } from '&state';
 
 export const fetchLists =
   (type: string) => async (dispatch: Dispatch<Action>) => {
@@ -13,3 +13,10 @@ export const fetchLists =
       payload: data,
     });
   };
+
+export const deleteList = () => {
+  return {
+    type: ActionType.DELETE_USERS,
+    payload: [],
+  };
+};
