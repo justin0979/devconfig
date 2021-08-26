@@ -41,10 +41,10 @@ const Users: React.FC = () => {
   };
 
   return (
-    <section>
+    <section className="section__users">
       <h2>Users</h2>
       {renderButton()}
-      <ol className="users-list">{renderUsers()}</ol>
+      <ol className="section__users--list">{renderUsers()}</ol>
     </section>
   );
 };
