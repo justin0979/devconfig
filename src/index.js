@@ -1,32 +1,31 @@
-import axios from "axios";
-import "../public/index.html";
+import axios from 'axios';
 
 const starting = async () => {
   const response = await axios.get(
-    "https://jsonPlaceholder.typicode.com/users",
+    'https://jsonPlaceholder.typicode.com/users',
   );
 
   const users = response.data;
 
-  const ul = document.createElement("ul");
+  const ul = document.createElement('ul');
 
   users.forEach((user) => {
-    const li = document.createElement("li");
+    const li = document.createElement('li');
     li.key = user.id;
     li.innerHTML = user.name;
     ul.appendChild(li);
   });
 
-  const saying2 = document.createElement("h2");
-  saying2.innerHTML = "webpack-dev-server";
+  const saying2 = document.createElement('h2');
+  saying2.innerHTML = 'webpack-dev-server';
 
-  const saying = document.createElement("h2");
-  saying.innerHTML = "Working with Webpack 5";
-  const app = document.querySelector(".app");
+  const saying = document.createElement('h2');
+  saying.innerHTML = 'Working with Webpack 5';
+  const app = document.querySelector('.app');
   app.appendChild(saying2);
   app.appendChild(saying);
 
-  const environment = document.createElement("h3");
+  const environment = document.createElement('h3');
   environment.innerHTML = `Environment = ${process.env.NODE_ENV}`;
 
   // const module_hot = document.createElement("h3");
@@ -35,13 +34,13 @@ const starting = async () => {
   app.appendChild(ul);
 
   const reminder = `run "npm uninstall axios" if it is not needed.`;
-  const p_reminder = document.createElement("p");
+  const p_reminder = document.createElement('p');
   p_reminder.innerHTML = reminder;
   app.appendChild(p_reminder);
 };
 
 starting();
 
-if (module.hot) {
-  module.hot.accept();
-}
+//if (module.hot) {
+//  module.hot.accept();
+//}
