@@ -1,4 +1,5 @@
 import axios from 'axios';
+import './main.scss';
 
 const starting = async () => {
   const response = await axios.get(

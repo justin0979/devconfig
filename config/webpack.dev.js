@@ -5,7 +5,7 @@ const { merge } = require('webpack-merge');
 const commonConfig = require('./webpack.common');
 
 module.exports = merge(commonConfig, {
-  entry: ['./src', './src/main.scss'],
+  entry: ['./src'],
   output: {
     publicPath: '',
   },
@@ -20,6 +20,12 @@ module.exports = merge(commonConfig, {
     port: 3000,
     host: '0.0.0.0', // add for docker
     historyApiFallback: true,
+    client: {
+      overlay: {
+        errors: true,
+        warnings: false,
+      },
+    },
     // public: "post.com" // whatever host name is (e.g. "client:80" or "ticketing.dev")
   },
   module: {
