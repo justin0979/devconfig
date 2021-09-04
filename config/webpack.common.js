@@ -1,37 +1,42 @@
-const path = require("path");
-const { CleanWebpackPlugin } = require("clean-webpack-plugin");
-const HtmlWebpackPlugin = require("html-webpack-plugin");
-const TsconfigPathsPlugin = require("tsconfig-paths-webpack-plugin");
-const ForkTsCheckerWebpackPlugin = require("fork-ts-checker-webpack-plugin");
-const StylelintPlugin = require("stylelint-webpack-plugin");
+const path = require('path');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
+const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
+const StylelintPlugin = require('stylelint-webpack-plugin');
 //const CopyWebpackPlugin = require("copy-webpack-plugin");
 
 module.exports = {
+  optimization: {
+    splitChunks: {
+      chunks: 'all',
+    },
+  },
   resolve: {
-    modules: [path.resolve(__dirname, "src"), "node_modules"],
+    modules: [path.resolve(__dirname, 'src'), 'node_modules'],
     plugins: [
       new TsconfigPathsPlugin({
-        configFile: "tsconfig.json",
+        configFile: 'tsconfig.json',
       }),
     ],
     extensions: [
-      ".js",
-      ".jsx",
-      ".ts",
-      ".tsx",
-      ".css",
-      ".scss",
-      ".jpg",
-      ".jpeg",
-      ".png",
-      ".svg",
-      ".gif",
-      ".ttf",
-      ".woff",
-      ".woff2",
-      ".eot",
-      "mp4",
-      "webm",
+      '.js',
+      '.jsx',
+      '.ts',
+      '.tsx',
+      '.css',
+      '.scss',
+      '.jpg',
+      '.jpeg',
+      '.png',
+      '.svg',
+      '.gif',
+      '.ttf',
+      '.woff',
+      '.woff2',
+      '.eot',
+      'mp4',
+      'webm',
     ],
   },
   module: {
@@ -39,14 +44,14 @@ module.exports = {
       {
         test: /\.jsx?$/,
         exclude: /node_modules/,
-        loader: "babel-loader",
+        loader: 'babel-loader',
       },
       {
         test: /\.tsx?$/,
         exclude: /node_modules/,
         use: [
           {
-            loader: "ts-loader",
+            loader: 'ts-loader',
             options: {
               transpileOnly: true,
             },
@@ -55,11 +60,11 @@ module.exports = {
       },
       {
         test: /\.html$/,
-        loader: "html-loader",
+        loader: 'html-loader',
       },
       {
         test: /\.(jpe?g|png|gif|svg|ttf|woff(2)?|eot|mp4|webm)$/,
-        type: "asset",
+        type: 'asset',
         parser: {
           dataUrlCondition: {
             maxSize: 3 * 1024, // 3 kBs
@@ -70,16 +75,16 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: "./public/index.html",
-      favicon: "./public/favicon-32x32.png",
+      template: './public/index.html',
+      favicon: './public/favicon-32x32.png',
       meta: {
-        viewport: "width=device-width, initial-scale=1",
+        viewport: 'width=device-width, initial-scale=1',
       },
     }),
     new CleanWebpackPlugin(),
     new ForkTsCheckerWebpackPlugin({
       eslint: {
-        files: "./src/**/*.{ts,tsx,js,jsx}",
+        files: './src/**/*.{ts,tsx,js,jsx}',
       },
       typescript: {
         diagnosticOptions: {

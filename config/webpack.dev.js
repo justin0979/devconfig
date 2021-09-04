@@ -9,11 +9,6 @@ module.exports = merge(commonConfig, {
     path: path.resolve(__dirname, '../dist'),
     publicPath: '/',
   },
-  optimization: {
-    splitChunks: {
-      chunks: 'all',
-    },
-  },
   mode: 'development',
   devtool: 'inline-source-map',
   devServer: {
@@ -22,7 +17,10 @@ module.exports = merge(commonConfig, {
     hot: true,
     historyApiFallback: true,
     client: {
-      overlay: true,
+      overlay: {
+        errors: true,
+        warnings: false,
+      },
     },
     // public: "posts.com" // change to whatever host name is (e.g., "client:80" or "ticketing.dex")
   },
