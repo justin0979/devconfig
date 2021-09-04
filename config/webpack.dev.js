@@ -22,6 +22,12 @@ module.exports = {
   devServer: {
     port: 3000,
     host: '0.0.0.0',
+    client: {
+      overlay: {
+        errors: true,
+        warnings: false,
+      },
+    },
   },
   resolve: {
     modules: [path.resolve(__dirname, 'src'), 'node_modules'],
