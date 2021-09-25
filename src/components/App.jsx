@@ -1,5 +1,5 @@
-import { useState, Suspense, lazy } from "react";
-const Lazy = lazy(() => import("&components/Lazy"));
+import { useState, Suspense, lazy } from 'react';
+const Lazy = lazy(() => import('&components/Lazy'));
 
 const App = () => {
   const [loaded, setLoaded] = useState(false);
@@ -12,9 +12,7 @@ const App = () => {
         </Suspense>
       );
     }
-    return (
-      <h1 data-test="lazyLoadLazyDefault">Loaded here</h1>
-    );
+    return <h1 data-test="lazyLoadLazyDefault">Loaded here</h1>;
   };
 
   return (
