@@ -1,0 +1,13 @@
+.section {
+  &__users {
+    width: 70%;
+
+    &--list {
+      margin: 0 auto;
+      height: 16rem;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+    }
+  }
+}
