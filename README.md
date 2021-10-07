@@ -35,6 +35,12 @@ To change directory name while cloning, add new name after repo:
 git clone git@github.com:justin0979/devconfig.git new_name
 ```
 
+For only the main branch:
+
+```sh
+git clone --branch main --single-branch --depth 1 https://github.com/justin0979/devconfig.git
+```
+
 To change favicon, add new favicon to public and change path to that favicon in webpack configs' html plugin.
 
 <hr />
