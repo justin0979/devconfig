@@ -1,6 +1,6 @@
 @mixin responsive($screen-width) {
   @if $screen-width == phone {
-    // 600px / 16px = 37.5
+    /* 600px / 16px = 37.5 */
     @media (max-width: 37.5em) {
       @content;
     }

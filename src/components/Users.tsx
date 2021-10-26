@@ -1,6 +1,6 @@
-import { useDispatch } from 'react-redux';
-import { useAppSelector } from '&hooks';
-import { fetchLists, deleteList } from '&state';
+import { useDispatch } from "react-redux";
+import { useAppSelector } from "&hooks";
+import { fetchLists, deleteList } from "&state";
 
 const Users: React.FC = () => {
   const dispatch = useDispatch();
@@ -8,7 +8,7 @@ const Users: React.FC = () => {
 
   const getUsersList: React.MouseEventHandler<HTMLButtonElement> =
     () => {
-      dispatch(fetchLists('users'));
+      dispatch(fetchLists("users"));
     };
 
   const emptyUsersList: React.MouseEventHandler<HTMLButtonElement> =

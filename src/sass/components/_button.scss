@@ -10,11 +10,11 @@
   color: snow;
   text-decoration: none;
   border: none;
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0.5rem 1rem rgba(0 0 0 / 50%);
 
   &:hover {
     transform: translateY(-0.5rem);
-    box-shadow: 0 1.5rem 1rem rgba(0, 0, 0, 0.5);
+    box-shadow: 0 1.5rem 1rem rgba(0 0 0 / 50%);
     background-color: lighten(green, 20%);
     color: #777;
     font-weight: bold;
@@ -22,7 +22,7 @@
 
   &:active {
     transform: translateY(-0.3rem);
-    box-shadow: 0 0.5rem 0.3rem rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0.5rem 0.3rem rgba(0 0 0 / 50%);
     background-color: springgreen;
   }
 }
