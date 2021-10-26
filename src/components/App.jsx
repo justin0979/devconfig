@@ -1,5 +1,5 @@
-import { useState, Suspense, lazy } from 'react';
-const Lazy = lazy(() => import('&components/Lazy'));
+import { useState, Suspense, lazy } from "react";
+const Lazy = lazy(() => import("&components/Lazy"));
 
 const App = () => {
   const [loaded, setLoaded] = useState(false);
