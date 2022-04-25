@@ -1,9 +1,13 @@
-import ReactDOM from 'react-dom';
-import App from '&components/App';
-import '&sass/main.scss';
+import { createRoot } from "react-dom/client";
+import App from "&components/App";
+import "&sass/main.scss";
 
-ReactDOM.render(<App />, document.querySelector('#root'));
+const container = document.getElementById(
+  "root",
+) as HTMLElement;
+const root = createRoot(container);
+root.render(<App />);
 
-if (module.hot) {
-  module.hot.accept();
-}
+// if (module.hot) {
+//   module.hot.accept();
+// }
