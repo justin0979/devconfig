@@ -4,9 +4,11 @@
 
     &--list {
       margin: 0 auto;
+      margin-top: 2rem;
       height: 16rem;
       display: flex;
       flex-direction: column;
+      flex-wrap: wrap;
     }
   }
 }
