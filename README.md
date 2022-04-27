@@ -27,7 +27,7 @@ Sass is already setup.
 
 `Branch: main` is only html, js, and scss.
 
-All of the following copy and paste commands for cloning use `SSH`.
+** Be sure to check the repository name for whether or not `SSH` or `https` is used. **
 
 To get all of the branches:
 (To change directory name while cloning, add new name after repo):
@@ -80,7 +80,7 @@ touch __mocks__/fileMock.js __mocks__/styleMock.js
 Add to `fileMock.js`:
 
 ```javascript
-module.exports = 'test-file-stub';
+module.exports = "test-file-stub";
 ```
 
 Add to `styleMock.js`:
@@ -99,17 +99,17 @@ Add/Update `jest.config.js`:
 
 ```javascript
 module.exports = {
-  roots: ['<rootDir>/src'],
+  roots: ["<rootDir>/src"],
   testMatch: [
-    '**/__tests__/**/*.+(ts|tsx|js)',
-    '**/?(*.)*(spec|test).*(ts|tsx|js)',
+    "**/__tests__/**/*.+(ts|tsx|js)",
+    "**/?(*.)*(spec|test).*(ts|tsx|js)",
   ],
   transform: {
-    '^.+\\.(ts|tsx)$': 'ts-jest',
+    "^.+\\.(ts|tsx)$": "ts-jest",
   },
   moduleNameMapper: {
-    '\\.(css|less)$': '<rootDir>/__mocks__/styleMock.js',
-    '\\.(gif|ttf|eot|svg)$': '<rootDir>/__mocks__/fileMock.js',
+    "\\.(css|less)$": "<rootDir>/__mocks__/styleMock.js",
+    "\\.(gif|ttf|eot|svg)$": "<rootDir>/__mocks__/fileMock.js",
   },
 };
 ```
@@ -241,7 +241,7 @@ git clone --branch react-ts git@github.com:justin0979/devconfig.git \
 For use of absolute paths like:
 
 ```javascript
-import newFile from '&newdirname/newFile';
+import newFile from "&newdirname/newFile";
 ```
 
 ### Two ways:
@@ -458,12 +458,12 @@ e.g.
 `.svg` file added to `img` element with JS file by importing the `svg` file and `setAttribute("src", <svg filename>)`.
 
 ```javascript
-import loader from 'images/loader.svg';
+import loader from "images/loader.svg";
 
-const loaderDiv = document.getElementById('loader');
-const imgSvg = document.createElement('img');
-imgSvg.setAttribute('src', loader);
-imgSvg.setAttribute('alt', 'Loading');
+const loaderDiv = document.getElementById("loader");
+const imgSvg = document.createElement("img");
+imgSvg.setAttribute("src", loader);
+imgSvg.setAttribute("alt", "Loading");
 loaderDiv.appendChild(imgSvg);
 ```
 
