@@ -27,7 +27,9 @@ Sass is already setup.
 
 `Branch: main` is only html, js, and scss.
 
-** Be sure to check the repository name for whether or not `SSH` or `https` is used. **
+<strong>
+Be sure to check the repository name for whether or not `SSH` or `https` is used.
+</strong>
 
 To get all of the branches:
 (To change directory name while cloning, add new name after repo):
