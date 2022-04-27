@@ -30,7 +30,8 @@ Sass is already setup.
 <strong>
 Be sure to check the repository name for whether or not `SSH` or `https` is used in 
 the copy and paste commands.
-</strong><br />
+</strong>
+<br />
 
 To get all of the branches:
 (To change directory name while cloning, add new name after repo):
@@ -45,7 +46,9 @@ For only the main branch:
 git clone --branch main --single-branch --depth 1 https://github.com/justin0979/devconfig.git
 ```
 
-To change favicon, add new favicon to public and change path to that favicon in webpack configs' html plugin.
+To change favicon, add new favicon to `public` directory and change path to that favicon
+in `plugins: [new HtmlWebpackPlugin({favicon: <new_favicon>})]` in both
+`config/webpack.dev.js` and `config/webpack.prog.js`.
 
 <hr />
 </details>
