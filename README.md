@@ -1,4 +1,4 @@
-## "Base" Development Envrionments
+## "Base" Front End Development Envrionments
 
 <sub>(Some of the comments towards the bottom might be out of
 date)</sub>
