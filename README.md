@@ -54,6 +54,25 @@ in `plugins: [new HtmlWebpackPlugin({favicon: <new_favicon>})]` in both
 </details>
 
 <details>
+<summary><b>Absolute Paths</b></summary>
+
+If copying `src/` directly to `create-react-app`, be sure to either check each import
+path **or** be sure to add `jsconfig.json` file to `create-react-app`. In `jsonconfig.json`:
+
+```javascript
+{
+  "compilerOptions": {
+    "baseUrl": "src"
+  },
+  "include": ["src"]
+}
+```
+
+If above does not work, try `./src` instead of `src`.
+
+</details>
+
+<details>
 <summary><b>Linting</b></summary>
 
 Done through `webpack`. To disable, comment out or delete
