@@ -1,13 +1,18 @@
 import axios from "axios";
 import "./main.scss";
 
-const starting = async () => {
-  const response = await axios.get(
-    "https://jsonPlaceholder.typicode.com/users",
-  );
+/**
+ *  @typedef {Object} Item
+ *  @property {number} id - user id
+ *  @property {string} name - user name
+ */
 
-  const users = response.data;
-
+/**
+ *  Creates an unordered list of users from jsonPlaceholder
+ *  @param {Item[]} users - list of users from jsonPlaceholder
+ *  @returns {HTMLElement} - unordered list of users
+ * */
+const usersList = (users) => {
   const ul = document.createElement("ul");
 
   users.forEach((user) => {
@@ -16,6 +21,21 @@ const starting = async () => {
     li.innerHTML = user.name;
     ul.appendChild(li);
   });
+
+  return ul;
+};
+
+/**
+ *  Creates and adds HTML elements to HTML body
+ */
+const starting = async () => {
+  const response = await axios.get(
+    "https://jsonPlaceholder.typicode.com/users",
+  );
+
+  const users = response.data;
+
+  const ul = usersList(users);
 
   const saying2 = document.createElement("h2");
   saying2.innerHTML = "webpack-dev-server";
