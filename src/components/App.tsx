@@ -17,7 +17,7 @@ const componentContent: Content = {
   reference:
     "https://medium.com/@dahvinchee/how-to-set-up-a-react-typescript-project-from-scratch-with-babel-and-webpack-6b069881229d",
   refDesc: `There are lots of articles with explanations 
-    (like this one)`,
+    (like this one) for setup, like the tsconfig.json`,
 };
 
 const App: React.FC = () => {
