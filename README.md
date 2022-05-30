@@ -3,10 +3,14 @@
 <sub>(Some of the comments towards the bottom might be out of
 date)</sub>
 
-Light weight development environment. This is just for a quick
-install & run and is easily configurable with webpack and
-babel. Webpack is <strong>not</strong> set up for production
-in some branches.
+Manually setup webpack for a light weight development environment.
+This is just for a quick install & run and is easily configurable
+with webpack and babel. Webpack is <strong>not</strong> set up for
+production in some branches.
+
+For those using `React`, after development, can copy `src/` directly
+to `create-react-app` and `npm install` all required packages. Run
+`npm build` or other processes as needed.
 
 #### Select A Setup From Below
 
