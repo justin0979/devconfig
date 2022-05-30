@@ -10,7 +10,10 @@ production in some branches.
 
 For those using `React`, after development, can copy `src/` directly
 to `create-react-app` and `npm install` all required packages. Run
-`npm build` or other processes as needed.
+`npm build` or other processes as needed. Be sure to check for
+<strong>absolute</strong> and <strong>relative paths</strong> in each
+branch. See [Create React App Absolute Imports](https://create-react-app.dev/docs/importing-a-component/#absolute-imports)
+to set up custom absolute paths.
 
 #### Select A Setup From Below
 
