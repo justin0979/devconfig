@@ -77,7 +77,7 @@ path **or** be sure to add `jsconfig.json` file to `create-react-app`. In `jsonc
 }
 ```
 
-If above does not work, try `./src` instead of `src`.
+If above does not work, try `"include": ["./src"]` instead of `"include": ["src"]`.
 
 </details>
 
