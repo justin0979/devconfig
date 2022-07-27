@@ -12,9 +12,7 @@ const App = () => {
         </Suspense>
       );
     }
-    return (
-      <h1 data-test="lazyLoadLazyDefault">Loaded here</h1>
-    );
+    return <h1 data-test="lazyLoadLazyDefault">Loaded here</h1>;
   };
 
   return (
