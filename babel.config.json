@@ -10,5 +10,22 @@
         }
       }
     ]
+<<<<<<< HEAD
+=======
+  ],
+  "plugins": [
+    "@babel/transform-runtime",
+    "@babel/proposal-class-properties"
+    ,[
+      "module-resolver", 
+      {
+        "root": ["./"],
+        "alias": {
+          "&src": "./src",
+          "&public": "./public"
+        }
+      }
+    ]
+>>>>>>> db7c085d1b44b6c04e3bd6be71394e929d01d332
   ]
 }

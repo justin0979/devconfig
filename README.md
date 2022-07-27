@@ -1,7 +1,13 @@
 ## "Base" Front End Development Envrionments
 
+<<<<<<< HEAD
 <sub>(Some of the comments towards the bottom might be out of
 date)</sub>
+=======
+(No production webpack configuration file setup yet)
+
+run `npm i` then `npm start` and go to `localhost:3000`.
+>>>>>>> db7c085d1b44b6c04e3bd6be71394e929d01d332
 
 Manually setup webpack for a light weight development environment.
 This is just for a quick install & run and is easily configurable
@@ -34,6 +40,7 @@ absolute routes.
 
 Sass is already setup.
 
+<<<<<<< HEAD
 `Branch: main` is only html, js, and scss.
 
 <strong>
@@ -411,11 +418,42 @@ module.exports = {
       index: "index.html"
     },
     overlay: true,
+=======
+For `react` already installed and ready for use:<br />
+run `git checkout react` then `npm i` then `npm start`.
+
+## Linting
+
+For `.scss` files:
+[stylelint](https://stylelint.io/)
+Only used [Getting started](https://stylelint.io/user-guide/get-started)
+section of stylelint docs.
+
+To disable linting, comment out or delete from webpack
+plugins in `config/`.
+
+## Import /public/index.html
+
+Import with:
+
+```typescript
+import "$public/index.html";
+```
+
+To change this, go to `tsconig.json` and make changes to:
+
+```javascript
+"compilerOptions": {
+  ...,
+  "paths": {
+    "&public/*": ["./public/*"]
+>>>>>>> db7c085d1b44b6c04e3bd6be71394e929d01d332
   },
   ...
 }
 ```
 
+<<<<<<< HEAD
 to
 
 ```javascript
@@ -512,10 +550,23 @@ Fixed above issue by adding `custom.d.ts` to root directory:
 
 declare module "*.svg" {
   const ReactComponent: React.FunctionComponent<React.SVGAttributes<SVGElement>>;
+=======
+## Import SVG file
+
+In order to import `svg` files, you need to do the following:
+
+1. Create custon.d.ts file in home directory with:<br />
+   `touch custom.d.ts`
+2. Add the following to `custom.d.ts`:
+
+```
+declare module "*.svg" {
+>>>>>>> db7c085d1b44b6c04e3bd6be71394e929d01d332
   const content: string;
   export default content;
 }
 ```
+<<<<<<< HEAD
 
 </details>
 
@@ -526,3 +577,5 @@ Check `output.publicPath` in `config/webpack.dev.js` and/or
 `config/webpack.prod.js` and adjust according to your situation.
 
 </details>
+=======
+>>>>>>> db7c085d1b44b6c04e3bd6be71394e929d01d332
