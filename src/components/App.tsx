@@ -13,7 +13,7 @@ interface Content {
 
 const componentContent: Content = {
   h1: "With Typescript",
-  text: "This works",
+  text: "This works, but just know that I typed this up over a couple of years ago",
   reference:
     "https://medium.com/@dahvinchee/how-to-set-up-a-react-typescript-project-from-scratch-with-babel-and-webpack-6b069881229d",
   refDesc: `There are lots of articles with explanations 
