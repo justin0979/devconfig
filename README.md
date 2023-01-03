@@ -1,6 +1,6 @@
 ## "Base" Front End Development Envrionments
 
-<sub>(Some of the comments towards the bottom might be out of
+<sub>(Some of the comments might be out of
 date)</sub>
 
 Manually setup webpack for a light weight development environment.
@@ -24,7 +24,9 @@ branch.
 
 <details>
 
-<summary><strong>Overview</strong></summary>
+<summary><strong>Get Started</strong></summary>
+
+<sub>(Third party package updates may show errors. I will try to update this repo as often as I can.)</sub>
 
 run `npm i` then `npm start` and go to `localhost:3000`.<br />
 Uses `webpack-dev-server` for auto reloads on save.<br/>
@@ -133,18 +135,18 @@ Add/Update `jest.config.js`:
 
 ```javascript
 module.exports = {
-  roots: ["<rootDir>/src"],
-  testMatch: [
-    "**/__tests__/**/*.+(ts|tsx|js)",
-    "**/?(*.)*(spec|test).*(ts|tsx|js)",
-  ],
-  transform: {
-    "^.+\\.(ts|tsx)$": "ts-jest",
-  },
-  moduleNameMapper: {
-    "\\.(css|less)$": "<rootDir>/__mocks__/styleMock.js",
-    "\\.(gif|ttf|eot|svg)$": "<rootDir>/__mocks__/fileMock.js",
-  },
+    roots: ["<rootDir>/src"],
+    testMatch: [
+        "**/__tests__/**/*.+(ts|tsx|js)",
+        "**/?(*.)*(spec|test).*(ts|tsx|js)",
+    ],
+    transform: {
+        "^.+\\.(ts|tsx)$": "ts-jest",
+    },
+    moduleNameMapper: {
+        "\\.(css|less)$": "<rootDir>/__mocks__/styleMock.js",
+        "\\.(gif|ttf|eot|svg)$": "<rootDir>/__mocks__/fileMock.js",
+    },
 };
 ```
 
@@ -304,11 +306,11 @@ then add the desired absolute paths to `tsconfig.json`:
 
 ```json
 {
-  "compilerOptions": {
-    "paths": {
-      "&components/*": ["src/components/*"]
+    "compilerOptions": {
+        "paths": {
+            "&components/*": ["src/components/*"]
+        }
     }
-  }
 }
 ```
 
