@@ -1,3 +1,4 @@
+// Remember to add this file to `tsconfig.json` in `{"include": ["src, custom.d.ts"]}`
 declare module "*.png";
 declare module "*.jpg";
 declare module "*.jpeg";
