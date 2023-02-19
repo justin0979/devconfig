@@ -3,10 +3,10 @@
 <sub>(Some of the comments might be out of
 date)</sub>
 
-Manually setup webpack for a light weight development environment.
-This is just for a quick install & run and is easily configurable
-with webpack and babel. Webpack is <strong>not</strong> set up for
-production in some branches.
+Manually setup webpack for a light weight <em><strong>development</strong></em>
+environment. This is just for a quick install & run and is easily configurable
+with webpack and babel. Again, <strong>webpack configuration is not set up for
+production</strong>.
 
 For those using `React`, after development, can copy `src/` directly
 to `create-react-app` and `npm install` all required packages
