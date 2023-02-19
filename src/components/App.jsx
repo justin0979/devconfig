@@ -5,14 +5,13 @@ const App = () => {
   const [loaded, setLoaded] = useState(false);
 
   const lazyLoadLazy = () => {
-    if (loaded) {
-      return (
+    return (
+      (loaded && (
         <Suspense fallback="Lazy loading Lazy component">
           <Lazy />
         </Suspense>
-      );
-    }
-    return <h1 data-test="lazyLoadLazyDefault">Loaded here</h1>;
+      )) || <h1 data-test="lazyLoadLazyDefault">Loaded here</h1>
+    );
   };
 
   return (
