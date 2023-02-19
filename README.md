@@ -59,94 +59,6 @@ in `plugins: [new HtmlWebpackPlugin({favicon: <new_favicon>})]` in both
 <hr />
 </details>
 
-<details>
-<summary><b>Absolute Paths</b></summary>
-
-If copying `src/` directly to `create-react-app`, be sure to either check each import
-path **or** be sure to add `jsconfig.json` file to `create-react-app`. In `jsonconfig.json`:
-
-```javascript
-{
-  "compilerOptions": {
-    "baseUrl": "src"
-  },
-  "include": ["src"]
-}
-```
-
-If above does not work, try `"include": ["./src"]` instead of `"include": ["src"]`.
-
-</details>
-
-<details>
-<summary><b>Linting</b></summary>
-
-Done through `webpack`. To disable, comment out or delete
-the appropriate plugins in `config/webpack.common.js`.
-
-For `.scss` files: [stylelint](https://stylelint.io/) <br />
-For SCSS linting in all branches, the only setup is from the
-[Getting started](https://stylelint.io/user-guide/get-started)
-section from the docs.
-
-</details>
-
-<details>
-<summary><b>Testing</b></summary>
-
-Setup `jest` to not throw errors for importing .svg files, use mock files.
-
-In the root directory, run:
-
-```sh
-mkdir __mocks__
-```
-
-Add mock files:
-
-```sh
-touch __mocks__/fileMock.js __mocks__/styleMock.js
-```
-
-Add to `fileMock.js`:
-
-```javascript
-module.exports = "test-file-stub";
-```
-
-Add to `styleMock.js`:
-
-```javascript
-module.exports = {};
-```
-
-Now create `jest.config.js` in root directory:
-
-```sh
-touch jest.config.js
-```
-
-Add/Update `jest.config.js`:
-
-```javascript
-module.exports = {
-    roots: ["<rootDir>/src"],
-    testMatch: [
-        "**/__tests__/**/*.+(ts|tsx|js)",
-        "**/?(*.)*(spec|test).*(ts|tsx|js)",
-    ],
-    transform: {
-        "^.+\\.(ts|tsx)$": "ts-jest",
-    },
-    moduleNameMapper: {
-        "\\.(css|less)$": "<rootDir>/__mocks__/styleMock.js",
-        "\\.(gif|ttf|eot|svg)$": "<rootDir>/__mocks__/fileMock.js",
-    },
-};
-```
-
-</details>
-
 <hr />
 
 #### Select A Setup From Below
@@ -397,9 +309,97 @@ For all branches, follow steps from React section above.<br />
 <hr />
 </details>
 
-<details>
-
 <hr />
+
+<details>
+<summary><b>Absolute Paths</b></summary>
+
+If copying `src/` directly to `create-react-app`, be sure to either check each import
+path **or** be sure to add `jsconfig.json` file to `create-react-app`. In `jsonconfig.json`:
+
+```javascript
+{
+  "compilerOptions": {
+    "baseUrl": "src"
+  },
+  "include": ["src"]
+}
+```
+
+If above does not work, try `"include": ["./src"]` instead of `"include": ["src"]`.
+
+</details>
+
+<details>
+<summary><b>Linting</b></summary>
+
+Done through `webpack`. To disable, comment out or delete
+the appropriate plugins in `config/webpack.common.js`.
+
+For `.scss` files: [stylelint](https://stylelint.io/) <br />
+For SCSS linting in all branches, the only setup is from the
+[Getting started](https://stylelint.io/user-guide/get-started)
+section from the docs.
+
+</details>
+
+<details>
+<summary><b>Testing</b></summary>
+
+Setup `jest` to not throw errors for importing .svg files, use mock files.
+
+In the root directory, run:
+
+```sh
+mkdir __mocks__
+```
+
+Add mock files:
+
+```sh
+touch __mocks__/fileMock.js __mocks__/styleMock.js
+```
+
+Add to `fileMock.js`:
+
+```javascript
+module.exports = "test-file-stub";
+```
+
+Add to `styleMock.js`:
+
+```javascript
+module.exports = {};
+```
+
+Now create `jest.config.js` in root directory:
+
+```sh
+touch jest.config.js
+```
+
+Add/Update `jest.config.js`:
+
+```javascript
+module.exports = {
+    roots: ["<rootDir>/src"],
+    testMatch: [
+        "**/__tests__/**/*.+(ts|tsx|js)",
+        "**/?(*.)*(spec|test).*(ts|tsx|js)",
+    ],
+    transform: {
+        "^.+\\.(ts|tsx)$": "ts-jest",
+    },
+    moduleNameMapper: {
+        "\\.(css|less)$": "<rootDir>/__mocks__/styleMock.js",
+        "\\.(gif|ttf|eot|svg)$": "<rootDir>/__mocks__/fileMock.js",
+    },
+};
+```
+
+</details>
+
+<details>
 
 <summary><strong>Kubernetes</strong></summary>
 
