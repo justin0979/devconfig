@@ -23,16 +23,6 @@ and copy and paste code from link into that file</sub>
 
 <sub>(Third party package updates may show errors. I will try to update this repo as often as I can.)</sub>
 
-run `npm i` then `npm start` and go to `localhost:3000`.<br />
-Uses `webpack-dev-server` for auto reloads on save.<br/>
-Aboslute paths are set to `src` in `webpack.config.js` for
-`main`, the other branches use `babel.config.js` to set
-absolute routes.
-
-Sass is already setup.
-
-`Branch: main` is only html, js, and scss.
-
 <strong>
 Be sure to check the repository name for whether or not `SSH` or `https` is used in 
 the copy and paste commands.
@@ -56,7 +46,16 @@ To change favicon, add new favicon to `public` directory and change path to that
 in `plugins: [new HtmlWebpackPlugin({favicon: <new_favicon>})]` in both
 `config/webpack.dev.js` and `config/webpack.prog.js`.
 
-<hr />
+run `npm i` then `npm start` and go to `localhost:3000`.<br />
+Uses `webpack-dev-server` for auto reloads on save.<br/>
+Aboslute paths are set to `src` in `webpack.config.js` for
+`main`, the other branches use `babel.config.js` to set
+absolute routes.
+
+Sass is already setup.
+
+`Branch: main` is only html, js, and scss.
+
 </details>
 
 <hr />
