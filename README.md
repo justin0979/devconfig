@@ -147,143 +147,6 @@ module.exports = {
 
 </details>
 
-<details>
-
-<summary><strong>Kubernetes</strong></summary>
-
-When using Kubernetes and needing to adjust where the project is running at, make the following change: <br />
-From
-
-```javascript
-module.exports = {
-  // ...
-  devServer: {
-    host: "0.0.0.0",
-    port: 3000,
-    hot: true,
-    historyApiFallback: {
-      index: "index.html"
-    },
-    overlay: true,
-  },
-  ...
-}
-```
-
-to
-
-```javascript
-module.exports = {
-  // ...
-  devServer: {
-    host: "0.0.0.0",
-    port: 3000,
-    hot: true,
-    historyApiFallback: {
-      index: "index.html"
-   },
-    overlay: true,
-    public: "posts.com" // or whatever name will be (e.g., public: "ticketing.dev")
-  },
-  ...
-```
-
-<hr />
-</details>
-
-<details>
-
-<summary><strong>Issues</strong></summary>
-
-These are issues I've encountered over the **years**, so, packages may already
-address these issues.
-
-<details>
-
-<summary>[SOLVED Issue] Unable to load wasm file to dist directory</summary>
-
-Using `esbuild-wasm@0.8.27` in React program to transpile and bundle in browser, adding
-`./node_modules/esbuild-wasm/esbuild.wasm` to `./public`
-did not build with `esbuild.wasm` being added to `./dist`.<br />
-
-##### SOLUTION for Unable to load wasm file to dist/
-
-run
-
-```ssh
-npm i -D copy-webpack-plugin
-```
-
-In `webpack.common.config` add:
-
-```javascript
-const CopyWebpackPlugin = require("copy-webpack-plugin");
-
- module.exports = {
-   ...,
-   plugins: [
-     new CopyWebpackPlugin({
-      patterns: [
-        {
-          from: "public"
-        }
-      ]
-     })
-   ]
- };
-```
-
-</details>
-
-<details>
-
-<summary>[SOLVED for TS Issue] Unable to load `svg` files onto html img's</summary>
-
-e.g.
-
-```html
-<img src="loader.svg" alt="stuff" />
-```
-
-~~I just opened the svg file and copied and pasted the `<svg>...</svg>` directly into the html file.~~<br />
-`.svg` file added to `img` element with JS file by importing the `svg` file and `setAttribute("src", <svg filename>)`.
-
-```javascript
-import loader from "images/loader.svg";
-
-const loaderDiv = document.getElementById("loader");
-const imgSvg = document.createElement("img");
-imgSvg.setAttribute("src", loader);
-imgSvg.setAttribute("alt", "Loading");
-loaderDiv.appendChild(imgSvg);
-```
-
-(May have overlooked a simple, direct, common sense way for adding directly to `index.html` though)
-
-#### SOLUTION for Unable to load `svg` files onto html img's
-
-Fixed above issue by adding `custom.d.ts` to root directory:
-
-```javascript
-// custom.d.ts
-
-declare module "*.svg" {
-  const ReactComponent: React.FunctionComponent<React.SVGAttributes<SVGElement>>;
-  const content: string;
-  export default content;
-}
-```
-
-</details>
-
-<details>
-  <summary>Routing Issue</summary>
-
-Check `output.publicPath` in `config/webpack.dev.js` and/or
-`config/webpack.prod.js` and adjust according to your situation.
-
-</details>
-
 #### Select A Setup From Below
 
 Then just copy and paste the `git clone` for that single
@@ -530,4 +393,138 @@ For all branches, follow steps from React section above.<br />
 \*adjust the `tsconfig.json` file.
 
 <hr />
+</details>
+
+<details>
+
+<summary><strong>Kubernetes</strong></summary>
+
+When using Kubernetes and needing to adjust where the project is running at, make the following change: <br />
+From
+
+```javascript
+module.exports = {
+  // ...
+  devServer: {
+    host: "0.0.0.0",
+    port: 3000,
+    hot: true,
+    historyApiFallback: {
+      index: "index.html"
+    },
+    overlay: true,
+  },
+  ...
+}
+```
+
+to
+
+```javascript
+module.exports = {
+  // ...
+  devServer: {
+    host: "0.0.0.0",
+    port: 3000,
+    hot: true,
+    historyApiFallback: {
+      index: "index.html"
+   },
+    overlay: true,
+    public: "posts.com" // or whatever name will be (e.g., public: "ticketing.dev")
+  },
+  ...
+```
+
+<hr />
+</details>
+
+<details>
+
+<summary><strong>Issues</strong></summary>
+
+<details>
+
+<summary>[SOLVED Issue] Unable to load wasm file to dist directory</summary>
+
+Using `esbuild-wasm@0.8.27` in React program to transpile and bundle in browser, adding
+`./node_modules/esbuild-wasm/esbuild.wasm` to `./public`
+did not build with `esbuild.wasm` being added to `./dist`.<br />
+
+##### SOLUTION for Unable to load wasm file to dist/
+
+run
+
+```ssh
+npm i -D copy-webpack-plugin
+```
+
+In `webpack.common.config` add:
+
+```javascript
+const CopyWebpackPlugin = require("copy-webpack-plugin");
+
+ module.exports = {
+   ...,
+   plugins: [
+     new CopyWebpackPlugin({
+      patterns: [
+        {
+          from: "public"
+        }
+      ]
+     })
+   ]
+ };
+```
+
+</details>
+
+<details>
+
+<summary>[SOLVED for TS Issue] Unable to load `svg` files onto html img's</summary>
+
+e.g.
+
+```html
+<img src="loader.svg" alt="stuff" />
+```
+
+~~I just opened the svg file and copied and pasted the `<svg>...</svg>` directly into the html file.~~<br />
+`.svg` file added to `img` element with JS file by importing the `svg` file and `setAttribute("src", <svg filename>)`.
+
+```javascript
+import loader from "images/loader.svg";
+
+const loaderDiv = document.getElementById("loader");
+const imgSvg = document.createElement("img");
+imgSvg.setAttribute("src", loader);
+imgSvg.setAttribute("alt", "Loading");
+loaderDiv.appendChild(imgSvg);
+```
+
+(May have overlooked a simple, direct, common sense way for adding directly to `index.html` though)
+
+#### SOLUTION for Unable to load `svg` files onto html img's
+
+Fixed above issue by adding `custom.d.ts` to root directory:
+
+```javascript
+// custom.d.ts
+
+declare module "*.svg" {
+  const ReactComponent: React.FunctionComponent<React.SVGAttributes<SVGElement>>;
+  const content: string;
+  export default content;
+}
+```
+
+</details>
+
+<details>
+  <summary>Routing Issue</summary>
+
+Check `output.publicPath` in `config/webpack.dev.js` and/or
+`config/webpack.prod.js` and adjust according to your situation.
+
 </details>
