@@ -23,14 +23,18 @@ and copy and paste code from link into that file</sub>
 
 <sub>(Third party package updates may show errors. I will try to update this repo as often as I can.)</sub>
 
+First, clone the branch you want:
+
 <strong>
 Be sure to check the repository name for whether or not `SSH` or `https` is used in 
 the copy and paste commands.
 </strong>
 <br />
 
-To get all of the branches:
+To get all of the branches, using `SSH`:
 (To change directory name while cloning, add new name after repo):
+
+<sub>(replace `new_name` at end of command with the desired name of directory)</sub>
 
 ```sh
 git clone git@github.com:justin0979/devconfig.git new_name
