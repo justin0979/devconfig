@@ -4,7 +4,11 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const TsconfigPathsPlugin = require("tsconfig-paths-webpack-plugin");
 const ForkTsCheckerWebpackPlugin = require("fork-ts-checker-webpack-plugin");
 const StylelintPlugin = require("stylelint-webpack-plugin");
+const ReactRefreshWebpackPlugin = require("@pmmmwh/react-refresh-webpack-plugin");
+const ReactRefreshTS = require("react-refresh-typescript");
 //const CopyWebpackPlugin = require("copy-webpack-plugin");
+
+const isDevelopment = process.env.NODE_ENV !== "production";
 
 module.exports = {
   optimization: {
@@ -53,7 +57,12 @@ module.exports = {
           {
             loader: "ts-loader",
             options: {
-              transpileOnly: true,
+              getCustomTransformers: () => ({
+                before: [isDevelopment && ReactRefreshTS()].filter(
+                  Boolean,
+                ),
+              }),
+              transpileOnly: isDevelopment,
             },
           },
         ],
@@ -91,6 +100,7 @@ module.exports = {
       },
     }),
     new StylelintPlugin(),
+    isDevelopment && new ReactRefreshWebpackPlugin(),
     //    new CopyWebpackPlugin({
     //      patterns: [
     //        {
@@ -98,5 +108,5 @@ module.exports = {
     //        },
     //      ],
     //    }),
-  ],
+  ].filter(Boolean),
 };
