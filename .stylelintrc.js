@@ -21,5 +21,6 @@ module.exports = {
     ],
     "font-family-name-quotes": null,
     "font-family-no-missing-generic-family-keyword": null,
+    "import-notation": null,
   },
 };
