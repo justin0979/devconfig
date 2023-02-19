@@ -147,6 +147,8 @@ module.exports = {
 
 </details>
 
+<hr />
+
 #### Select A Setup From Below
 
 Then just copy and paste the `git clone` for that single
@@ -396,6 +398,8 @@ For all branches, follow steps from React section above.<br />
 </details>
 
 <details>
+
+<hr />
 
 <summary><strong>Kubernetes</strong></summary>
 
