@@ -1,7 +1,7 @@
 ## "Base" Front End Development Envrionments
 
-<sub>(Some of the comments might be out of
-date)</sub>
+<sub>(Some of the comments might be out of date and I've probably repeated myself many times
+throughout each README)</sub>
 
 Manually setup webpack for a light weight <em><strong>development</strong></em>
 environment. This is just for a quick install & run and is easily configurable
@@ -34,7 +34,8 @@ the copy and paste commands.
 To get all of the branches, using `SSH`:
 (To change directory name while cloning, add new name after repo):
 
-<sub>(replace `new_name` at end of command with the desired name of directory)</sub>
+<sub>(replace `new_name` at end of command with the desired name of directory,
+leave off `new_name` to use the default name of `devconfig`)</sub>
 
 ```sh
 git clone git@github.com:justin0979/devconfig.git new_name
@@ -50,15 +51,14 @@ To change favicon, add new favicon to `public` directory and change path to that
 in `plugins: [new HtmlWebpackPlugin({favicon: <new_favicon>})]` in both
 `config/webpack.dev.js` and `config/webpack.prog.js`.
 
-run `npm i` then `npm start` and go to `localhost:3000`.<br />
-Uses `webpack-dev-server` for auto reloads on save.<br/>
-Aboslute paths are set to `src` in `webpack.config.js` for
-`main`, the other branches use `babel.config.js` to set
-absolute routes.
+Next, run `npm i` then `npm start` and go to `localhost:3000`.<br />
 
-Sass is already setup.
-
-`Branch: main` is only html, js, and scss.
+-   `webpack-dev-server` is used for auto reloads on save.
+-   Aboslute paths are set to `src` in `webpack.config.js` for
+    `main`, the other branches use `babel.config.js` to set
+    absolute routes.
+-   Sass is already setup.
+-   `Branch: main` is only html, js, and scss.
 
 </details>
 
