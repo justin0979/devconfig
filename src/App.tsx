@@ -1,12 +1,13 @@
-import { Provider } from "react-redux";
-import { store } from "&state";
+import { Route } from "./components";
 import { HomePage } from "./pages";
 
 const App: React.FC = () => {
   return (
-    <Provider store={store}>
-      <HomePage />
-    </Provider>
+    <>
+      <Route path="/">
+        <HomePage />
+      </Route>
+    </>
   );
 };
 
