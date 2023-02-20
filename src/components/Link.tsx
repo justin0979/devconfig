@@ -7,7 +7,7 @@ interface LinkProps {
 }
 
 const Link = ({ to, children }: LinkProps) => {
-  const { navigate } = useNavigation();
+  const { currentPath, navigate } = useNavigation();
 
   const handleClick = (
     event: React.MouseEvent<HTMLAnchorElement, MouseEvent>,
@@ -21,7 +21,11 @@ const Link = ({ to, children }: LinkProps) => {
   };
 
   return (
-    <a onClick={handleClick} href={to} className="link">
+    <a
+      onClick={handleClick}
+      href={to}
+      className={`link ${to === currentPath ? "link__active" : ""}`}
+    >
       {children}
     </a>
   );
