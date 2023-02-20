@@ -16,7 +16,7 @@ const componentContent: Content = {
 
 const HomePage = () => {
   return (
-    <div className="app" data-test="appComponent">
+    <div className="home" data-test="appComponent">
       <img src={favIcon} alt="Name" />
       <img src={ripple} alt="Rippling" />
       <h1>With Typescript</h1>

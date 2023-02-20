@@ -21,7 +21,7 @@ const Link = ({ to, children }: LinkProps) => {
   };
 
   return (
-    <a onClick={handleClick} href={to}>
+    <a onClick={handleClick} href={to} className="link">
       {children}
     </a>
   );
