@@ -6,11 +6,11 @@ interface Route {
   path: string;
 }
 
-interface SidebarProps {
+interface MenuProps {
   routes: Route[];
 }
 
-const Sidebar = ({ routes }: SidebarProps) => {
+const Menu = ({ routes }: MenuProps) => {
   const renderedPaths = routes.map((route) => {
     return (
       <Link key={route.id} to={route.path}>
@@ -26,4 +26,4 @@ const Sidebar = ({ routes }: SidebarProps) => {
   );
 };
 
-export default Sidebar;
+export default Menu;
