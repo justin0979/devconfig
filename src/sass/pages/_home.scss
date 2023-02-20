@@ -1,8 +1,11 @@
 .app {
+  margin: 3rem;
+}
+
+.home {
   min-height: 85vh;
   line-height: 2;
   color: #cccbbb;
-  margin: 3rem;
   background-image: linear-gradient(to left, #222, #888);
   display: flex;
   flex-direction: column;
