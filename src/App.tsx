@@ -1,5 +1,5 @@
 import { Route, Menu } from "./components";
-import { HomePage } from "./pages";
+import { HomePage, CounterPage } from "./pages";
 
 const App: React.FC = () => {
   const routes = [
@@ -12,6 +12,9 @@ const App: React.FC = () => {
       <Menu routes={routes} />
       <Route path="/">
         <HomePage />
+      </Route>
+      <Route path="/counter">
+        <CounterPage />
       </Route>
     </div>
   );
