@@ -334,7 +334,7 @@ If above does not work, try `"include": ["./src"]` instead of `"include": ["src"
 </details>
 
 <details>
-<summary><b>Linting</b></summary>
+<summary><b>Linting (Stylelint errors/warnings)</b></summary>
 
 Done through `webpack`. To disable, comment out or delete
 the appropriate plugins in `config/webpack.common.js`.
@@ -343,6 +343,31 @@ For `.scss` files: [stylelint](https://stylelint.io/) <br />
 For SCSS linting in all branches, the only setup is from the
 [Getting started](https://stylelint.io/user-guide/get-started)
 section from the docs.
+
+This `.stylelintrc.js` is more basic at this point. I adjust it as erros/warnings
+appear that I do not need to deal with.<br />
+To handle things like below:
+
+```sh
+ERROR in [stylelint]
+src/sass/base/_base.scss
+ 18:5  x  Expected a space after //  scss/double-slash-comment-whitespace-inside
+
+ 1 problem (1 error, 0 warnings)
+```
+
+Just add the stated rule to `.stylelintrc.js` rules:
+
+```javascript
+module.exports = {
+    extends: "...",
+             rules: {
+                 "at-rule-empty-line-before": null,
+                 ...,
+                 "scss/double-slash-comment-whitespace-inside": null,
+             }
+}
+```
 
 </details>
 
