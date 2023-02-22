@@ -23,5 +23,6 @@ module.exports = {
     "scss/double-slash-comment-empty-line-before": null,
     "scss/dollar-variable-empty-line-before": null,
     "scss/double-slash-comment-whitespace-inside": null,
+    "scss/no-global-function-names": null,
   },
 };
