@@ -361,11 +361,11 @@ Just add the stated rule to `.stylelintrc.js` rules:
 ```javascript
 module.exports = {
     extends: "...",
-             rules: {
-                 "at-rule-empty-line-before": null,
-                 ...,
-                 "scss/double-slash-comment-whitespace-inside": null,
-             }
+    rules: {
+      "at-rule-empty-line-before": null,
+      ...,
+      "scss/double-slash-comment-whitespace-inside": null,
+    }
 }
 ```
 
