@@ -18,5 +18,6 @@ module.exports = {
       },
     ],
     "scss/double-slash-comment-empty-line-before": null,
+    "scss/double-slash-comment-whitespace-inside": null,
   },
 };
