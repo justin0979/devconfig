@@ -1,5 +1,5 @@
 module.exports = {
-  extends: "stylelint-config-standard",
+  extends: "stylelint-config-standard-scss",
   rules: {
     "at-rule-empty-line-before": null,
     "at-rule-no-unknown": null,
@@ -17,5 +17,6 @@ module.exports = {
         ignore: ["inside-parens"],
       },
     ],
+    "scss/double-slash-comment-empty-line-before": null,
   },
 };
