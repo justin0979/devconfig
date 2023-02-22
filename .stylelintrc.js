@@ -21,6 +21,7 @@ module.exports = {
     "font-family-name-quotes": null,
     "font-family-no-missing-generic-family-keyword": null,
     "scss/double-slash-comment-empty-line-before": null,
+    "scss/dollar-variable-empty-line-before": null,
     "scss/double-slash-comment-whitespace-inside": null,
   },
 };
