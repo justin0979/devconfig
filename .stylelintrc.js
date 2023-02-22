@@ -25,5 +25,6 @@ module.exports = {
     "no-invalid-double-slash-comments": null,
     "scss/dollar-variable-empty-line-before": null,
     "scss/double-slash-comment-whitespace-inside": null,
+    "scss/no-global-function-names": null,
   },
 };
