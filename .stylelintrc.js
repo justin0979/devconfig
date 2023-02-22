@@ -23,6 +23,7 @@ module.exports = {
     "font-family-no-missing-generic-family-keyword": null,
     "import-notation": null,
     "no-invalid-double-slash-comments": null,
+    "scss/dollar-variable-empty-line-before": null,
     "scss/double-slash-comment-whitespace-inside": null,
   },
 };
