@@ -17,6 +17,7 @@ module.exports = {
         ignore: ["inside-parens"],
       },
     ],
+    "scss/at-mixin-argumentless-call-parentheses": null,
     "scss/double-slash-comment-empty-line-before": null,
     "scss/dollar-variable-empty-line-before": null,
     "scss/double-slash-comment-whitespace-inside": null,
