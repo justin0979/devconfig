@@ -5,6 +5,7 @@ module.exports = {
     "at-rule-no-unknown": null,
     "block-no-empty": null,
     "color-hex-length": null,
+    "comment-empty-line-before": null,
     "declaration-colon-newline-after": null,
     "declaration-block-no-redundant-longhand-properties": null,
     "declaration-empty-line-before": [
