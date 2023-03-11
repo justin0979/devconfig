@@ -19,7 +19,7 @@ const HomePage = () => {
     <div className="home" data-test="appComponent">
       <img src={favIcon} alt="Name" />
       <img src={ripple} alt="Rippling" />
-      <h1>With Typescript</h1>
+      <h1>React With Typescript</h1>
       <p>
         This works, but just know that I typed this up over a couple of
         years ago
