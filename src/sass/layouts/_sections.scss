@@ -1,11 +1,15 @@
 .section {
   &__users {
-    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
     &--list {
+      height: 16rem;
+      width: 100%;
       margin: 0 auto;
       margin-top: 2rem;
-      height: 16rem;
       display: flex;
       flex-direction: column;
       flex-wrap: wrap;

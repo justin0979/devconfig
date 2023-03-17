@@ -4,7 +4,7 @@ interface IClassNamesObj {
 
 type ClassNamesType = string | string[] | IClassNamesObj;
 
-export function classNamesClone(...rest: ClassNamesType[]) {
+export function setClassNames(...rest: ClassNamesType[]) {
   return rest.reduce((acc: string, curr: ClassNamesType) => {
     switch (typeof curr) {
       case "string": {
@@ -14,11 +14,13 @@ export function classNamesClone(...rest: ClassNamesType[]) {
         if (Array.isArray(curr)) {
           return `${curr.join(" ")} ${acc}`;
         }
+        let tempCurr = acc;
         for (let [key, value] of Object.entries(curr)) {
           if (value) {
-            return `${key} ${acc}`;
+            tempCurr = `${key} ${tempCurr}`;
           }
         }
+        return tempCurr;
       }
       default: {
         return acc;

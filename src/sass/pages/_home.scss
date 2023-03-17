@@ -13,6 +13,12 @@
   justify-content: center;
   text-align: center;
 
+  &-icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
   .content > a {
     display: block;
     width: 51rem;

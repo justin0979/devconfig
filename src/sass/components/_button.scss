@@ -25,4 +25,29 @@
     box-shadow: 0 0.5rem 0.3rem rgba(0 0 0 / 50%);
     background-color: springgreen;
   }
+
+  &-primary {
+    background-color: skyblue;
+  }
+
+  &-secondary {
+    background-color: springgreen;
+  }
+
+  &-warning {
+    background-color: yellow;
+  }
+
+  &-active {
+    clip-path: polygon(
+      0 30%,
+      30% 0,
+      70% 0%,
+      100% 30%,
+      100% 60%,
+      70% 100%,
+      30% 100%,
+      0 60%
+    );
+  }
 }

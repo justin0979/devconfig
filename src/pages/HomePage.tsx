@@ -16,9 +16,11 @@ const componentContent: Content = {
 
 const HomePage = () => {
   return (
-    <div className="home" data-test="appComponent">
-      <img src={favIcon} alt="Name" />
-      <img src={ripple} alt="Rippling" />
+    <div data-test="appComponent">
+      <span className="home-icon">
+        <img src={favIcon} alt="Name" />
+        <img src={ripple} alt="Rippling" />
+      </span>
       <h1>React With Typescript</h1>
       <p>
         This works, but just know that I typed this up over a couple of
