@@ -4,6 +4,12 @@ interface IClassNamesObj {
 
 type ClassNamesType = string | string[] | IClassNamesObj;
 
+/**
+ *  This is a limited copy of the `classnames` npm package.
+ *  Function to set CSS class names to component either in list of names
+ *  or with use of object where key consists of string of class names that
+ *  is only used if the value is set to true.
+ */
 export function setClassNames(...rest: ClassNamesType[]) {
   return rest.reduce((acc: string, curr: ClassNamesType) => {
     switch (typeof curr) {
