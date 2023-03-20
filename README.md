@@ -8,6 +8,8 @@ environment. This is just for a quick install & run and is easily configurable
 with webpack and babel. <strong>Webpack configuration is not set up for
 production</strong>.
 
+Just click on the below dropdowns and copy and paste the `git clone` command.
+
 <details>
 
 <summary><strong>Get Started</strong></summary>
@@ -311,6 +313,9 @@ Be sure to check for <strong>absolute</strong> and
 [Create React App Absolute Imports](https://create-react-app.dev/docs/importing-a-component/#absolute-imports)
 to set up custom absolute paths. <sub>In root dir, run `touch jsconfig.json`
 and copy and paste code from link into that file</sub>
+
+Also, browser refreshes on saves are controlled with `react-refresh-webpack-plugin` and `react-refresh-typescript`.
+I haven't looked into these as thoroughly to see if there is a rule to clear the browser console on saves.
 
 <hr />
 
