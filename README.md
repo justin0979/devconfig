@@ -5,17 +5,8 @@ throughout each README)</sub>
 
 Manually setup webpack for a light weight <em><strong>development</strong></em>
 environment. This is just for a quick install & run and is easily configurable
-with webpack and babel. Again, <strong>webpack configuration is not set up for
+with webpack and babel. <strong>Webpack configuration is not set up for
 production</strong>.
-
-For those using `React`, after development, can copy `src/` directly
-to `create-react-app` and `npm install` all required packages
-(e.g. `npm i -D sass`). Run `npm build` or other processes as needed.
-Be sure to check for <strong>absolute</strong> and
-<strong>relative paths</strong> in each branch. See
-[Create React App Absolute Imports](https://create-react-app.dev/docs/importing-a-component/#absolute-imports)
-to set up custom absolute paths. <sub>In root dir, run `touch jsconfig.json`
-and copy and paste code from link into that file</sub>
 
 <details>
 
@@ -311,6 +302,15 @@ For all branches, follow steps from React section above.<br />
 
 <hr />
 </details>
+
+For those using `React`, after development, `src/` can be copied directly
+to `create-react-app` and `npm install` all required packages
+(e.g. `npm i -D sass`). Run `npm build` or other processes as needed.
+Be sure to check for <strong>absolute</strong> and
+<strong>relative paths</strong> in each branch. See
+[Create React App Absolute Imports](https://create-react-app.dev/docs/importing-a-component/#absolute-imports)
+to set up custom absolute paths. <sub>In root dir, run `touch jsconfig.json`
+and copy and paste code from link into that file</sub>
 
 <hr />
 
