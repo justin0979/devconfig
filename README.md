@@ -40,10 +40,6 @@ For only the main branch:
 git clone --branch main --single-branch --depth 1 https://github.com/justin0979/devconfig.git
 ```
 
-To change favicon, add new favicon to `public` directory and change path to that favicon
-in `plugins: [new HtmlWebpackPlugin({favicon: <new_favicon>})]` in both
-`config/webpack.dev.js` and `config/webpack.prog.js`.
-
 Next, run `npm i` then `npm start` and go to `localhost:3000`.<br />
 
 -   `webpack-dev-server` is used for auto reloads on save.
@@ -52,6 +48,13 @@ Next, run `npm i` then `npm start` and go to `localhost:3000`.<br />
     absolute routes.
 -   Sass is already setup.
 -   `Branch: main` is only html, js, and scss.
+
+To change favicon, add new favicon to `public` directory and change path to that favicon
+in both `config/webpack.dev.js` and `config/webpack.prog.js` to:
+
+```javascript
+plugins: [new HtmlWebpackPlugin({favicon: <new_favicon>})]
+```
 
 </details>
 
