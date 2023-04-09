@@ -4,6 +4,12 @@
 
 Light weight dev environment. `create-react-app` covers way more scenarios; however, it takes time to install all of the dependencies. This is just for a quick install and run and is easily configurable with webpack and babel.
 
+Install:
+
+```sh
+git clone --branch react --single-branch --depth 1 https://github.com/justin0979/devconfig.git
+```
+
 `npm i`<br />
 `npm start`<br />
 Go to `localhost:3000`
@@ -39,9 +45,9 @@ If needing to use:
 
 ```javascript
 jest.spyOn(global, "fetch").mockImplementation(() =>
-  Promise.resolve({
-    json: () => Promise.resolve(stuff),
-  }),
+    Promise.resolve({
+        json: () => Promise.resolve(stuff),
+    }),
 );
 ```
 
@@ -49,9 +55,9 @@ implement this way instead:
 
 ```javascript
 global.fetch = jest.fn().mockImplementation(() =>
-  Promise.resolve({
-    json: () => Promise.resolve(stuff),
-  }),
+    Promise.resolve({
+        json: () => Promise.resolve(stuff),
+    }),
 );
 ```
 
