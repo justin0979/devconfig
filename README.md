@@ -1,5 +1,14 @@
 # Base Development Envrionment with React and Redux (using Typescript)
 
+Install:
+
+```sh
+git clone --branch react-ts --single-branch --depth 1 git@github.com:justin0979/devconfig.git
+```
+
+A lot of the info in this file is outdated due to npm packages updating. To ensure
+the latest package versions are used, you can install and run `npm-upgrade`.
+
 After updating `babel.config.js` to use [JSX Transform](https://reactjs.org/blog/2020/09/22/introducing-the-new-jsx-transform.html),
 functional components no longer need to import `react` with
 
@@ -37,9 +46,9 @@ If needing to use:
 
 ```javascript
 jest.spyOn(global, "fetch").mockImplementation(() =>
-  Promise.resolve({
-    json: () => Promise.resolve(stuff),
-  }),
+    Promise.resolve({
+        json: () => Promise.resolve(stuff),
+    }),
 );
 ```
 
@@ -47,9 +56,9 @@ use this instead:
 
 ```javascript
 global.fetch = jest.fn().mockImplementation(() =>
-  Promise.resolve({
-    json: () => Promise.resolve(stuff),
-  }),
+    Promise.resolve({
+        json: () => Promise.resolve(stuff),
+    }),
 );
 ```
 
@@ -76,14 +85,11 @@ update the following (assuming <code>newdirname/</code> is in <code>src/</code>)
 
 ```typescript
 export default {
-  resolve: {
-    alias: {
-      "&newdirname": path.resolve(
-        __dirname,
-        "../src/newdirname",
-      ),
+    resolve: {
+        alias: {
+            "&newdirname": path.resolve(__dirname, "../src/newdirname"),
+        },
     },
-  },
 };
 ```
 
@@ -92,15 +98,15 @@ export default {
 
 ```javascript
 module.exports = {
-  plugins: [
-    "module-resolver",
-    {
-      root: ["./"],
-      alias: {
-        "&newdirname": "./src/newdirname",
-      },
-    },
-  ],
+    plugins: [
+        "module-resolver",
+        {
+            root: ["./"],
+            alias: {
+                "&newdirname": "./src/newdirname",
+            },
+        },
+    ],
 };
 ```
 
