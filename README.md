@@ -10,6 +10,12 @@ production</strong>.
 
 Just click on the below dropdowns and copy and paste the `git clone` command.
 
+For only the main branch:
+
+```sh
+git clone --branch main --single-branch --depth 1 https://github.com/justin0979/devconfig.git
+```
+
 <details>
 
 <summary><strong>Get Started</strong></summary>
@@ -32,12 +38,6 @@ leave off `new_name` to use the default name of `devconfig`)</sub>
 
 ```sh
 git clone git@github.com:justin0979/devconfig.git new_name
-```
-
-For only the main branch:
-
-```sh
-git clone --branch main --single-branch --depth 1 https://github.com/justin0979/devconfig.git
 ```
 
 Next, run `npm i` then `npm start` and go to `localhost:3000`.<br />
