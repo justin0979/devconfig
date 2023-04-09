@@ -1,13 +1,17 @@
 ## "Base" Front End Development Envrionments
 
-<<<<<<< HEAD
 <sub>(Some of the comments towards the bottom might be out of
 date)</sub>
 =======
 (No production webpack configuration file setup yet)
 
+Install only this branch:
+
+```sh
+git clone --branch typescript --single-branch --depth 1 https://github.com/justin0979/devconfig.git
+```
+
 run `npm i` then `npm start` and go to `localhost:3000`.
->>>>>>> db7c085d1b44b6c04e3bd6be71394e929d01d332
 
 Manually setup webpack for a light weight development environment.
 This is just for a quick install & run and is easily configurable
@@ -140,18 +144,18 @@ Add/Update `jest.config.js`:
 
 ```javascript
 module.exports = {
-  roots: ["<rootDir>/src"],
-  testMatch: [
-    "**/__tests__/**/*.+(ts|tsx|js)",
-    "**/?(*.)*(spec|test).*(ts|tsx|js)",
-  ],
-  transform: {
-    "^.+\\.(ts|tsx)$": "ts-jest",
-  },
-  moduleNameMapper: {
-    "\\.(css|less)$": "<rootDir>/__mocks__/styleMock.js",
-    "\\.(gif|ttf|eot|svg)$": "<rootDir>/__mocks__/fileMock.js",
-  },
+    roots: ["<rootDir>/src"],
+    testMatch: [
+        "**/__tests__/**/*.+(ts|tsx|js)",
+        "**/?(*.)*(spec|test).*(ts|tsx|js)",
+    ],
+    transform: {
+        "^.+\\.(ts|tsx)$": "ts-jest",
+    },
+    moduleNameMapper: {
+        "\\.(css|less)$": "<rootDir>/__mocks__/styleMock.js",
+        "\\.(gif|ttf|eot|svg)$": "<rootDir>/__mocks__/fileMock.js",
+    },
 };
 ```
 
@@ -311,11 +315,11 @@ then add the desired absolute paths to `tsconfig.json`:
 
 ```json
 {
-  "compilerOptions": {
-    "paths": {
-      "&components/*": ["src/components/*"]
+    "compilerOptions": {
+        "paths": {
+            "&components/*": ["src/components/*"]
+        }
     }
-  }
 }
 ```
 
@@ -407,7 +411,7 @@ For all branches, follow steps from React section above.<br />
 When using Kubernetes and needing to adjust where the project is running at, make the following change: <br />
 From
 
-```javascript
+````javascript
 module.exports = {
   // ...
   devServer: {
@@ -438,7 +442,7 @@ Import with:
 
 ```typescript
 import "$public/index.html";
-```
+````
 
 To change this, go to `tsconig.json` and make changes to:
 
@@ -560,11 +564,14 @@ In order to import `svg` files, you need to do the following:
 2. Add the following to `custom.d.ts`:
 
 ```
-declare module "*.svg" {
->>>>>>> db7c085d1b44b6c04e3bd6be71394e929d01d332
-  const content: string;
-  export default content;
-}
+
+declare module "\*.svg" {
+
+> > > > > > > db7c085d1b44b6c04e3bd6be71394e929d01d332
+> > > > > > > const content: string;
+> > > > > > > export default content;
+> > > > > > > }
+
 ```
 <<<<<<< HEAD
 
@@ -579,3 +586,4 @@ Check `output.publicPath` in `config/webpack.dev.js` and/or
 </details>
 =======
 >>>>>>> db7c085d1b44b6c04e3bd6be71394e929d01d332
+```
