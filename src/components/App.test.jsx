@@ -1,23 +1,9 @@
-import { render, unmountComponentAtNode } from "react-dom";
-import { act } from "react-dom/test-utils";
+import { render, screen } from "@testing-library/react";
+import "@testing-library/jest-dom";
 import App from "./App";
 
-let container = null;
-beforeEach(() => {
-  container = document.createElement("div");
-  document.body.appendChild(container);
-});
-
-afterEach(() => {
-  unmountComponentAtNode(container);
-  container.remove();
-  container = null;
-});
-
-it("renders strings", () => {
-  act(() => {
-    render(<App />, container);
-  });
-  const button = container.querySelector("button");
-  expect(button.textContent).toBe("lazy load");
+test("button renders strings", () => {
+  render(<App />);
+  const button = screen.getByRole("button");
+  expect(button).toHaveTextContent("Lazy load");
 });
