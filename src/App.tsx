@@ -9,7 +9,7 @@ const App: React.FC = () => {
   ];
 
   return (
-    <div className="app">
+    <div className="app" data-testid="apptest">
       <Menu routes={routes} />
       <div className="home">
         <Route path="/">

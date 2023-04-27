@@ -1,4 +1,4 @@
-import { ActionType } from '&state';
+import { ActionType } from "../action-types";
 
 export interface Address {
   street: string;

@@ -1,6 +1,6 @@
-import { Users } from "&src/components";
-import ripple from "&src/ripple.svg";
-import favIcon from "&images/my_name-32x32.png";
+import { Users } from "../components";
+import ripple from "../ripple.svg";
+import favIcon from "../images/my_name-32x32.png";
 
 interface Content {
   reference: string;

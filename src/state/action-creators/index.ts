@@ -1,6 +1,7 @@
 import axios from "axios";
 import { Dispatch } from "redux";
-import { ActionType, Action, User } from "&state";
+import { ActionType } from "../action-types";
+import { Action, User } from "../actions";
 
 export const fetchLists =
   (type: string): any =>

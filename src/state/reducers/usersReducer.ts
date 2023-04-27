@@ -1,4 +1,5 @@
-import { ActionType, User, Action } from '&state';
+import { ActionType } from "../action-types";
+import { User, Action } from "../actions";
 
 export const usersReducer = (
   state: User[] = [],

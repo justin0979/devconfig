@@ -1,5 +1,5 @@
 import { ReactNode } from "react";
-import { useNavigation } from "&hooks";
+import { useNavigation } from "../hooks";
 
 interface RouteProps {
   path: string;
