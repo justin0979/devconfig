@@ -154,6 +154,8 @@ The `tsconfig.json` comes from:
 <details>
 <summary><strong>Install & Setup Tailwind CSS</strong></summary>
 
+Official documentation: [Get started with Tailwind CSS](https://tailwindcss.com/docs/installation)
+
 In terminal:
 
 ```sh
