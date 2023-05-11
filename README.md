@@ -181,7 +181,7 @@ In `index.tsx`:
 ```javascript
 import ReactDOM from "react-dom/client";
 import "./input.css"; // whatever you named your css file
-import "./App";
+import App from  "./App";
 ```
 
 </details>
