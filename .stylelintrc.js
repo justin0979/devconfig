@@ -26,6 +26,7 @@ module.exports = {
     "no-invalid-double-slash-comments": null,
     "value-keyword-case": null,
     "scss/at-mixin-argumentless-call-parentheses": null,
+    "scss/at-rule-no-unknown": null,
     "scss/dollar-variable-empty-line-before": null,
     "scss/double-slash-comment-empty-line-before": null,
     "scss/double-slash-comment-whitespace-inside": null,

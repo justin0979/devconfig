@@ -151,9 +151,60 @@ change <code>tsconfig.json</code>:
 The `tsconfig.json` comes from:
 [TypeScript: Documentation Path mapping](https://www.typescriptlang.org/docs/handbook/module-resolution.html#path-mapping)
 
+<details>
+<summary><strong>Install & Setup Tailwind CSS</strong></summary>
+
+In terminal:
+
+```sh
+npm i -D tailwindcss
+npx tailwindcss init
+```
+
+In `config/postcss.config.js`:
+
+```javascript
+const tailwindcss = require("tailwindcss");
+
+module.exports = {
+    plugins: [require("autoprefixer"), tailwindcss],
+};
+```
+
+In `tailwind.config.js`:
+
+```javascript
+module.exports = {
+    content: ["./src/**/*.{html,js,jsx,ts,tsx}"],
+    theme: {
+        extend: {},
+    },
+    plugins: [],
+};
+```
+
+In `input.css`, or `main.css` (whatever you want to name it):
+
+```javascript
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+```
+
+In `index.tsx`:
+
+```javascript
+import ReactDOM from "react-dom/client";
+import "./input.css"; // whatever you named your css file
+import "./App";
+```
+
+</details>
+
 ## Issues
 
 If run into routing issues, check `output.publicPath` in `webpack.dev.js`
 and/or `webpack.prod.js`.
 If run into routing issues, check `output.publicPath` in `webpack.dev.js`
+and/or `webpack.prod.js`.
 and/or `webpack.prod.js`.
