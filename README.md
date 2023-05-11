@@ -39,36 +39,11 @@ To disable, comment out or delete their webpack plugins in `config`.
 Redux data is accessed in `state/` along with `hooks/`
 
 <details>
-    <summary><strong>Running Tests ***Needs Updating***</strong></summary>
+    <summary><strong>Running Tests</strong></summary>
 
-Testing only uses jest. Enzyme was removed due to a lack of an official adapter-17.
+Testing recently changed to [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/).
 
-If needing to use:
-
-```javascript
-jest.spyOn(global, "fetch").mockImplementation(() =>
-    Promise.resolve({
-        json: () => Promise.resolve(stuff),
-    }),
-);
-```
-
-use this instead:
-
-```javascript
-global.fetch = jest.fn().mockImplementation(() =>
-    Promise.resolve({
-        json: () => Promise.resolve(stuff),
-    }),
-);
-```
-
-then, remove the mock:
-
-```javascript
-global.fetch.mockRestore();
-delete global.fetch();
-```
+I have not run tests with this yet to find out any configuration issues this repo will have.
 
 </details>
 
