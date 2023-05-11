@@ -38,7 +38,8 @@ To disable, comment out or delete their webpack plugins in `config`.
 
 Redux data is accessed in `state/` along with `hooks/`
 
-#### Running Tests
+<details>
+    <summary><strong>Running Tests ***Needs Updating***</strong></summary>
 
 Testing only uses jest. Enzyme was removed due to a lack of an official adapter-17.
 
@@ -68,6 +69,11 @@ then, remove the mock:
 global.fetch.mockRestore();
 delete global.fetch();
 ```
+
+</details>
+
+<details>
+    <summary><strong>Absolute Paths</strong></summary>
 
 #### Absolute Path
 
@@ -150,6 +156,8 @@ change <code>tsconfig.json</code>:
 
 The `tsconfig.json` comes from:
 [TypeScript: Documentation Path mapping](https://www.typescriptlang.org/docs/handbook/module-resolution.html#path-mapping)
+
+</details>
 
 <details>
 <summary><strong>Install & Setup Tailwind CSS</strong></summary>
