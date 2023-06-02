@@ -21,6 +21,7 @@ module.exports = {
     "font-family-name-quotes": null,
     "font-family-no-missing-generic-family-keyword": null,
     "import-notation": null,
+    "media-feature-range-notation": null,
     "no-descending-specificity": null,
     "no-empty-source": null,
     "no-invalid-double-slash-comments": null,
