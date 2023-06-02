@@ -12,7 +12,6 @@ root.render(
     <NavigationProvider>
       <App />
     </NavigationProvider>
-    ,
   </Provider>,
 );
 
