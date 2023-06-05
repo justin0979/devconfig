@@ -49,6 +49,13 @@ Next, run `npm i` then `npm start` and go to `localhost:3000`.<br />
 -   Sass is already setup.
 -   `Branch: main` is only html, js, and scss.
 
+<strong>Reminder for setting up new repo in github</strong><br />
+Run:
+
+```sh
+rm -rf .git
+```
+
 To change favicon, add new favicon to `public` directory and change path to that favicon
 in both `config/webpack.dev.js` and `config/webpack.prog.js` to:
 
