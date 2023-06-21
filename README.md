@@ -576,3 +576,55 @@ Check `output.publicPath` in `config/webpack.dev.js` and/or
 `config/webpack.prod.js` and adjust according to your situation.
 
 </details>
+
+<details>
+<summary>Install & Setup Tailwind CSS</summary>
+
+Official documentation: [Get started with Tailwind CSS](https://tailwindcss.com/docs/installation)
+
+In terminal:
+
+```sh
+npm i -D tailwindcss
+npx tailwindcss init
+```
+
+In `config/postcss.config.js`:
+
+```javascript
+const tailwindcss = require("tailwindcss");
+
+module.exports = {
+    plugins: [require("autoprefixer"), tailwindcss],
+};
+```
+
+In `tailwind.config.js`:
+
+```javascript
+module.exports = {
+    content: ["./src/**/*.{html,js,jsx,ts,tsx}"],
+    theme: {
+        extend: {},
+    },
+    plugins: [],
+};
+```
+
+in `input.css`, or `main.css` (whatever `.css` filename you choose, _e.g._, `grover.css`):
+
+```css
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+```
+
+In `index.tsx`:
+
+```javascript
+import ReactDOM from "react-dom/client";
+import "./input.css"; // or whatever you named the file
+import App from "./App";
+```
+
+</details>
