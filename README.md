@@ -578,6 +578,7 @@ Check `output.publicPath` in `config/webpack.dev.js` and/or
 </details>
 
 <details>
+
 <summary>Install & Setup Tailwind CSS</summary>
 
 Official documentation: [Get started with Tailwind CSS](https://tailwindcss.com/docs/installation)
