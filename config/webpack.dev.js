@@ -105,7 +105,7 @@ module.exports = {
       favicon: "./public/lastname-32x32.png",
     }),
     new MiniCssExtractPlugin({
-      filename: "styles.css",
+      chunkFilename: "my-styles.css",
     }),
     new CleanWebpackPlugin(),
     new ForkTsCheckerWebpackPlugin({
