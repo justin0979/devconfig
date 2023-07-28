@@ -1,6 +1,6 @@
 import { createRoot } from "react-dom/client";
 import { Provider } from "react-redux";
-import { store } from "./state";
+import { store } from "./store";
 import { NavigationProvider } from "./context";
 import App from "./App";
 import "./sass/main.scss";
@@ -12,7 +12,7 @@ root.render(
     <NavigationProvider>
       <App />
     </NavigationProvider>
-  </Provider>,
+  </Provider>
 );
 
 // if (module.hot) {

@@ -1,3 +1,4 @@
+import { useState, ReactNode } from "react";
 import { Users } from "../components";
 import ripple from "../ripple.svg";
 import favIcon from "../images/my_name-32x32.png";
@@ -15,6 +16,23 @@ const componentContent: Content = {
 };
 
 const HomePage = () => {
+  const [show, setShow] = useState(false);
+
+  const renderButton = (): ReactNode => {
+    if (show) {
+      return (
+        <button className="btn" onClick={() => setShow(false)}>
+          Remove All Users
+        </button>
+      );
+    }
+    return (
+      <button className="btn" onClick={() => setShow(true)}>
+        Get Users with Axios
+      </button>
+    );
+  };
+
   return (
     <div data-test="appComponent">
       <span className="home-icon">
@@ -35,7 +53,8 @@ const HomePage = () => {
           <p>You will have to look up any configurations though.</p>
         </div>
       </div>
-      <Users />
+      {renderButton()}
+      {show && <Users />}
     </div>
   );
 };

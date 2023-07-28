@@ -1,51 +1,39 @@
-import { useDispatch } from "react-redux";
-import { useAppSelector } from "../hooks";
-import { fetchLists, deleteList } from "../state";
+// import { useDispatch } from "react-redux";
+// import { useAppSelector } from "../hooks";
+// import { fetchLists, deleteList } from "../state";
+import { useState, ReactNode } from "react";
+import { useFetchUsersQuery, User } from "../store";
 
 const Users: React.FC = () => {
-  const dispatch = useDispatch();
-  const users = useAppSelector((state) => state.users);
+  const [users, setUsers] = useState<User[]>([]);
+  const { data, error, isFetching } = useFetchUsersQuery();
+  // const dispatch = useDispatch();
+  // const users = useAppSelector((state) => state.users);
 
-  const getUsersList: React.MouseEventHandler<
-    HTMLButtonElement
-  > = () => {
-    dispatch(fetchLists("users"));
-  };
+  // const getUsersList: React.MouseEventHandler<
+  //   HTMLButtonElement
+  // > = () => {
+  //     dispatch(fetchLists("users"));
 
-  const emptyUsersList: React.MouseEventHandler<
-    HTMLButtonElement
-  > = () => {
-    dispatch(deleteList());
-  };
+  // };
 
-  const renderButton = (): JSX.Element => {
-    if (users.length) {
-      return (
-        <button className="btn" onClick={emptyUsersList}>
-          Remove All Users
-        </button>
-      );
-    }
+  // const emptyUsersList: React.MouseEventHandler<
+  //   HTMLButtonElement
+  // > = () => {
+  //      dispatch(deleteList());
+  // };
+
+  const renderUsers = (): ReactNode => {
     return (
-      <button className="btn" onClick={getUsersList}>
-        Get Users with Axios
-      </button>
+      data &&
+      data.map((user) => {
+        return <li key={user.id}>{user.name}</li>;
+      })
     );
-  };
-
-  const renderUsers = (): JSX.Element | JSX.Element[] => {
-    if (users.length === 0) {
-      return <></>;
-    }
-    return users.map((user) => {
-      return <li key={user.id}>{user.name}</li>;
-    });
   };
 
   return (
     <section className="section__users">
-      <h2>Users</h2>
-      {renderButton()}
       <ol className="section__users--list">{renderUsers()}</ol>
     </section>
   );
