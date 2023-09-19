@@ -11,7 +11,7 @@ const App: React.FC = () => {
   return (
     <div className="app" data-testid="apptest">
       <Menu routes={routes} />
-      <div className="home">
+      <main className="home">
         <Route path="/">
           <HomePage />
         </Route>
@@ -21,7 +21,7 @@ const App: React.FC = () => {
         <Route path="/buttons">
           <ButtonPage />
         </Route>
-      </div>
+      </main>
     </div>
   );
 };
