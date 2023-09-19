@@ -1,5 +1,3 @@
-import ButtonPage from "./ButtonPage";
-import HomePage from "./HomePage";
-import CounterPage from "./CounterPage";
-
-export { HomePage, CounterPage, ButtonPage };
+export { default as ButtonPage } from "./ButtonPage";
+export { default as HomePage } from "./HomePage";
+export { default as CounterPage } from "./CounterPage";

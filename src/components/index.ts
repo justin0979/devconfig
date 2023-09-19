@@ -1,7 +1,5 @@
-import Button from "./Button";
-import Link from "./Link";
-import Users from "./Users";
-import Route from "./Route";
-import Menu from "./Menu";
-
-export { Link, Users, Route, Menu, Button };
+export { default as Button } from "./Button";
+export { default as Link } from "./Link";
+export { default as Users } from "./Users";
+export { default as Route } from "./Route";
+export { default as Menu } from "./Menu";
