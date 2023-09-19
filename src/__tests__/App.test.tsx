@@ -1,9 +1,10 @@
 import { render, screen } from "@testing-library/react";
+import user from "@testing-library/user-event";
 import App from "../App";
 
-test("renders component", () => {
+test("renders component", async () => {
   render(<App />);
-  screen.debug();
+
   const div = screen.getByTestId("apptest");
   expect(div).toBeInTheDocument();
 });
