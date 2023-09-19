@@ -17,7 +17,7 @@ const ButtonPage = () => {
     return id === activated;
   };
   return (
-    <div>
+    <>
       <h1>Button Page</h1>
       <div>
         <Button
@@ -40,7 +40,7 @@ const ButtonPage = () => {
           Secondary
         </Button>
       </div>
-    </div>
+    </>
   );
 };
 

@@ -34,7 +34,7 @@ const HomePage = () => {
   };
 
   return (
-    <main>
+    <>
       <span className="home-icon">
         <img src={favIcon} alt="Name" />
         <img src={ripple} alt="Rippling" />
@@ -55,7 +55,7 @@ const HomePage = () => {
       </div>
       {renderButton()}
       {show && <Users />}
-    </main>
+    </>
   );
 };
 
