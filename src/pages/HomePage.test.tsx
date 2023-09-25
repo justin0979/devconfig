@@ -1,5 +1,5 @@
 import { screen, render } from "@testing-library/react";
-import HomePage from "../../pages/HomePage";
+import HomePage from "./HomePage";
 
 test("One anchor exists", () => {
   render(<HomePage />);
