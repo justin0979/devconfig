@@ -10,9 +10,7 @@ const App = () => {
         <Suspense fallback="Lazy loading Lazy component">
           <Lazy />
         </Suspense>
-      )) || (
-        <h1 data-test="lazyLoadLazyDefault">Loaded here</h1>
-      )
+      )) || <h1 data-test="lazyLoadLazyDefault">Loaded here</h1>
     );
   };
 
