@@ -9,15 +9,8 @@ module.exports = {
     "color-hex-length": null,
     "comment-empty-line-before": null,
     "custom-property-empty-line-before": null,
-    "declaration-colon-newline-after": null,
     "declaration-block-no-redundant-longhand-properties": null,
     "declaration-empty-line-before": null,
-    indentation: [
-      2,
-      {
-        ignore: ["inside-parens"],
-      },
-    ],
     "font-family-name-quotes": null,
     "font-family-no-missing-generic-family-keyword": null,
     "import-notation": null,
