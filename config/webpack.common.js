@@ -53,19 +53,7 @@ module.exports = {
       {
         test: /\.tsx?$/,
         exclude: /node_modules/,
-        use: [
-          {
-            loader: "ts-loader",
-            options: {
-              getCustomTransformers: () => ({
-                before: [isDevelopment && ReactRefreshTS()].filter(
-                  Boolean,
-                ),
-              }),
-              transpileOnly: isDevelopment,
-            },
-          },
-        ],
+        use: "ts-loader",
       },
       {
         test: /\.html$/,
